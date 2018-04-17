@@ -20,7 +20,7 @@ import junit.framework.Assert;
 public class DBCleaner {
 	
 	public WebDriver driver;
-	String url = "http://tools.streamoid.com/dbcleaner2/DBCleaner.php";
+	String url = "http://tools.streamoid.com/dbcleaner2/DBCleaner.php?login=the_tagging_admin";
 	
 	public void launchUrl() {
 		
