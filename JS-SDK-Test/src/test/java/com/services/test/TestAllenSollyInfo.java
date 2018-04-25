@@ -61,7 +61,7 @@ public class TestAllenSollyInfo {
 		int main_category_size = main_category_list.size();
 		
 		
-		for(int i=4;i<=main_category_size; i++) {
+		for(int i=5;i<=main_category_size; i++) {
 			
 		int j=1;
 		List<WebElement> child_categ_div = driver.findElements(By.xpath(".//*[@id='nav-bar']/li["+i+"]/div/div/div"));
@@ -91,22 +91,43 @@ public class TestAllenSollyInfo {
 				}
 					
 					catch(Exception e) {
-						e.printStackTrace();
-						System.out.println("No Products found for this category.");
+						//e.printStackTrace();
+						//System.out.println("No Products found for this category.");
 						j=1;
 						x++;
 					}
 				}
 				
-				if(!driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/div/div/div["+x+"]/div["+y+"]/ul/li["+j+"]/a")).isDisplayed()) {
+				while(i==5) {
+					try {
+					
+					driver.findElement(By.xpath(".//*[@id='nav-bar']/li[5]/div/div/div["+x+"]/div/a/div")).click();
+					clickfirst.clickOnProduct(driver);
+
+					driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div[1]/div[2]/div[1]/a/img")).click();
+					WebElement main_category1 = driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/a"));
+					clickfirst.moveToElement_only(main_category1, driver);
+					x++;
+					}
+					catch(Exception e){
+						
+						i++;
+					}
+				}
+				try {
+				if(driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/div/div/div["+x+"]/div["+y+"]/div/img")).isDisplayed()) {
 					
 					y++;
+				}
+				}
+				catch(Exception e) {
+					break;
 				}
 				
 				
 				
-				try {
 					while(driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/div/div/div["+x+"]/div["+y+"]/ul/li["+j+"]/a")).isDisplayed()) {
+						try {
 						WebElement main_Category = driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/a"));
 						WebElement product_category1 = driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/div/div/div["+x+"]/div["+y+"]/ul/li["+j+"]/a"));
 						clickfirst.moveToElementandClick(main_Category, product_category1, driver);
@@ -120,12 +141,13 @@ public class TestAllenSollyInfo {
 						clickfirst.moveToElement_only(main_category1, driver);
 						
 					}
+						catch(Exception e) {
+							//e.printStackTrace();
+							//System.out.println("No Products found for this category.");
+							j=1;
+						}
 					}
-					catch(Exception e) {
-						e.printStackTrace();
-						System.out.println("No Products found for this category.");
-						j=1;
-					}
+					
 			}
 		}
 		
