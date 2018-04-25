@@ -24,9 +24,9 @@ public class clickonFirstProduct {
 		
 	}
 	
-	public void moveToElementandClick(WebElement e1 , WebElement e2 , WebDriver driver) {
+	public void moveToElementandClick(WebElement main_category , WebElement product_category , WebDriver driver) {
 		action = new Actions(driver);
-		action.moveToElement(e1).moveToElement(e2).click().build().perform();
+		action.moveToElement(main_category).moveToElement(product_category).click().build().perform();
 	}
 	
 	public void moveToElement_only(WebElement product_Category , WebDriver driver) throws InterruptedException {
