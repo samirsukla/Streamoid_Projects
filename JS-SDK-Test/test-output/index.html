@@ -128,13 +128,14 @@
                   <a name="testAllenSolly">
                   </a> <!-- testAllenSolly -->
                   <span class="method-name">testAllenSolly</span>
-                  <div class="stack-trace">org.openqa.selenium.WebDriverException: Failed to decode response from marionette
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: Unable to locate element: .//*[@id=&apos;nav-bar&apos;]/li[1]/div/div/div[1]/div[1]/ul/li[5]/a
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.11.0&apos;, revision: &apos;e59cfb3&apos;, time: &apos;2018-03-11T20:26:55.152Z&apos;
 System info: host: &apos;streamoid-ThinkPad-T440s&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;4.13.0-39-generic&apos;, java.version: &apos;1.8.0_162&apos;
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 55.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:processID: 6143, moz:profile: /tmp/rust_mozprofile.jPndr1..., pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.13.0-39-generic, rotatable: false, specificationLevel: 0, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: fc58e0e6-4823-4b7e-9514-3d1576c0a54f
-*** Element info: {Using=xpath, value=.//*[@id=&apos;nav-bar&apos;]/li[7]/div/div/div}
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 55.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:processID: 9518, moz:profile: /tmp/rust_mozprofile.QI3Gqz..., pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.13.0-39-generic, rotatable: false, specificationLevel: 0, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 5ebec0c8-63d3-425f-a320-33664bca88e3
+*** Element info: {Using=xpath, value=.//*[@id=&apos;nav-bar&apos;]/li[1]/div/div/div[1]/div[1]/ul/li[5]/a}
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -145,11 +146,11 @@ Session ID: fc58e0e6-4823-4b7e-9514-3d1576c0a54f
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:346)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementsByXPath(RemoteWebDriver.java:425)
-	at org.openqa.selenium.By$ByXPath.findElements(By.java:356)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElements(RemoteWebDriver.java:307)
-	at com.services.test.TestAllenSollyInfo.testAllenSolly(TestAllenSollyInfo.java:67)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:421)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)
+	at com.services.test.TestAllenSollyInfo.testAllenSolly(TestAllenSollyInfo.java:145)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -184,7 +185,7 @@ Session ID: fc58e0e6-4823-4b7e-9514-3d1576c0a54f
         </div> <!-- panel Default_suite -->
         <div panel-name="test-xml-Default_suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/tmp/testng-eclipse-1990705883/testng-customsuite.xml</span>
+            <span class="header-content">/tmp/testng-eclipse--248428044/testng-customsuite.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
@@ -237,7 +238,7 @@ data.addRows(1);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'testAllenSolly')
 data.setCell(0, 2, 'com.services.test.TestAllenSollyInfo')
-data.setCell(0, 3, 112296);
+data.setCell(0, 3, 119902);
 window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
 return data;
 }
@@ -277,13 +278,11 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">testAllenSolly</span>
-                <span class="method-start">5179 ms</span>
+                <span class="method-start">5611 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">tearDown</span>
-                <span class="method-start">117485 ms</span>
+                <span class="method-start">125528 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

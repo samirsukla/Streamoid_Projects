@@ -36,7 +36,7 @@ public class TestAllenSollyInfo {
 	public void setUp() throws IOException {
 		System.setProperty("webdriver.gecko.driver", "/home/streamoid/geckodriver");
 		driver = new FirefoxDriver();
-//		driver.manage().window().maximize();
+		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		props = new Properties();
 		finput = new FileInputStream("src/test/resources/URLInfo.properties");
@@ -87,9 +87,9 @@ public class TestAllenSollyInfo {
 					WebDriverWait wait = new WebDriverWait(driver,10);
 					wait.until(ExpectedConditions.visibilityOfAllElements(similar_product_widget));
 					
-					className = this.getClass().getSimpleName();
+					/*className = this.getClass().getSimpleName();
 					scrshot = new takeScreenShot();
-					scrshot.captureScreenShot(driver,className);
+					scrshot.captureScreenShot(driver,className);*/
 	
 					j++;
 
@@ -100,8 +100,7 @@ public class TestAllenSollyInfo {
 				}
 					
 					catch(Exception e) {
-						//e.printStackTrace();
-						//System.out.println("No Products found for this category.");
+						
 						j=1;
 						x++;
 					}
@@ -117,9 +116,9 @@ public class TestAllenSollyInfo {
 					WebDriverWait wait = new WebDriverWait(driver,10);
 					wait.until(ExpectedConditions.visibilityOfAllElements(similar_product_widget));
 					
-					className = this.getClass().getSimpleName();
+					/*className = this.getClass().getSimpleName();
 					scrshot = new takeScreenShot();
-					scrshot.captureScreenShot(driver,className);
+					scrshot.captureScreenShot(driver,className);*/
 
 					driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div[1]/div[2]/div[1]/a/img")).click();
 					WebElement main_category1 = driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/a"));
@@ -138,7 +137,7 @@ public class TestAllenSollyInfo {
 				}
 				}
 				catch(Exception e) {
-					break;
+					e.printStackTrace();
 				}
 				
 				
@@ -155,9 +154,9 @@ public class TestAllenSollyInfo {
 						WebDriverWait wait = new WebDriverWait(driver,10);
 						wait.until(ExpectedConditions.visibilityOfAllElements(similar_product_widget));
 						
-						className = this.getClass().getSimpleName();
+						/*className = this.getClass().getSimpleName();
 						scrshot = new takeScreenShot();
-						scrshot.captureScreenShot(driver,className);
+						scrshot.captureScreenShot(driver,className);*/
 		
 						j++;
 	
@@ -167,8 +166,6 @@ public class TestAllenSollyInfo {
 						
 					}
 						catch(Exception e) {
-							//e.printStackTrace();
-							//System.out.println("No Products found for this category.");
 							j=1;
 						}
 					}
@@ -182,9 +179,6 @@ public class TestAllenSollyInfo {
 		
 		
 		
-		className = this.getClass().getSimpleName();
-		scrshot = new takeScreenShot();
-		scrshot.captureScreenShot(driver,className);
 		
 		
 
