@@ -30,9 +30,15 @@ public class clickonFirstProduct {
 	}
 	
 	public void moveToElement_only(WebElement product_Category , WebDriver driver) throws InterruptedException {
-		Thread.sleep(3000);
+		Thread.sleep(2000);
 		action = new Actions(driver);
 		action.moveToElement(product_Category).build().perform();
+
+	}
+	
+	public String getCategoryName(WebElement element) {
+		return element.getText();
+		
 	}
 
 }

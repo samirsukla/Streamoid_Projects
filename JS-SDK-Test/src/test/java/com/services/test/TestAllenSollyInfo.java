@@ -29,7 +29,7 @@ public class TestAllenSollyInfo {
 	static Properties props;
 	static FileInputStream finput;
 	static String className;
-	
+	static String folderName;
 	
 	
 	@BeforeClass
@@ -42,6 +42,10 @@ public class TestAllenSollyInfo {
 		finput = new FileInputStream("src/test/resources/URLInfo.properties");
 		props.load(finput);
 		clickfirst = new clickonFirstProduct();
+		className = this.getClass().getSimpleName();
+		folderName = className.replace("Test", " ").replace("Info", " ").trim();
+		
+		
 		
 		
 	}
@@ -63,16 +67,17 @@ public class TestAllenSollyInfo {
 		
 		
 		for(int i=1;i<=main_category_size; i++) {
-			
+		String mainCategory = clickfirst.getCategoryName(main_category_list.get(i-1));
 		int j=1;
 		List<WebElement> child_categ_div = driver.findElements(By.xpath(".//*[@id='nav-bar']/li["+i+"]/div/div/div"));
 		
 		for(int x=1; x<=child_categ_div.size(); x++) {
-			
-			List<WebElement> sub_categ_div = driver.findElements(By.xpath(".//*[@id='nav-bar']/li["+i+"]/div/div/div["+x+"]/div"));
 			WebElement product_category = driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/a"));
 			clickfirst.moveToElement_only(product_category, driver);
+			List<WebElement> sub_categ_div = driver.findElements(By.xpath(".//*[@id='nav-bar']/li["+i+"]/div/div/div["+x+"]/div"));
+			
 			for(int y=1;y<=sub_categ_div.size(); y++) {
+				
 				
 				while(i==2 && x==1) {
 					try {
@@ -80,16 +85,16 @@ public class TestAllenSollyInfo {
 					WebElement sub_Category = driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/a"));
 					WebElement product_category1 = driver.findElement(By.xpath(".//*[@id='nav-bar']/li[2]/div/div/div[1]/ul/li["+j+"]/a"));
 					clickfirst.moveToElementandClick(sub_Category, product_category1, driver);
-
+                    String prodCategory = clickfirst.getCategoryName(product_category1);
 					clickfirst.clickOnProduct(driver);
 					
-					List<WebElement> similar_product_widget = driver.findElements(By.xpath("/html/body/section/div[2]/div/div"));
+					/*List<WebElement> similar_product_widget = driver.findElements(By.xpath("/html/body/section/div[2]/div/div"));
 					WebDriverWait wait = new WebDriverWait(driver,10);
-					wait.until(ExpectedConditions.visibilityOfAllElements(similar_product_widget));
+					wait.until(ExpectedConditions.visibilityOfAllElements(similar_product_widget));*/
+					Thread.sleep(3000);
 					
-					/*className = this.getClass().getSimpleName();
 					scrshot = new takeScreenShot();
-					scrshot.captureScreenShot(driver,className);*/
+					scrshot.captureScreenShot(driver,folderName,mainCategory,prodCategory);
 	
 					j++;
 
@@ -110,15 +115,18 @@ public class TestAllenSollyInfo {
 					try {
 					
 					driver.findElement(By.xpath(".//*[@id='nav-bar']/li[5]/div/div/div["+x+"]/div/a/div")).click();
+					String prodCategory = driver.findElement(By.xpath(".//*[@id='nav-bar']/li[5]/div/div/div["+x+"]/div/a/div/span")).getText();
 					clickfirst.clickOnProduct(driver);
 					
-					List<WebElement> similar_product_widget = driver.findElements(By.xpath("/html/body/section/div[2]/div/div"));
+					/*List<WebElement> similar_product_widget = driver.findElements(By.xpath("/html/body/section/div[2]/div/div"));
 					WebDriverWait wait = new WebDriverWait(driver,10);
-					wait.until(ExpectedConditions.visibilityOfAllElements(similar_product_widget));
+					wait.until(ExpectedConditions.visibilityOfAllElements(similar_product_widget));*/
 					
-					/*className = this.getClass().getSimpleName();
+					Thread.sleep(3000);
+					
 					scrshot = new takeScreenShot();
-					scrshot.captureScreenShot(driver,className);*/
+					scrshot.captureScreenShot(driver,folderName,mainCategory,prodCategory);
+					
 
 					driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div[1]/div[2]/div[1]/a/img")).click();
 					WebElement main_category1 = driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/a"));
@@ -141,22 +149,23 @@ public class TestAllenSollyInfo {
 				}
 				
 				
-				
+				try {
 					while(driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/div/div/div["+x+"]/div["+y+"]/ul/li["+j+"]/a")).isDisplayed()) {
-						try {
+						
 						WebElement main_Category = driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/a"));
 						WebElement product_category1 = driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/div/div/div["+x+"]/div["+y+"]/ul/li["+j+"]/a"));
 						clickfirst.moveToElementandClick(main_Category, product_category1, driver);
-			
+						String prodCategory = clickfirst.getCategoryName(product_category1);
+	                    System.out.println(prodCategory);
 						clickfirst.clickOnProduct(driver);
 						
-						List<WebElement> similar_product_widget = driver.findElements(By.xpath("/html/body/section/div[2]/div/div"));
+						/*List<WebElement> similar_product_widget = driver.findElements(By.xpath("/html/body/section/div[2]/div/div"));
 						WebDriverWait wait = new WebDriverWait(driver,10);
-						wait.until(ExpectedConditions.visibilityOfAllElements(similar_product_widget));
+						wait.until(ExpectedConditions.visibilityOfAllElements(similar_product_widget));*/
+						Thread.sleep(3000);
 						
-						/*className = this.getClass().getSimpleName();
 						scrshot = new takeScreenShot();
-						scrshot.captureScreenShot(driver,className);*/
+						scrshot.captureScreenShot(driver,folderName,mainCategory,prodCategory);
 		
 						j++;
 	
@@ -165,10 +174,13 @@ public class TestAllenSollyInfo {
 						clickfirst.moveToElement_only(main_category1, driver);
 						
 					}
-						catch(Exception e) {
-							j=1;
-						}
+						
 					}
+				catch(Exception e) {
+					//e.printStackTrace();
+					j=1;
+					
+				}
 					
 			}
 		}

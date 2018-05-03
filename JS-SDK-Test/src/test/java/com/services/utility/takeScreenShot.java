@@ -10,14 +10,17 @@ import org.openqa.selenium.WebDriver;
 
 public class takeScreenShot {
 	static getSystemDate getDate;
+	static CreateFolder createFolder;
 	
-	public void captureScreenShot(WebDriver driver,String className) throws IOException {
-		
+	public void captureScreenShot(WebDriver driver,String folderName, String mainCat, String prodCat) throws IOException {
+		String folderPath = "/home/streamoid/Desktop/Samir_Streamoid/Selenium_Setup/Eclipse_program/My First Project/JS-SDK-Test/Output/";
 		getDate = new getSystemDate();
-		String currentDate = getDate.getPresentDate();
+		createFolder = new CreateFolder();
+		String date = getDate.getPresentDate();
+		createFolder.createDirectory(folderName, date);
 		File scrfile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		
-		FileUtils.copyFile(scrfile,new File("/home/streamoid/Pictures/AllenSolly_Women_shirts&blouses.png"));
+		FileUtils.copyFile(scrfile,new File(folderPath+folderName+"/"+date+"/"+mainCat+"_"+prodCat+".png"));
 
 		
 	}
