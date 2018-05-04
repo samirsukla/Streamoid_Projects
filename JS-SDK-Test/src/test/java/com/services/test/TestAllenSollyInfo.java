@@ -30,14 +30,14 @@ public class TestAllenSollyInfo {
 	static FileInputStream finput;
 	static String className;
 	static String folderName;
-	static String mainCategory;
+	static String mainCategoryName;
 	static int z=1;
 	
 	@BeforeClass
 	public void setUp() throws IOException {
 		System.setProperty("webdriver.gecko.driver", "/home/streamoid/geckodriver");
 		driver = new FirefoxDriver();
-		driver.manage().window().maximize();
+		driver.manage().window().maximize();;
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		props = new Properties();
 		finput = new FileInputStream("src/test/resources/URLInfo.properties");
@@ -63,28 +63,28 @@ public class TestAllenSollyInfo {
 
 		}
 		
-		List<WebElement> main_category_list = driver.findElements(By.xpath("//ul[@id='nav-bar']/li"));
-		int main_category_size = main_category_list.size();
+//		List<WebElement> main_category_list = driver.findElements(By.xpath("//ul[@id='nav-bar']/li"));
+//		int main_category_size = main_category_list.size();
 		
-		for(int i=5;i<=main_category_size; i++) {
+		for(int i=4;i<=6; i++) {
 		
-		mainCategory = driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/a")).getText();
+		mainCategoryName = driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/a")).getText();
 		
 		int j=1;
 		List<WebElement> child_categ_div = driver.findElements(By.xpath(".//*[@id='nav-bar']/li["+i+"]/div/div/div"));
 		
 		for(int x=1; x<=child_categ_div.size(); x++) {
-			WebElement product_category = driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/a"));
-			clickfirst.moveToElement_only(product_category, driver);
+			WebElement main_category = driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/a"));
+			clickfirst.moveToElement_only(main_category, driver);
 			
 			while(i==2 && x==1) {
 				try {
 				
-				WebElement main_Category = driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/a"));
-				WebElement product_category1 = driver.findElement(By.xpath(".//*[@id='nav-bar']/li[2]/div/div/div[1]/ul/li["+j+"]/a"));
-				String prodCategory = clickfirst.getCategoryName(product_category1);
+				WebElement main_category1 = driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/a"));
+				WebElement product_category = driver.findElement(By.xpath(".//*[@id='nav-bar']/li[2]/div/div/div[1]/ul/li["+j+"]/a"));
+				String prodCategoryName = clickfirst.getCategoryName(product_category);
 				
-				clickfirst.moveToElementandClick(main_Category, product_category1, driver);
+				clickfirst.moveToElementandClick(main_category1, product_category, driver);
                 
 				clickfirst.clickOnProduct(driver);
 				
@@ -95,13 +95,13 @@ public class TestAllenSollyInfo {
 				Thread.sleep(3000);
 				
 				scrshot = new takeScreenShot();
-				scrshot.captureScreenShot(driver,folderName,mainCategory,prodCategory);
+				scrshot.captureScreenShot(driver,folderName,mainCategoryName,prodCategoryName);
 
 				j++;
 
 				driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div[1]/div[2]/div[1]/a/img")).click();
-				WebElement main_category1 = driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/a"));
-				clickfirst.moveToElement_only(main_category1, driver);
+				WebElement main_category2 = driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/a"));
+				clickfirst.moveToElement_only(main_category2, driver);
 				
 			}
 				
@@ -112,6 +112,38 @@ public class TestAllenSollyInfo {
 				}
 			}
 			
+			while(i==5) {
+				try {
+					
+				String prodCategoryName = driver.findElement(By.xpath(".//*[@id='nav-bar']/li[5]/div/div/div["+z+"]/div/a/div/span")).getText();
+				driver.findElement(By.xpath(".//*[@id='nav-bar']/li[5]/div/div/div["+z+"]/div/a/div")).click();
+				
+				clickfirst.clickOnProduct(driver);
+				
+				/*List<WebElement> similar_product_widget = driver.findElements(By.xpath("/html/body/section/div[2]/div/div"));
+				WebDriverWait wait = new WebDriverWait(driver,10);
+				wait.until(ExpectedConditions.visibilityOfAllElements(similar_product_widget));*/
+				
+				Thread.sleep(3000);
+				
+				scrshot = new takeScreenShot();
+				scrshot.captureScreenShot(driver,folderName,mainCategoryName,prodCategoryName);
+				
+
+				driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div[1]/div[2]/div[1]/a/img")).click();
+
+//				WebElement main_category1= driver.findElement(By.xpath(".//*[@id='nav-bar']/li[5]/a"));
+//				clickfirst.moveToElement_only(main_category1, driver);
+				driver.findElement(By.xpath(".//*[@id='nav-bar']/li[5]/a")).click();
+				z++;
+				}
+				catch(Exception e){
+					
+					i++;
+					driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/a")).click();
+				}
+			}
+			
 			List<WebElement> sub_categ_div = driver.findElements(By.xpath(".//*[@id='nav-bar']/li["+i+"]/div/div/div["+x+"]/div"));
 			
 			for(int y=1;y<=sub_categ_div.size(); y++) {
@@ -119,39 +151,12 @@ public class TestAllenSollyInfo {
 				
 				
 				
-				while(i==5) {
-					try {
-						
-					String prodCategory = driver.findElement(By.xpath(".//*[@id='nav-bar']/li[5]/div/div/div["+z+"]/div/a/div/span")).getText();
-					driver.findElement(By.xpath(".//*[@id='nav-bar']/li[5]/div/div/div["+z+"]/div/a/div")).click();
-					
-					clickfirst.clickOnProduct(driver);
-					
-					/*List<WebElement> similar_product_widget = driver.findElements(By.xpath("/html/body/section/div[2]/div/div"));
-					WebDriverWait wait = new WebDriverWait(driver,10);
-					wait.until(ExpectedConditions.visibilityOfAllElements(similar_product_widget));*/
-					
-					Thread.sleep(3000);
-//					
-//					scrshot = new takeScreenShot();
-//					scrshot.captureScreenShot(driver,folderName,mainCategory,prodCategory);
-//					
-
-					driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div[1]/div[2]/div[1]/a/img")).click();
-					Thread.sleep(2000);
-					WebElement main_category1= driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/a"));
-					clickfirst.moveToElement_only(main_category1, driver);
-					z++;
-					}
-					catch(Exception e){
-						
-						i++;
-					}
-				}
+				
 				try {
 				if(driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/div/div/div["+x+"]/div["+y+"]/div/img")).isDisplayed()) {
 					
 					y++;
+					mainCategoryName = driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/a")).getText();
 				}
 				}
 				catch(Exception e) {
@@ -162,11 +167,11 @@ public class TestAllenSollyInfo {
 				try {
 					while(driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/div/div/div["+x+"]/div["+y+"]/ul/li["+j+"]/a")).isDisplayed()) {
 						
-						WebElement main_Category = driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/a"));
-						WebElement product_category1 = driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/div/div/div["+x+"]/div["+y+"]/ul/li["+j+"]/a"));
-						String prodCategory = clickfirst.getCategoryName(product_category1);
+						WebElement main_category1 = driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/a"));
+						WebElement product_category = driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/div/div/div["+x+"]/div["+y+"]/ul/li["+j+"]/a"));
+						String prodCategoryName = clickfirst.getCategoryName(product_category);
 						
-						clickfirst.moveToElementandClick(main_Category, product_category1, driver);
+						clickfirst.moveToElementandClick(main_category1, product_category, driver);
 						
 	                    
 						clickfirst.clickOnProduct(driver);
@@ -177,14 +182,14 @@ public class TestAllenSollyInfo {
 						
 						Thread.sleep(3000);
 						
-//						scrshot = new takeScreenShot();
-//						scrshot.captureScreenShot(driver,folderName,mainCategory,prodCategory);
-//		
+						scrshot = new takeScreenShot();
+						scrshot.captureScreenShot(driver,folderName,mainCategoryName,prodCategoryName);
+		
 						j++;
 	
 						driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div[1]/div[2]/div[1]/a/img")).click();
-						WebElement main_category1 = driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/a"));
-						clickfirst.moveToElement_only(main_category1, driver);
+						WebElement main_category2 = driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/a"));
+						clickfirst.moveToElement_only(main_category2, driver);
 						
 					}
 						

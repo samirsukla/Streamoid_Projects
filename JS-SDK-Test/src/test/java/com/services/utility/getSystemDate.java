@@ -12,7 +12,7 @@ public class getSystemDate {
 		SimpleDateFormat sdf = new SimpleDateFormat("ddMMyyyy");
 		Date date = new Date();
 		String currDate = sdf.format(date);
-		System.out.println(currDate);
+		
 		return currDate;
 
 	}
