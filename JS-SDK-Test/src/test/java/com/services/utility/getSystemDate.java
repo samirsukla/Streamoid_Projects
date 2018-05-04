@@ -9,7 +9,7 @@ public class getSystemDate {
 	
 	public String getPresentDate() {
 		
-		SimpleDateFormat sdf = new SimpleDateFormat("ddMMyyyy HH:mm:ss");
+		SimpleDateFormat sdf = new SimpleDateFormat("ddMMyyyy");
 		Date date = new Date();
 		String currDate = sdf.format(date);
 		System.out.println(currDate);
