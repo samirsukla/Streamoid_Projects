@@ -10,6 +10,10 @@ public class CreateFolder {
 		File dir = new File(path+ parent_folder+ "/"+folder_name);
 		if(!dir.exists()) {
 		  dir.mkdir();
+		  File passFolder = new File(path+parent_folder+"/"+folder_name+"/"+"PASSED");
+		  File failFolder = new File(path+parent_folder+"/"+folder_name+"/"+"FAILED");
+		  passFolder.mkdir();
+		  failFolder.mkdir();
 		}
 		
 		

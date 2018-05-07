@@ -2,22 +2,16 @@ package com.services.test;
 
 import org.testng.annotations.Test;
 
+import com.services.utility.CheckWidgetPresentStatus;
+import com.services.utility.InitialSetup;
 import com.services.utility.clickonFirstProduct;
 import com.services.utility.takeScreenShot;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.List;
-import java.util.Properties;
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
@@ -26,34 +20,29 @@ public class TestAllenSollyInfo {
 	public WebDriver driver;
 	static clickonFirstProduct clickfirst;
 	static takeScreenShot scrshot;
-	static Properties props;
-	static FileInputStream finput;
+	
 	static String className;
 	static String folderName;
 	static String mainCategoryName;
+	static InitialSetup initSet;
 	static int z=1;
+	static String status;
+	static CheckWidgetPresentStatus checkStatus;
+	static WebElement element ;
 	
 	@BeforeClass
 	public void setUp() throws IOException {
-		System.setProperty("webdriver.gecko.driver", "/home/streamoid/geckodriver");
-		driver = new FirefoxDriver();
-		driver.manage().window().maximize();;
-		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-		props = new Properties();
-		finput = new FileInputStream("src/test/resources/URLInfo.properties");
-		props.load(finput);
+		initSet = new InitialSetup();
+		driver = initSet.initialSetup();
 		clickfirst = new clickonFirstProduct();
 		className = this.getClass().getSimpleName();
 		folderName = className.replace("Test", " ").replace("Info", " ").trim();
-		
-		
-		
-		
-	}
+		checkStatus = new CheckWidgetPresentStatus();
+		}
 	@Test
 	public void testAllenSolly() throws IOException, InterruptedException {
 		
-		String url = props.getProperty("Allen_Solly");
+		String url = initSet.getUrl("Allen_Solly");
 		driver.get(url);
 		
 		if(driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div[1]/div[2]/div[2]/div[2]/div/img")).isDisplayed())
@@ -63,10 +52,8 @@ public class TestAllenSollyInfo {
 
 		}
 		
-//		List<WebElement> main_category_list = driver.findElements(By.xpath("//ul[@id='nav-bar']/li"));
-//		int main_category_size = main_category_list.size();
-		
-		for(int i=4;i<=6; i++) {
+
+		for(int i=1;i<=6; i++) {
 		
 		mainCategoryName = driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/a")).getText();
 		
@@ -74,6 +61,7 @@ public class TestAllenSollyInfo {
 		List<WebElement> child_categ_div = driver.findElements(By.xpath(".//*[@id='nav-bar']/li["+i+"]/div/div/div"));
 		
 		for(int x=1; x<=child_categ_div.size(); x++) {
+			
 			WebElement main_category = driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/a"));
 			clickfirst.moveToElement_only(main_category, driver);
 			
@@ -88,15 +76,10 @@ public class TestAllenSollyInfo {
                 
 				clickfirst.clickOnProduct(driver);
 				
-				/*List<WebElement> similar_product_widget = driver.findElements(By.xpath("/html/body/section/div[2]/div/div"));
-				WebDriverWait wait = new WebDriverWait(driver,10);
-				wait.until(ExpectedConditions.visibilityOfAllElements(similar_product_widget));*/
-				
 				Thread.sleep(3000);
+				element = driver.findElement(By.className("allen_solly_vertical_container"));
+				checkStatus.checkStatusAndTakeScreenshot(driver, folderName, mainCategoryName, prodCategoryName, element);
 				
-				scrshot = new takeScreenShot();
-				scrshot.captureScreenShot(driver,folderName,mainCategoryName,prodCategoryName);
-
 				j++;
 
 				driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div[1]/div[2]/div[1]/a/img")).click();
@@ -120,25 +103,16 @@ public class TestAllenSollyInfo {
 				
 				clickfirst.clickOnProduct(driver);
 				
-				/*List<WebElement> similar_product_widget = driver.findElements(By.xpath("/html/body/section/div[2]/div/div"));
-				WebDriverWait wait = new WebDriverWait(driver,10);
-				wait.until(ExpectedConditions.visibilityOfAllElements(similar_product_widget));*/
-				
 				Thread.sleep(3000);
 				
-				scrshot = new takeScreenShot();
-				scrshot.captureScreenShot(driver,folderName,mainCategoryName,prodCategoryName);
+				element = driver.findElement(By.className("allen_solly_vertical_container"));
+				checkStatus.checkStatusAndTakeScreenshot(driver, folderName, mainCategoryName, prodCategoryName, element);
 				
-
 				driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div[1]/div[2]/div[1]/a/img")).click();
-
-//				WebElement main_category1= driver.findElement(By.xpath(".//*[@id='nav-bar']/li[5]/a"));
-//				clickfirst.moveToElement_only(main_category1, driver);
 				driver.findElement(By.xpath(".//*[@id='nav-bar']/li[5]/a")).click();
 				z++;
 				}
 				catch(Exception e){
-					
 					i++;
 					driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/a")).click();
 				}
@@ -148,10 +122,6 @@ public class TestAllenSollyInfo {
 			
 			for(int y=1;y<=sub_categ_div.size(); y++) {
 				
-				
-				
-				
-				
 				try {
 				if(driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/div/div/div["+x+"]/div["+y+"]/div/img")).isDisplayed()) {
 					
@@ -160,7 +130,7 @@ public class TestAllenSollyInfo {
 				}
 				}
 				catch(Exception e) {
-					e.printStackTrace();
+					System.out.println("Element not found");
 				}
 				
 				
@@ -172,18 +142,12 @@ public class TestAllenSollyInfo {
 						String prodCategoryName = clickfirst.getCategoryName(product_category);
 						
 						clickfirst.moveToElementandClick(main_category1, product_category, driver);
-						
-	                    
 						clickfirst.clickOnProduct(driver);
-						
-						/*List<WebElement> similar_product_widget = driver.findElements(By.xpath("/html/body/section/div[2]/div/div"));
-						WebDriverWait wait = new WebDriverWait(driver,10);
-						wait.until(ExpectedConditions.visibilityOfAllElements(similar_product_widget));*/
 						
 						Thread.sleep(3000);
 						
-						scrshot = new takeScreenShot();
-						scrshot.captureScreenShot(driver,folderName,mainCategoryName,prodCategoryName);
+						element = driver.findElement(By.className("allen_solly_vertical_container"));
+						checkStatus.checkStatusAndTakeScreenshot(driver, folderName, mainCategoryName, prodCategoryName, element);
 		
 						j++;
 	

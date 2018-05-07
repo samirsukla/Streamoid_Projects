@@ -12,15 +12,19 @@ public class takeScreenShot {
 	static getSystemDate getDate;
 	static CreateFolder createFolder;
 	
-	public void captureScreenShot(WebDriver driver,String folderName, String mainCat, String prodCat) throws IOException {
+	public void captureScreenShot(WebDriver driver,String folderName, String mainCat, String prodCat,String status) throws IOException {
 		String folderPath = "/home/streamoid/Desktop/Samir_Streamoid/Selenium_Setup/Eclipse_program/My First Project/JS-SDK-Test/Output/";
 		getDate = new getSystemDate();
 		createFolder = new CreateFolder();
 		String date = getDate.getPresentDate();
 		createFolder.createDirectory(folderName, date);
 		File scrfile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		
-		FileUtils.copyFile(scrfile,new File(folderPath+folderName+"/"+date+"/"+mainCat+"_"+prodCat+".png"));
+		if(status.equals("passed")){
+		FileUtils.copyFile(scrfile,new File(folderPath+folderName+"/"+date+"/"+"PASSED"+"/"+mainCat+"_"+prodCat+".png"));
+	}
+		else {
+			FileUtils.copyFile(scrfile,new File(folderPath+folderName+"/"+date+"/"+"FAILED"+"/"+mainCat+"_"+prodCat+".png"));
+		}
 
 		
 	}

@@ -33,7 +33,7 @@ public class TestGlobusFashionInfo {
 		
 		System.setProperty("webdriver.gecko.driver", "/home/streamoid/geckodriver");
 		driver = new FirefoxDriver();
-//		driver.manage().window().maximize();
+		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		props = new Properties();
 		finput = new FileInputStream("src/test/resources/URLInfo.properties");
@@ -63,7 +63,7 @@ public class TestGlobusFashionInfo {
 			try {
 				while(driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[2]/ul/li["+i+"]/div/div[1]/ul/li["+y+"]/div/div/ul/li["+j+"]/a/span")).isDisplayed()) {
 					
-					//WebElement main_Category = driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[2]/ul/li["+i+"]/a/span"));
+					WebElement main_Category = driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[2]/ul/li["+i+"]/a/span"));
 					WebElement product_category1 = driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[2]/ul/li["+i+"]/div/div[1]/ul/li["+y+"]/div/div/ul/li["+j+"]/a/span"));
 					String prodCategory = clickfirst.getCategoryName(product_category1);
 					
