@@ -81,7 +81,7 @@ public class TestAllenSollyInfo {
 				
 				clickfirst.moveToElementandClick(main_category1, product_category, driver);
 				
-				WebElement first_element_link = driver.findElement(By.xpath("html/body/div[3]/div[2]/div[2]/div/div[6]/div/div/div[1]/div"));
+				WebElement first_element_link = driver.findElement(By.xpath("/html/body/div[3]/div[2]/div[2]/div/div[6]/div/div/div[1]/div"));
 				product_id = first_element_link.getAttribute("id").replaceAll("product_wrap_", "");
                 
 				clickfirst.clickOnAllenSollyProduct(driver);
@@ -90,7 +90,7 @@ public class TestAllenSollyInfo {
 				
 				similar_widget = driver.findElement(By.className("allen_solly_vertical_container"));
 				List<String> similar_product_id = checkProducts.similarProducts(product_id,"allen_solly");
-				boolean isDisplaying = checkGUI.getIdsFromGUI(similar_product_id,driver);
+				boolean isDisplaying = checkGUI.getIdsFromGUIforAllenSolly(similar_product_id,driver);
 				
 				
 				
@@ -118,7 +118,7 @@ public class TestAllenSollyInfo {
 				String prodCategoryName = driver.findElement(By.xpath(".//*[@id='nav-bar']/li[5]/div/div/div["+z+"]/div/a/div/span")).getText();
 				driver.findElement(By.xpath(".//*[@id='nav-bar']/li[5]/div/div/div["+z+"]/div/a/div")).click();
 				
-				WebElement first_element_link = driver.findElement(By.xpath("html/body/div[3]/div[2]/div[2]/div/div[6]/div/div/div[1]/div"));
+				WebElement first_element_link = driver.findElement(By.xpath("/html/body/div[3]/div[2]/div[2]/div/div[6]/div/div/div[1]/div"));
 				product_id = first_element_link.getAttribute("id").replaceAll("product_wrap_", "");
 				
 				clickfirst.clickOnAllenSollyProduct(driver);
@@ -127,7 +127,7 @@ public class TestAllenSollyInfo {
 				
 				similar_widget = driver.findElement(By.className("allen_solly_vertical_container"));
 				List<String> similar_product_id = checkProducts.similarProducts(product_id,"allen_solly");
-				boolean isDisplaying = checkGUI.getIdsFromGUI(similar_product_id,driver);
+				boolean isDisplaying = checkGUI.getIdsFromGUIforAllenSolly(similar_product_id,driver);
 				
 				
 				
@@ -169,7 +169,7 @@ public class TestAllenSollyInfo {
 						
 						clickfirst.moveToElementandClick(main_category1, product_category, driver);
 						
-						WebElement first_element_link = driver.findElement(By.xpath("html/body/div[3]/div[2]/div[2]/div/div[6]/div/div/div[1]/div"));
+						WebElement first_element_link = driver.findElement(By.xpath("/html/body/div[3]/div[2]/div[2]/div/div[6]/div/div/div[1]/div"));
 						product_id = first_element_link.getAttribute("id").replaceAll("product_wrap_", "");
 						
 						clickfirst.clickOnAllenSollyProduct(driver);
@@ -178,7 +178,7 @@ public class TestAllenSollyInfo {
 						
 						similar_widget = driver.findElement(By.className("allen_solly_vertical_container"));
 						List<String> similar_product_id = checkProducts.similarProducts(product_id,"allen_solly");
-						boolean isDisplaying = checkGUI.getIdsFromGUI(similar_product_id,driver);
+						boolean isDisplaying = checkGUI.getIdsFromGUIforAllenSolly(similar_product_id,driver);
 						
 						
 						

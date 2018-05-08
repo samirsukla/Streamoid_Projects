@@ -13,7 +13,9 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.services.utility.CheckWidgetPresentStatus;
+import com.services.utility.GUICheckForSimilarProducts;
 import com.services.utility.InitialSetup;
+import com.services.utility.RestAPICheckForSimilarProducts;
 import com.services.utility.clickonFirstProduct;
 
 public class TestGlobusFashionInfo {
@@ -28,6 +30,11 @@ public class TestGlobusFashionInfo {
 	static WebElement widgetElement;
 	static CheckWidgetPresentStatus checkStatus;
 	static InitialSetup initSet;
+	static String status;
+	static WebElement similar_widget ;
+	static String product_id;
+	static RestAPICheckForSimilarProducts checkProducts;
+	static GUICheckForSimilarProducts checkGUI;
 	
 	
 	@BeforeClass
@@ -39,6 +46,8 @@ public class TestGlobusFashionInfo {
 		className = this.getClass().getSimpleName();
 		folderName = className.replace("Test", " ").replace("Info", " ").trim();
 		checkStatus = new CheckWidgetPresentStatus();
+		checkProducts = new RestAPICheckForSimilarProducts();
+		checkGUI = new GUICheckForSimilarProducts();
 		
 	}
   @Test
@@ -68,18 +77,26 @@ public class TestGlobusFashionInfo {
 					
 					clickfirst.moveToElementandClick(main_category1, product_category1, driver);
 					
-//                    WebDriverWait wait = new WebDriverWait(driver, 5);
-//                    wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[1]/div/div/div[2]/div[2]/ul/li[1]/div/div[1]/ul/li[1]/div/div/ul/li[1]/a/span")));
-				    clickfirst.clickOnGlobusProduct(driver);
+					WebElement first_element_link = driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[2]/div[6]/div[5]/ul/li[1]/div[1]/button"));
+					product_id = first_element_link.getAttribute("sku");
+					
+					
+			    clickfirst.clickOnGlobusProduct(driver);
 					
 				
 					
 				    Thread.sleep(2000);
 					
 					((JavascriptExecutor) driver).executeScript("window.scrollBy(0,500)"); 
-					widgetElement = driver.findElement(By.className("globus_container"));
-					checkStatus.checkStatusAndTakeScreenshot(driver, folderName, mainCategoryName, prodCategoryName, widgetElement);
 					
+					similar_widget = driver.findElement(By.className("globus_container"));
+					List<String> similar_product_id = checkProducts.similarProducts(product_id,"globus");
+					boolean isDisplaying = checkGUI.getIdsFromGUIforGlobusFashion(similar_product_id,driver);
+					
+					
+					
+					checkStatus.checkStatusAndTakeScreenshot(driver, folderName, mainCategoryName, prodCategoryName, similar_widget,
+							product_id,isDisplaying);
 					
 
 
