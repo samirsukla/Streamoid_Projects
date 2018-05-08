@@ -10,17 +10,17 @@ public class CheckWidgetPresentStatus {
 	
 	
 	public void checkStatusAndTakeScreenshot(WebDriver driver,String folderName,String mainCategoryName, String 
-			prodCategoryName,WebElement e) throws IOException{
+			prodCategoryName,WebElement e,String product_id,boolean isDisplaying) throws IOException{
 		takeScreenShot scrshot;
 		String status ="";
-		if(driver.findElement(By.className("allen_solly_vertical_container")).isDisplayed()) {
+		if(driver.findElement(By.className("allen_solly_vertical_container")).isDisplayed() && isDisplaying== true) {
 			status = "passed";
 			scrshot = new takeScreenShot();
-			scrshot.captureScreenShot(driver,folderName,mainCategoryName,prodCategoryName,status);
+			scrshot.captureScreenShot(driver,folderName,mainCategoryName,prodCategoryName,status,product_id);
 		}else {
 			status = "failed";
 			scrshot = new takeScreenShot();
-			scrshot.captureScreenShot(driver,folderName,mainCategoryName,prodCategoryName,status);
+			scrshot.captureScreenShot(driver,folderName,mainCategoryName,prodCategoryName,status,product_id);
 		}
 	}
 }

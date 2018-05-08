@@ -3,7 +3,9 @@ package com.services.test;
 import org.testng.annotations.Test;
 
 import com.services.utility.CheckWidgetPresentStatus;
+import com.services.utility.GUICheckForSimilarProducts;
 import com.services.utility.InitialSetup;
+import com.services.utility.RestAPICheckForSimilarProducts;
 import com.services.utility.clickonFirstProduct;
 import com.services.utility.takeScreenShot;
 
@@ -20,16 +22,18 @@ public class TestAllenSollyInfo {
 	public WebDriver driver;
 	static clickonFirstProduct clickfirst;
 	static takeScreenShot scrshot;
+	static InitialSetup initSet;
+	static CheckWidgetPresentStatus checkStatus;
+	static RestAPICheckForSimilarProducts checkProducts;
+	static GUICheckForSimilarProducts checkGUI;
 	
 	static String className;
 	static String folderName;
 	static String mainCategoryName;
-	static InitialSetup initSet;
-	static int z=1;
 	static String status;
-	static CheckWidgetPresentStatus checkStatus;
-	static WebElement element ;
-	
+	static WebElement similar_widget ;
+	static String product_id;
+	static int z=1;
 	@BeforeClass
 	public void setUp() throws IOException {
 		initSet = new InitialSetup();
@@ -38,7 +42,10 @@ public class TestAllenSollyInfo {
 		className = this.getClass().getSimpleName();
 		folderName = className.replace("Test", " ").replace("Info", " ").trim();
 		checkStatus = new CheckWidgetPresentStatus();
+		checkProducts = new RestAPICheckForSimilarProducts();
+		checkGUI = new GUICheckForSimilarProducts();
 		}
+	
 	@Test
 	public void testAllenSolly() throws IOException, InterruptedException {
 		
@@ -73,12 +80,22 @@ public class TestAllenSollyInfo {
 				String prodCategoryName = clickfirst.getCategoryName(product_category);
 				
 				clickfirst.moveToElementandClick(main_category1, product_category, driver);
+				
+				WebElement first_element_link = driver.findElement(By.xpath("html/body/div[3]/div[2]/div[2]/div/div[6]/div/div/div[1]/div"));
+				product_id = first_element_link.getAttribute("id").replaceAll("product_wrap_", "");
                 
-				clickfirst.clickOnProduct(driver);
+				clickfirst.clickOnAllenSollyProduct(driver);
 				
 				Thread.sleep(3000);
-				element = driver.findElement(By.className("allen_solly_vertical_container"));
-				checkStatus.checkStatusAndTakeScreenshot(driver, folderName, mainCategoryName, prodCategoryName, element);
+				
+				similar_widget = driver.findElement(By.className("allen_solly_vertical_container"));
+				List<String> similar_product_id = checkProducts.similarProducts(product_id,"allen_solly");
+				boolean isDisplaying = checkGUI.getIdsFromGUI(similar_product_id,driver);
+				
+				
+				
+				checkStatus.checkStatusAndTakeScreenshot(driver, folderName, mainCategoryName, prodCategoryName, similar_widget,
+						product_id,isDisplaying);
 				
 				j++;
 
@@ -101,12 +118,21 @@ public class TestAllenSollyInfo {
 				String prodCategoryName = driver.findElement(By.xpath(".//*[@id='nav-bar']/li[5]/div/div/div["+z+"]/div/a/div/span")).getText();
 				driver.findElement(By.xpath(".//*[@id='nav-bar']/li[5]/div/div/div["+z+"]/div/a/div")).click();
 				
-				clickfirst.clickOnProduct(driver);
+				WebElement first_element_link = driver.findElement(By.xpath("html/body/div[3]/div[2]/div[2]/div/div[6]/div/div/div[1]/div"));
+				product_id = first_element_link.getAttribute("id").replaceAll("product_wrap_", "");
+				
+				clickfirst.clickOnAllenSollyProduct(driver);
 				
 				Thread.sleep(3000);
 				
-				element = driver.findElement(By.className("allen_solly_vertical_container"));
-				checkStatus.checkStatusAndTakeScreenshot(driver, folderName, mainCategoryName, prodCategoryName, element);
+				similar_widget = driver.findElement(By.className("allen_solly_vertical_container"));
+				List<String> similar_product_id = checkProducts.similarProducts(product_id,"allen_solly");
+				boolean isDisplaying = checkGUI.getIdsFromGUI(similar_product_id,driver);
+				
+				
+				
+				checkStatus.checkStatusAndTakeScreenshot(driver, folderName, mainCategoryName, prodCategoryName, similar_widget,
+						product_id,isDisplaying);
 				
 				driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div[1]/div[2]/div[1]/a/img")).click();
 				driver.findElement(By.xpath(".//*[@id='nav-bar']/li[5]/a")).click();
@@ -142,12 +168,22 @@ public class TestAllenSollyInfo {
 						String prodCategoryName = clickfirst.getCategoryName(product_category);
 						
 						clickfirst.moveToElementandClick(main_category1, product_category, driver);
-						clickfirst.clickOnProduct(driver);
+						
+						WebElement first_element_link = driver.findElement(By.xpath("html/body/div[3]/div[2]/div[2]/div/div[6]/div/div/div[1]/div"));
+						product_id = first_element_link.getAttribute("id").replaceAll("product_wrap_", "");
+						
+						clickfirst.clickOnAllenSollyProduct(driver);
 						
 						Thread.sleep(3000);
 						
-						element = driver.findElement(By.className("allen_solly_vertical_container"));
-						checkStatus.checkStatusAndTakeScreenshot(driver, folderName, mainCategoryName, prodCategoryName, element);
+						similar_widget = driver.findElement(By.className("allen_solly_vertical_container"));
+						List<String> similar_product_id = checkProducts.similarProducts(product_id,"allen_solly");
+						boolean isDisplaying = checkGUI.getIdsFromGUI(similar_product_id,driver);
+						
+						
+						
+						checkStatus.checkStatusAndTakeScreenshot(driver, folderName, mainCategoryName, prodCategoryName, similar_widget,
+								product_id,isDisplaying);
 		
 						j++;
 	

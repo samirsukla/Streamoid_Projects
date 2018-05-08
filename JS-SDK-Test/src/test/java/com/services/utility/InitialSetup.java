@@ -17,7 +17,7 @@ public class InitialSetup {
 		
 		System.setProperty("webdriver.gecko.driver", "/home/streamoid/geckodriver");
 		driver = new FirefoxDriver();
-		driver.manage().window().maximize();;
+		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		props = new Properties();
 		finput = new FileInputStream("src/test/resources/URLInfo.properties");
