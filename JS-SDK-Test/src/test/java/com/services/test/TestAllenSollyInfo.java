@@ -14,19 +14,14 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
 public class TestAllenSollyInfo {
 	
 	public WebDriver driver;
-	static clickonFirstProduct clickfirst;
-	static takeScreenShot scrshot;
-	static InitialSetup initSet;
-	static CheckWidgetPresentStatus checkStatus;
-	static RestAPICheckForSimilarProducts checkProducts;
-	static GUICheckForSimilarProducts checkGUI;
-	
 	static String className;
 	static String folderName;
 	static String mainCategoryName;
@@ -34,6 +29,15 @@ public class TestAllenSollyInfo {
 	static WebElement similar_widget ;
 	static String product_id;
 	static int z=1;
+	
+	static clickonFirstProduct clickfirst;
+	static takeScreenShot scrshot;
+	static InitialSetup initSet;
+	static CheckWidgetPresentStatus checkStatus;
+	static RestAPICheckForSimilarProducts checkProducts;
+	static GUICheckForSimilarProducts checkGUI;
+	
+	
 	@BeforeClass
 	public void setUp() throws IOException {
 		initSet = new InitialSetup();
@@ -81,6 +85,10 @@ public class TestAllenSollyInfo {
 				
 				clickfirst.moveToElementandClick(main_category1, product_category, driver);
 				
+				WebDriverWait wait = new WebDriverWait(driver,10);
+				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[3]/div[2]/div[2]/div/div[6]/div/div/div[1]/div/div[1]/div[1]/div/div/ul/li[2]/a/div/img")));
+			
+				
 				WebElement first_element_link = driver.findElement(By.xpath("/html/body/div[3]/div[2]/div[2]/div/div[6]/div/div/div[1]/div"));
 				product_id = first_element_link.getAttribute("id").replaceAll("product_wrap_", "");
                 
@@ -109,6 +117,8 @@ public class TestAllenSollyInfo {
 					
 					j=1;
 					x++;
+					
+					
 				}
 			}
 			
@@ -117,6 +127,10 @@ public class TestAllenSollyInfo {
 					
 				String prodCategoryName = driver.findElement(By.xpath(".//*[@id='nav-bar']/li[5]/div/div/div["+z+"]/div/a/div/span")).getText();
 				driver.findElement(By.xpath(".//*[@id='nav-bar']/li[5]/div/div/div["+z+"]/div/a/div")).click();
+				
+				WebDriverWait wait = new WebDriverWait(driver,10);
+				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[3]/div[2]/div[2]/div/div[6]/div/div/div[1]/div/div[1]/div[1]/div/div/ul/li[2]/a/div/img")));
+			
 				
 				WebElement first_element_link = driver.findElement(By.xpath("/html/body/div[3]/div[2]/div[2]/div/div[6]/div/div/div[1]/div"));
 				product_id = first_element_link.getAttribute("id").replaceAll("product_wrap_", "");
@@ -169,6 +183,10 @@ public class TestAllenSollyInfo {
 						
 						clickfirst.moveToElementandClick(main_category1, product_category, driver);
 						
+						WebDriverWait wait = new WebDriverWait(driver,10);
+						wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[3]/div[2]/div[2]/div/div[6]/div/div/div[1]/div/div[1]/div[1]/div/div/ul/li[2]/a/div/img")));
+					
+						
 						WebElement first_element_link = driver.findElement(By.xpath("/html/body/div[3]/div[2]/div[2]/div/div[6]/div/div/div[1]/div"));
 						product_id = first_element_link.getAttribute("id").replaceAll("product_wrap_", "");
 						
@@ -197,6 +215,7 @@ public class TestAllenSollyInfo {
 				catch(Exception e) {
 					
 					j=1;
+					
 					
 				}
 					

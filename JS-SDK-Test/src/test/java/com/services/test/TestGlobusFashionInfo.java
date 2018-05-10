@@ -8,6 +8,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -25,14 +27,15 @@ public class TestGlobusFashionInfo {
 	static FileInputStream finput;
 	static String className;
 	static String folderName;
-	static clickonFirstProduct clickfirst;
 	static String mainCategoryName;
 	static WebElement widgetElement;
-	static CheckWidgetPresentStatus checkStatus;
-	static InitialSetup initSet;
 	static String status;
 	static WebElement similar_widget ;
 	static String product_id;
+	
+	static CheckWidgetPresentStatus checkStatus;
+	static InitialSetup initSet;
+	static clickonFirstProduct clickfirst;
 	static RestAPICheckForSimilarProducts checkProducts;
 	static GUICheckForSimilarProducts checkGUI;
 	
@@ -77,6 +80,10 @@ public class TestGlobusFashionInfo {
 					
 					clickfirst.moveToElementandClick(main_category1, product_category1, driver);
 					
+					WebDriverWait wait = new WebDriverWait(driver,10);
+					wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[2]/div[6]/div[5]/ul/li[1]/a/img")));
+					
+					
 					WebElement first_element_link = driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[2]/div[6]/div[5]/ul/li[1]/div[1]/button"));
 					product_id = first_element_link.getAttribute("sku");
 					
@@ -112,6 +119,9 @@ public class TestGlobusFashionInfo {
 			catch(Exception e) {
 				
 				j=1;
+				driver.findElement(By.xpath("/html/body/div[1]/div/div/div[1]/div[2]/div/div[3]/div/h1/a/img")).click();
+				WebElement main_category2 = driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[2]/ul/li["+i+"]/a/span"));
+				clickfirst.moveToElement_only(main_category2, driver);
 				
 			}
 		}
