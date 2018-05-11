@@ -96,14 +96,26 @@ public class TestGlobusFashionInfo {
 					
 					((JavascriptExecutor) driver).executeScript("window.scrollBy(0,500)"); 
 					
-					similar_widget = driver.findElement(By.className("globus_container"));
-					List<String> similar_product_id = checkProducts.similarProducts(product_id,"globus");
-					boolean isDisplaying = checkGUI.getIdsFromGUIforGlobusFashion(similar_product_id,driver);
 					
 					
-					
-					checkStatus.checkStatusAndTakeScreenshot(driver, folderName, mainCategoryName, prodCategoryName, similar_widget,
-							product_id,isDisplaying);
+					if(driver.findElement(By.className("globus_container")).isDisplayed())
+					{
+						status = "passed";
+						List<String> similar_product_id = checkProducts.similarProducts(product_id,"globus");
+						boolean isDisplaying = checkGUI.getIdsFromGUIforVanHeusen(similar_product_id,driver);
+						
+						checkStatus.checkStatusAndTakeScreenshot(driver, folderName, mainCategoryName, prodCategoryName, status,
+								product_id,isDisplaying);
+					}
+					else
+					{
+						status = "failed";
+						boolean isDisplaying = false;
+						
+						checkStatus.checkStatusAndTakeScreenshot(driver, folderName, mainCategoryName, prodCategoryName, status,
+								product_id,isDisplaying);
+						
+					}
 					
 
 

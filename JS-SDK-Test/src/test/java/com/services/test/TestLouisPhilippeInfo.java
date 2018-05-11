@@ -29,6 +29,7 @@ public class TestLouisPhilippeInfo {
 	static String folderName;
 	static String mainCategoryName;
 	static WebElement widgetElement;
+	static String status;
 	static String product_id;
 	static WebElement similar_widget ;
 	
@@ -62,7 +63,7 @@ public class TestLouisPhilippeInfo {
 		if(driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div[1]/div[3]/div[1]/ul/li[4]/div/img")).isDisplayed())
 		{
 
-		driver.findElement(By.xpath("html/body/div[2]/div/div/div/div[1]/div[3]/div[1]/ul/li[4]/div/div/a[2]")).click();
+		driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div[1]/div[3]/div[1]/ul/li[4]/div/div/a[2]")).click();
 
 		}
 	  
@@ -101,14 +102,25 @@ public class TestLouisPhilippeInfo {
 					
 					Thread.sleep(3000);
 					
-					similar_widget = driver.findElement(By.className("louis_philippe_vertical_container"));
-					List<String> similar_product_id = checkProducts.similarProducts(product_id,"louis_philippe");
-					boolean isDisplaying = checkGUI.getIdsFromGUIforLouisPhilippe(similar_product_id,driver);
+					if(driver.findElement(By.className("louis_philippe_vertical_container")).isDisplayed())
+					{
+						status = "passed";
+						List<String> similar_product_id = checkProducts.similarProducts(product_id,"louis_philippe");
+						boolean isDisplaying = checkGUI.getIdsFromGUIforLouisPhilippe(similar_product_id,driver);
+						
+						checkStatus.checkStatusAndTakeScreenshot(driver, folderName, mainCategoryName, prodCategoryName, status,
+								product_id,isDisplaying);
+					}
+					else
+					{
+						status = "failed";
+						boolean isDisplaying = false;
+						
+						checkStatus.checkStatusAndTakeScreenshot(driver, folderName, mainCategoryName, prodCategoryName, status,
+								product_id,isDisplaying);
+						
+					}
 					
-					
-					
-					checkStatus.checkStatusAndTakeScreenshot(driver, folderName, mainCategoryName, prodCategoryName, similar_widget,
-							product_id,isDisplaying);
 					
 					j++;
 

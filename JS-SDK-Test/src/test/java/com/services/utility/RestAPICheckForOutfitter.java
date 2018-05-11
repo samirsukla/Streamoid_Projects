@@ -10,13 +10,14 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
-public class RestAPICheckForSimilarProducts {
+public class RestAPICheckForOutfitter {
 	
-	public List<String> similarProducts(String product_id,String clientName) throws Exception {
+	public List<String> outfitterProducts(String product_id,String clientName) throws Exception {
 		
 	
-		List<String> sim_prod_ids = new ArrayList<String>();
-		URL url = new URL("https://similar.service.streamoid.com/insecure/similar/"+clientName+"/"+product_id+"/normalized");
+		List<String> out_prod_ids = new ArrayList<String>();
+		URL url = new URL("https://outfitter.service.streamoid.com/insecure/outfitter/"+clientName+"/"+product_id+"/normalized");
+		
 		String inline="";
 		HttpURLConnection conn = (HttpURLConnection)url.openConnection();
 		conn.setRequestMethod("GET");
@@ -41,28 +42,32 @@ public class RestAPICheckForSimilarProducts {
 			
 			JSONArray jarr = (JSONArray) jobj.get("data");
 			
-			for(int j=0; j<jarr.size(); j++) {
+			
+			
 				
-				JSONObject jobj1 = (JSONObject) jarr.get(j);				
 				
-//				long similar_product_id = (Long)jobj1.get("product_id");
-//				sim_prod_ids.add(Long.toString(similar_product_id));
-				String similar_product_id = (jobj1.get("product_id")).toString();
-				sim_prod_ids.add(similar_product_id);
+				JSONArray jarr1 = (JSONArray) jarr.get(0);
+				
+				for(int j=0;j<jarr1.size();j++) {
+				JSONObject jobj2 = (JSONObject) jarr1.get(j);
+
+				String outfitter_product_id = (jobj2.get("product_id")).toString();
+				out_prod_ids.add(outfitter_product_id);
 				
 				
 				if(j==4) {
 					break;
 				}
+				}
 			}
+		
     
-    
-		}
-		//System.out.println(sim_prod_ids);
-		return sim_prod_ids;
+		
+		//System.out.println(out_prod_ids);
+		return out_prod_ids;
 
 		}
-	}		
-
+		
+}
 
 

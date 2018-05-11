@@ -70,7 +70,7 @@ public boolean getIdsFromGUIforLouisPhilippe(List<String> prodUsingApi ,WebDrive
 			
 		}
 		Collections.reverse(prodUsingUI);
-		//System.out.println(prodUsingUI);
+		
 		if(prodUsingApi.equals(prodUsingUI)) {
 			return true;
 		}else {
@@ -79,4 +79,68 @@ public boolean getIdsFromGUIforLouisPhilippe(List<String> prodUsingApi ,WebDrive
 		
 		
 	}
+public boolean getIdsFromGUIforVanHeusen(List<String> prodUsingApi ,WebDriver driver)  {
+	
+	
+	List<WebElement> similar_Ids=driver.findElements(By.xpath("/html/body/section/div[2]/div/div/div[2]/div/div[@class=\"vanheusen_vertical_section\"]/a"));
+	List<String> prodUsingUI = new ArrayList<String>();
+	
+	for(WebElement elem : similar_Ids) {
+		String id1 = elem.getAttribute("id");
+		prodUsingUI.add(id1);
+		
+	}
+	Collections.reverse(prodUsingUI);
+	
+	if(prodUsingApi.equals(prodUsingUI)) {
+		return true;
+	}else {
+		return false;
+	}
+	
+	
 }
+public boolean getIdsFromGUIforFabIndia(List<String> prodUsingApi ,WebDriver driver)  {
+	
+	
+	List<WebElement> outfitter_Ids=driver.findElements(By.xpath("/html/body/form/div[3]/center/div/div/center/div[1]/div[3]/div[2]/div[3]/div/div/div[1]/div[2]/div/div/div[@class=\"fabindia_india_container\"]/a"));
+	List<String> prodUsingUI = new ArrayList<String>();
+	
+	for(WebElement elem : outfitter_Ids) {
+		String id1 = elem.getAttribute("id");
+		prodUsingUI.add(id1);
+		
+	}
+	//Collections.reverse(prodUsingUI);
+	//System.out.println(prodUsingUI);
+	if(prodUsingApi.equals(prodUsingUI)) {
+		return true;
+	}else {
+		return false;
+	}
+	
+	
+}
+public boolean getIdsFromGUIforPeterEngland(List<String> prodUsingApi ,WebDriver driver)  {
+	
+	
+	List<WebElement> similar_Ids=driver.findElements(By.xpath("/html/body/div[3]/div/div[5]/div/div[@class=\"peter_england_container\"]/a"));
+	List<String> prodUsingUI = new ArrayList<String>();
+	
+	for(WebElement elem : similar_Ids) {
+		String id1 = elem.getAttribute("id");
+		prodUsingUI.add(id1);
+		
+	}
+	//Collections.reverse(prodUsingUI);
+	//System.out.println(prodUsingUI);
+	if(prodUsingApi.equals(prodUsingUI)) {
+		return true;
+	}else {
+		return false;
+	}
+	
+	
+}
+}
+
