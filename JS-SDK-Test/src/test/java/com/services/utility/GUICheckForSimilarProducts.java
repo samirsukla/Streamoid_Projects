@@ -142,5 +142,47 @@ public boolean getIdsFromGUIforPeterEngland(List<String> prodUsingApi ,WebDriver
 	
 	
 }
+public boolean getIdsFromGUIforPeople(List<String> prodUsingApi ,WebDriver driver)  {
+	
+	
+	List<WebElement> similar_Ids=driver.findElements(By.xpath("/html/body/section/div[2]/div/div/div[2]/div/div[@class=\"people_vertical_section\"]/a"));
+	List<String> prodUsingUI = new ArrayList<String>();
+	
+	for(WebElement elem : similar_Ids) {
+		String id1 = elem.getAttribute("id");
+		prodUsingUI.add(id1);
+		
+	}
+	//Collections.reverse(prodUsingUI);
+	//System.out.println(prodUsingUI);
+	if(prodUsingApi.equals(prodUsingUI)) {
+		return true;
+	}else {
+		return false;
+	}
+	
+	
+}
+public boolean getIdsFromGUIforPlanetFashion(List<String> prodUsingApi ,WebDriver driver)  {
+	
+	
+	List<WebElement> similar_Ids=driver.findElements(By.xpath("/html/body/section/div[2]/div/div/div[2]/div/div[@class=\"planet_fashion_vertical_section\"]/a"));
+	List<String> prodUsingUI = new ArrayList<String>();
+	
+	for(WebElement elem : similar_Ids) {
+		String id1 = elem.getAttribute("id");
+		prodUsingUI.add(id1);
+		
+	}
+	//Collections.reverse(prodUsingUI);
+	//System.out.println(prodUsingUI);
+	if(prodUsingApi.equals(prodUsingUI)) {
+		return true;
+	}else {
+		return false;
+	}
+	
+	
+}
 }
 

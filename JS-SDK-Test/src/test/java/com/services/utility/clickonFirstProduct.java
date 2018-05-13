@@ -46,6 +46,12 @@ public class clickonFirstProduct {
 		driver.findElement(By.xpath(product)).click();
 	}
 	
+	public void clickOnPeopleProduct(WebDriver driver) throws InterruptedException {
+		Thread.sleep(2000);
+		String product ="/html/body/div[3]/div[1]/div[2]/div/div[6]/div/div/div[1]/div/div[1]/div[1]/div/div/ul/li[2]/a/div/img";
+		driver.findElement(By.xpath(product)).click();
+		
+	}
 	public void moveToElementandClick(WebElement main_category , WebElement product_category , WebDriver driver) {
 		action = new Actions(driver);
 		action.moveToElement(main_category).moveToElement(product_category).click().build().perform();

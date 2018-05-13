@@ -72,7 +72,7 @@ public class TestPeterEnglandInfo {
 		int j=1;
 		List<WebElement> child_categ_div = driver.findElements(By.xpath(".//*[@id='nav-bar']/li[1]/div/div/div"));
 		
-		for(int x=2; x<=child_categ_div.size(); x++) {
+		for(int x=1; x<=child_categ_div.size(); x++) {
 			WebElement main_category = driver.findElement(By.xpath(".//*[@id='nav-bar']/li[1]/a"));
 			clickfirst.moveToElement_only(main_category, driver);
 			Thread.sleep(2000);
@@ -95,7 +95,7 @@ public class TestPeterEnglandInfo {
 				
 				clickfirst.clickOnPeterEnglandProduct(driver);
 				
-				Thread.sleep(3000);
+				Thread.sleep(2000);
 				
 				((JavascriptExecutor) driver).executeScript("window.scrollBy(0,2650)");
 				if(driver.findElement(By.cssSelector(".similar_product_view.recomdtn")).isDisplayed())
@@ -156,7 +156,7 @@ public class TestPeterEnglandInfo {
 						
 						clickfirst.clickOnPeterEnglandProduct(driver);
 						
-						Thread.sleep(3000);
+						Thread.sleep(2000);
 						
 						((JavascriptExecutor) driver).executeScript("window.scrollBy(0,2650)");
 						if(driver.findElement(By.cssSelector(".similar_product_view.recomdtn")).isDisplayed())
@@ -191,7 +191,7 @@ public class TestPeterEnglandInfo {
 				catch(Exception e) {
 					e.printStackTrace();
 					j=1;
-					driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/a/img")).click();
+					//driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/a/img")).click();
 					WebElement main_category2 = driver.findElement(By.xpath(".//*[@id='nav-bar']/li[1]/a"));
 					clickfirst.moveToElement_only(main_category2, driver);
 					

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="3" guice-stage="DEVELOPMENT" name="Failed suite [Parallel Test Run]" parallel="classes">
+  <test name="TestClientInfo(failed)" parallel="classes">
+    <classes>
+      <class name="com.services.test.TestPeterEnglandInfo">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.services.test.TestPeterEnglandInfo -->
+      <class name="com.services.test.TestFabIndiaInfo">
+        <methods>
+          <include name="tearDown"/>
+          <include name="testFabIndia"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.services.test.TestFabIndiaInfo -->
+      <class name="com.services.test.TestLouisPhilippeInfo">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="testLouisPhilippe"/>
+        </methods>
+      </class> <!-- com.services.test.TestLouisPhilippeInfo -->
+      <class name="com.services.test.TestGlobusFashionInfo">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.services.test.TestGlobusFashionInfo -->
+      <class name="com.services.test.TestAllenSollyInfo">
+        <methods>
+          <include name="testAllenSolly"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.services.test.TestAllenSollyInfo -->
+    </classes>
+  </test> <!-- TestClientInfo(failed) -->
+</suite> <!-- Failed suite [Parallel Test Run] -->

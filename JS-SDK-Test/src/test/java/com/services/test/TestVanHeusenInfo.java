@@ -12,6 +12,7 @@ import com.services.utility.takeScreenShot;
 import java.io.IOException;
 import java.util.List;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -64,7 +65,7 @@ public class TestVanHeusenInfo {
 		}
 		
 
-		for(int i=2;i<=4; i++) {
+		for(int i=1;i<=4; i++) {
 		
 		mainCategoryName = driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/a")).getText();
 		
@@ -77,10 +78,11 @@ public class TestVanHeusenInfo {
 			clickfirst.moveToElement_only(main_category, driver);
 			Thread.sleep(2000);
 			
-			
-			while(i==1) {
+			try
+			{
+			while(i==1 && x!=3 ) {
 				
-				try {
+				
 				List<WebElement> sub_categ_div = driver.findElements(By.xpath(".//*[@id='nav-bar']/li["+i+"]/div/div/div["+x+"]/div"));
 				
 				for(int y=1;y<=sub_categ_div.size();y++) {
@@ -103,6 +105,25 @@ public class TestVanHeusenInfo {
 						
 						Thread.sleep(3000);
 						
+						if(driver.findElement(By.className("vanheusen_vertical_container")).isDisplayed())
+						{
+							status = "passed";
+							List<String> similar_product_id = checkProducts.similarProducts(product_id,"vanheusen");
+							boolean isDisplaying = checkGUI.getIdsFromGUIforVanHeusen(similar_product_id,driver);
+							
+							checkStatus.checkStatusAndTakeScreenshot(driver, folderName, mainCategoryName, prodCategoryName, status,
+									product_id,isDisplaying);
+						}
+						else
+						{
+							status = "failed";
+							boolean isDisplaying = false;
+							
+							checkStatus.checkStatusAndTakeScreenshot(driver, folderName, mainCategoryName, prodCategoryName, status,
+									product_id,isDisplaying);
+							
+						}
+						
 						j++;
 
 						driver.findElement(By.xpath("/html/body/div[2]/div/div/div[2]/div[1]/a/img")).click();
@@ -110,21 +131,22 @@ public class TestVanHeusenInfo {
 						clickfirst.moveToElement_only(main_category2, driver);
 						}
 					}
-					catch(Exception e) {
+					catch(NoSuchElementException e) {
 						j=1;
+						//driver.findElement(By.xpath("/html/body/div[2]/div/div/div[2]/div[1]/a/img")).click();
+						WebElement main_category2 = driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/a"));
+						clickfirst.moveToElement_only(main_category2, driver);
 					}
 						
 					}
 				}
-				
-				
-				}	
-			catch(Exception e) {
 				x++;
-			}
-			break;	
-			}	
-			
+				
+					}
+		}catch(Exception e) {
+			i++;
+			mainCategoryName = driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/a")).getText();
+		}
 			if(i==4) {
 				try {
 				while(driver.findElement(By.xpath(".//*[@id='nav-bar']/li[4]/div/div/div[2]/ul/li["+j+"]/a")).isDisplayed()) {
@@ -241,7 +263,9 @@ public class TestVanHeusenInfo {
 					
 				}
 			}
-		}
+
+			
+					}
 		
 		}
 		
