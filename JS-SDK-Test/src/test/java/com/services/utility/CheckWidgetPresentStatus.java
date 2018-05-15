@@ -2,6 +2,7 @@ package com.services.utility;
 
 import java.io.IOException;
 
+
 import org.openqa.selenium.WebDriver;
 
 public class CheckWidgetPresentStatus {
@@ -13,12 +14,13 @@ public class CheckWidgetPresentStatus {
 		
 		if(status=="passed" && isDisplaying== true) {
 			
+			String folderStatus = "PASSED";
 			scrshot = new takeScreenShot();
-			scrshot.captureScreenShot(driver,folderName,mainCategoryName,prodCategoryName,status,product_id);
+			scrshot.captureScreenShot(driver,folderName,mainCategoryName,prodCategoryName,folderStatus,product_id);
 		}else {
-			
+			String folderStatus = "FAILED";
 			scrshot = new takeScreenShot();
-			scrshot.captureScreenShot(driver,folderName,mainCategoryName,prodCategoryName,status,product_id);
+			scrshot.captureScreenShot(driver,folderName,mainCategoryName,prodCategoryName,folderStatus,product_id);
 		}
 	}
 	

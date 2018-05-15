@@ -81,8 +81,7 @@ public class TestLouisPhilippeInfo {
 			List<WebElement> child_category = driver.findElements(By.xpath(".//*[@id='nav-bar']/li["+i+"]/div/div/div["+x+"]/ul"));
 			for(int y=1;y<=child_category.size();y++) {
 
-			//List<WebElement> sub_category = driver.findElements(By.xpath(".//*[@id='nav-bar']/li["+i+"]/div/div/div["+y+"]/ul["+x+"]/li/a"));
-			
+						
 			try {
 				while(driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/div/div/div["+x+"]/ul["+y+"]/li["+j+"]/a")).isDisplayed()) {
 					

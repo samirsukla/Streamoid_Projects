@@ -2,34 +2,32 @@
 <testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="292751" started-at="2018-05-14T11:51:14Z" finished-at="2018-05-14T11:56:06Z">
+  <suite name="Default suite" duration-ms="17099" started-at="2018-05-15T07:38:50Z" finished-at="2018-05-15T07:39:08Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="292751" started-at="2018-05-14T11:51:14Z" finished-at="2018-05-14T11:56:06Z">
-      <class name="com.services.test.TestRaymondNextInfo">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:com.services.test.TestRaymondNextInfo@2b98378d]" name="setUp" is-config="true" duration-ms="4752" started-at="2018-05-14T17:21:14Z" finished-at="2018-05-14T17:21:18Z">
+    <test name="Default test" duration-ms="17099" started-at="2018-05-15T07:38:50Z" finished-at="2018-05-15T07:39:08Z">
+      <class name="com.services.test.TestPeopleInfo">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:com.services.test.TestPeopleInfo@3c130745]" name="setUp" is-config="true" duration-ms="4773" started-at="2018-05-15T13:08:50Z" finished-at="2018-05-15T13:08:55Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="FAIL" signature="testRaymondNext()[pri:0, instance:com.services.test.TestRaymondNextInfo@2b98378d]" name="testRaymondNext" duration-ms="287972" started-at="2018-05-14T17:21:18Z" finished-at="2018-05-14T17:26:06Z">
-          <exception class="org.openqa.selenium.SessionNotCreatedException">
+        <test-method status="FAIL" signature="testPeople()[pri:0, instance:com.services.test.TestPeopleInfo@3c130745]" name="testPeople" duration-ms="12271" started-at="2018-05-15T13:08:55Z" finished-at="2018-05-15T13:09:08Z">
+          <exception class="org.openqa.selenium.WebDriverException">
             <message>
-              <![CDATA[Tried to run command without establishing a connection
+              <![CDATA[Failed to decode response from marionette
 Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
 System info: host: 'streamoid-ThinkPad-T440s', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.13.0-41-generic', java.version: '1.8.0_171'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 55.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:processID: 12578, moz:profile: /tmp/rust_mozprofile.yv51Ec..., pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.13.0-41-generic, rotatable: false, specificationLevel: 0, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: 3c1f578c-06a0-45cc-8bc4-23611df41be6
-*** Element info: {Using=xpath, value=/html/body/div[1]/header/div/div/div[3]/div/div[1]/ul/li[1]/a}]]>
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 55.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:processID: 23559, moz:profile: /tmp/rust_mozprofile.0uA80a..., pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.13.0-41-generic, rotatable: false, specificationLevel: 0, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 985ac910-abac-4461-a065-4361f99b8512]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.SessionNotCreatedException: Tried to run command without establishing a connection
+              <![CDATA[org.openqa.selenium.WebDriverException: Failed to decode response from marionette
 Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
 System info: host: 'streamoid-ThinkPad-T440s', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.13.0-41-generic', java.version: '1.8.0_171'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 55.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:processID: 12578, moz:profile: /tmp/rust_mozprofile.yv51Ec..., pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.13.0-41-generic, rotatable: false, specificationLevel: 0, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: 3c1f578c-06a0-45cc-8bc4-23611df41be6
-*** Element info: {Using=xpath, value=/html/body/div[1]/header/div/div/div[3]/div/div[1]/ul/li[1]/a}
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 55.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:processID: 23559, moz:profile: /tmp/rust_mozprofile.0uA80a..., pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.13.0-41-generic, rotatable: false, specificationLevel: 0, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 985ac910-abac-4461-a065-4361f99b8512
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -40,11 +38,8 @@ Session ID: 3c1f578c-06a0-45cc-8bc4-23611df41be6
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:319)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:421)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:311)
-	at com.services.test.TestRaymondNextInfo.testRaymondNext(TestRaymondNextInfo.java:178)
+	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:273)
+	at com.services.test.TestPeopleInfo.testPeople(TestPeopleInfo.java:60)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -72,27 +67,27 @@ Session ID: 3c1f578c-06a0-45cc-8bc4-23611df41be6
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.SessionNotCreatedException -->
+          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testRaymondNext -->
-        <test-method status="FAIL" signature="tearDown()[pri:0, instance:com.services.test.TestRaymondNextInfo@2b98378d]" name="tearDown" is-config="true" duration-ms="0" started-at="2018-05-14T17:26:06Z" finished-at="2018-05-14T17:26:06Z">
+        </test-method> <!-- testPeople -->
+        <test-method status="FAIL" signature="tearDown()[pri:0, instance:com.services.test.TestPeopleInfo@3c130745]" name="tearDown" is-config="true" duration-ms="0" started-at="2018-05-15T13:09:08Z" finished-at="2018-05-15T13:09:08Z">
           <exception class="org.openqa.selenium.SessionNotCreatedException">
             <message>
               <![CDATA[Tried to run command without establishing a connection
 Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
 System info: host: 'streamoid-ThinkPad-T440s', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.13.0-41-generic', java.version: '1.8.0_171'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 55.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:processID: 12578, moz:profile: /tmp/rust_mozprofile.yv51Ec..., pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.13.0-41-generic, rotatable: false, specificationLevel: 0, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: 3c1f578c-06a0-45cc-8bc4-23611df41be6]]>
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 55.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:processID: 23559, moz:profile: /tmp/rust_mozprofile.0uA80a..., pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.13.0-41-generic, rotatable: false, specificationLevel: 0, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 985ac910-abac-4461-a065-4361f99b8512]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.SessionNotCreatedException: Tried to run command without establishing a connection
 Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
 System info: host: 'streamoid-ThinkPad-T440s', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.13.0-41-generic', java.version: '1.8.0_171'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 55.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:processID: 12578, moz:profile: /tmp/rust_mozprofile.yv51Ec..., pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.13.0-41-generic, rotatable: false, specificationLevel: 0, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
-Session ID: 3c1f578c-06a0-45cc-8bc4-23611df41be6
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 55.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:processID: 23559, moz:profile: /tmp/rust_mozprofile.0uA80a..., pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.13.0-41-generic, rotatable: false, specificationLevel: 0, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 985ac910-abac-4461-a065-4361f99b8512
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -105,7 +100,7 @@ Session ID: 3c1f578c-06a0-45cc-8bc4-23611df41be6
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
 	at org.openqa.selenium.remote.RemoteWebDriver.close(RemoteWebDriver.java:435)
-	at com.services.test.TestRaymondNextInfo.tearDown(TestRaymondNextInfo.java:194)
+	at com.services.test.TestPeopleInfo.tearDown(TestPeopleInfo.java:138)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -137,7 +132,7 @@ Session ID: 3c1f578c-06a0-45cc-8bc4-23611df41be6
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.services.test.TestRaymondNextInfo -->
+      </class> <!-- com.services.test.TestPeopleInfo -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

@@ -5,7 +5,6 @@
   
     <classes>
       <class name="com.services.test.TestAllenSollyInfo"/>
-      <class name="com.services.test.TestGlobusFashionInfo"/>
       <class name="com.services.test.TestLouisPhilippeInfo"/>
       <class name="com.services.test.TestFabIndiaInfo"/>
       <class name="com.services.test.TestPeterEnglandInfo"/>

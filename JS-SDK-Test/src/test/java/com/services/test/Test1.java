@@ -1,39 +1,33 @@
-package com.services.test;
-
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
-import org.openqa.selenium.By;
-import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.testng.annotations.Test;
-
-import com.services.utility.takeScreenShot;
-
-public class Test1 {
-
-	static takeScreenShot scrshot;
-	
-	public boolean getIds(List<String> prodUsingApi ,WebDriver driver)  {
-	
-		scrshot = new takeScreenShot();
-		List<WebElement> similar_Ids=driver.findElements(By.xpath("/html/body/section/div[2]/div/div/div[2]/div/div[@class=\"allen_solly_vertical_section\"]/a"));
-		List<String> prodUsingUI = new ArrayList<String>();
-		
-		for(WebElement elem : similar_Ids) {
-			String id1 = elem.getAttribute("id");
-			prodUsingUI.add(id1);
-		}
-		Collections.reverse(prodUsingUI);
-		//System.out.println(prodUsingUI);
-		if(prodUsingApi.equals(prodUsingUI)) {
-			return true;
-		}else {
-			return false;
-		}
-		
-		
-	}
-}
+package com.services.test;   
+import java.util.*;  
+    import javax.mail.*;  
+    import javax.mail.internet.*;  
+    import javax.activation.*;  
+      
+    public class Test1  
+    {  
+     public static void main(String [] args){  
+          String to = "samirkumarsukla@gmail.com";
+          String from = "sk.sukla@outlook.com";
+          String host = "localhost";
+      
+         //Get the session object  
+          Properties properties = System.getProperties();  
+          properties.setProperty("mail.smtp.host", host);  
+          Session session = Session.getDefaultInstance(properties);  
+      
+         //compose the message  
+          try{  
+             MimeMessage message = new MimeMessage(session);  
+             message.setFrom(new InternetAddress(from));  
+             message.addRecipient(Message.RecipientType.TO,new InternetAddress(to));  
+             message.setSubject("Hiiiiiiiiiiiiiii");  
+             message.setText("Hello, this is example of sending email  ");  
+      
+             // Send message  
+             Transport.send(message);  
+             System.out.println("message sent successfully....");  
+      
+          }catch (MessagingException mex) {mex.printStackTrace();}  
+       }  
+    }  
