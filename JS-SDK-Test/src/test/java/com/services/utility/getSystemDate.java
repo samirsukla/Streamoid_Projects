@@ -3,8 +3,6 @@ package com.services.utility;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import org.testng.annotations.Test;
-
 public class getSystemDate {
 	
 	public String getPresentDate() {

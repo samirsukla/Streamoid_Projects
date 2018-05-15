@@ -184,5 +184,26 @@ public boolean getIdsFromGUIforPlanetFashion(List<String> prodUsingApi ,WebDrive
 	
 	
 }
+public boolean getIdsFromGUIforRaymondNext(List<String> prodUsingApi ,WebDriver driver)  {
+	
+	
+	List<WebElement> similar_Ids=driver.findElements(By.xpath("/html/body/div[1]/main/div[2]/div/div[2]/div[3]/div[4]/div/div[@class=\"raymond_container\"]/a"));
+	List<String> prodUsingUI = new ArrayList<String>();
+	
+	for(WebElement elem : similar_Ids) {
+		String id1 = elem.getAttribute("id");
+		prodUsingUI.add(id1);
+		
+	}
+	//Collections.reverse(prodUsingUI);
+	//System.out.println(prodUsingUI);
+	if(prodUsingApi.equals(prodUsingUI)) {
+		return true;
+	}else {
+		return false;
+	}
+	
+	
+}
 }
 
