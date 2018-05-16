@@ -1,6 +1,7 @@
 package com.services.utility;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -66,6 +67,14 @@ public void clickOnRaymondProduct_2(WebDriver driver) throws InterruptedExceptio
 	driver.findElement(By.xpath(product)).click();
 	
 }
+
+public void clickOnPothysProduct(WebDriver driver) throws InterruptedException {
+	Thread.sleep(2000);
+	String product ="/html/body/section/section[3]/div/div[3]/section/div/div[2]/ul/li[1]/div[1]/div/div[1]/div[1]/span/a/img";
+	WebElement firstProduct = driver.findElement(By.xpath(product));
+	((JavascriptExecutor)driver).executeScript("arguments[0].click();", firstProduct);
+	
+}
 	public void moveToElementandClick(WebElement main_category , WebElement product_category , WebDriver driver) {
 		action = new Actions(driver);
 		action.moveToElement(main_category).moveToElement(product_category).click().build().perform();
@@ -82,5 +91,7 @@ public void clickOnRaymondProduct_2(WebDriver driver) throws InterruptedExceptio
 		return  element.getText();
 		
 	}
+
+	
 
 }
