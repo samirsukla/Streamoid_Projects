@@ -78,7 +78,7 @@ public class TestPeterEnglandInfo {
 		int j=1;
 		List<WebElement> child_categ_div = driver.findElements(By.xpath(".//*[@id='nav-bar']/li[1]/div/div/div"));
 		
-		for(int x=3; x<=child_categ_div.size(); x++) {
+		for(int x=1; x<=child_categ_div.size(); x++) {
 			WebElement main_category = driver.findElement(By.xpath(".//*[@id='nav-bar']/li[1]/a"));
 			clickfirst.moveToElement_only(main_category, driver);
 			Thread.sleep(2000);
