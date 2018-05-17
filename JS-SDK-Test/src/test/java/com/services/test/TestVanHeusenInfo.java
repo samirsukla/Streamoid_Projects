@@ -108,6 +108,12 @@ public class TestVanHeusenInfo {
 				
 						clickfirst.moveToElementandClick(main_category1, product_category, driver);
 						
+						WebDriverWait wait = new WebDriverWait(driver,10);
+						wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[3]/div[2]/div[2]/div/div[6]/div/div/div[1]/div/div[1]/div[1]/div/div/ul/li[2]/a/div/img")));
+								
+						WebElement first_element_link = driver.findElement(By.xpath("/html/body/div[3]/div[2]/div[2]/div/div[6]/div/div/div[1]/div"));
+						product_id = first_element_link.getAttribute("id").replaceAll("product_wrap_", "");
+						
 						clickfirst.clickOnABOFProduct(driver);
 						
 						Thread.sleep(3000);
@@ -140,7 +146,7 @@ public class TestVanHeusenInfo {
 					}
 					catch(NoSuchElementException e) {
 						j=1;
-						//driver.findElement(By.xpath("/html/body/div[2]/div/div/div[2]/div[1]/a/img")).click();
+						driver.findElement(By.xpath("/html/body/div[2]/div/div/div[2]/div[1]/a/img")).click();
 						WebElement main_category2 = driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/a"));
 						clickfirst.moveToElement_only(main_category2, driver);
 					}

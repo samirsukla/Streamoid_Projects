@@ -191,7 +191,7 @@ public class TestFabIndiaInfo {
 		catch(Exception e) {
 			e.printStackTrace();
 			
-			//driver.findElement(By.xpath("/html/body/form/div[3]/center/div/div/center/div[1]/div[1]/div[3]/div/div/div[1]/a/img")).click();
+			driver.findElement(By.xpath("/html/body/form/div[3]/center/div/div/center/div[1]/div[1]/div[3]/div/div/div[1]/a/img")).click();
 			WebElement main_category2 = driver.findElement(By.xpath(".//*[@id='sample-menu-2']/li[2]/a/span[2]"));
 			clickfirst.moveToElement_only(main_category2, driver);
 		}

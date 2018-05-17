@@ -128,7 +128,7 @@ public class TestPlanetFashionInfo {
 				}
 			catch(Exception e) {
 				j=1;
-				//driver.findElement(By.xpath("/html/body/div[2]/div[1]/div/div/div/div[1]/div/a/img")).click();
+				driver.findElement(By.xpath("/html/body/div[2]/div[1]/div/div/div/div[1]/div/a/img")).click();
 				WebElement main_category2 = driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/a"));
 				clickfirst.moveToElement_only(main_category2, driver);
 				

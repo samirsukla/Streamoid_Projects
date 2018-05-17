@@ -80,7 +80,7 @@ public class TestPothysInfo {
 				Thread.sleep(2000);
 				
 				try {
-					j=1;
+					
 					while(driver.findElement(By.xpath("/html/body/section/section[1]/section[2]/div/div/nav/div/div/div/ul/li["+i+"]/div/div/div/div["+x+"]/div/div/div[2]/div/ul/li["+j+"]/a")).isDisplayed()) {
 						
 						WebElement main_category1 = driver.findElement(By.xpath(".//*[@id='mainmenutop']/div/div/div/ul/li["+i+"]/a/span"));
@@ -131,10 +131,10 @@ public class TestPothysInfo {
 						
 					}
 				catch(Exception e) {
-					e.printStackTrace();
-					j++;
-					//j=1;
-					//driver.findElement(By.xpath("/html/body/section/section[1]/section[1]/div[2]/div/div[1]/div/a/img")).click();
+					//e.printStackTrace();
+					
+					j=1;
+					driver.findElement(By.xpath("/html/body/section/section[1]/section[1]/div[2]/div/div[1]/div/a/img")).click();
 					WebElement main_category2 = driver.findElement(By.xpath(".//*[@id='mainmenutop']/div/div/div/ul/li["+i+"]/a/span"));
 					clickfirst.moveToElement_only(main_category2, driver);
 					
