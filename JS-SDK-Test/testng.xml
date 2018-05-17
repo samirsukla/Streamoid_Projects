@@ -4,12 +4,14 @@
   <test name="TestClientInfo">
   
     <classes>
+   	  <class name="com.services.test.TestAllenSollyInfo"/>	
+   	  <class name="com.services.test.TestFabIndiaInfo"/>
    	  <class name="com.services.test.TestPeopleInfo"/>
       <class name="com.services.test.TestPlanetFashionInfo"/>
-      <class name="com.services.test.TestLouisPhilippeInfo"/>
+      <class name="com.services.test.TestPothysInfo"/>
       <class name="com.services.test.TestPeterEnglandInfo"/>
       <class name="com.services.test.TestVanHeusenInfo"/>
-      
+      <class name="com.services.test.TestLouisPhilippeInfo"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

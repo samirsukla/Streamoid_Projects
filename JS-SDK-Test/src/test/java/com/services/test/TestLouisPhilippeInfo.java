@@ -4,6 +4,7 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.List;
 import java.util.Properties;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -14,10 +15,12 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.services.utility.CheckWidgetPresentStatus;
+import com.services.utility.CreateFolder;
 import com.services.utility.GUICheckForSimilarProducts;
 import com.services.utility.InitialSetup;
 import com.services.utility.RestAPICheckForSimilarProducts;
 import com.services.utility.clickonFirstProduct;
+import com.services.utility.getSystemDate;
 
 public class TestLouisPhilippeInfo {
 	
@@ -32,6 +35,7 @@ public class TestLouisPhilippeInfo {
 	static String status;
 	static String product_id;
 	static WebElement similar_widget ;
+	static String currentDate = "";
 	
 	static clickonFirstProduct clickfirst;
 	static CheckWidgetPresentStatus checkStatus;
@@ -51,6 +55,10 @@ public class TestLouisPhilippeInfo {
 		checkStatus = new CheckWidgetPresentStatus();
 		checkProducts = new RestAPICheckForSimilarProducts();
 		checkGUI = new GUICheckForSimilarProducts();
+		getSystemDate getDate = new getSystemDate();
+		CreateFolder createFolder = new CreateFolder();
+		currentDate = getDate.getPresentDate();
+		createFolder.createDateDirectory(currentDate);
 		
 	}
   @Test
@@ -58,9 +66,14 @@ public class TestLouisPhilippeInfo {
 	  
 	    String url = initSet.getUrl("Louis_Philippe");
 		driver.get(url);
-	  
-
-		if(driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div[1]/div[3]/div[1]/ul/li[4]/div/img")).isDisplayed())
+		
+		if(driver.findElement(By.xpath("/html/body/div[3]/div/div[4]/div/div")).isDisplayed()) {
+			
+			driver.findElement(By.xpath("html/body/div[3]/div/div[4]/div/div/div[1]/button")).click();
+		}
+		
+		
+	  if(driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div[1]/div[3]/div[1]/ul/li[4]/div/img")).isDisplayed())
 		{
 
 		driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div[1]/div[3]/div[1]/ul/li[4]/div/div/a[2]")).click();
@@ -107,7 +120,7 @@ public class TestLouisPhilippeInfo {
 						List<String> similar_product_id = checkProducts.similarProducts(product_id,"louis_philippe");
 						boolean isDisplaying = checkGUI.getIdsFromGUIforLouisPhilippe(similar_product_id,driver);
 						
-						checkStatus.checkStatusAndTakeScreenshot(driver, folderName, mainCategoryName, prodCategoryName, status,
+						checkStatus.checkStatusAndTakeScreenshot(driver,currentDate, folderName, mainCategoryName, prodCategoryName, status,
 								product_id,isDisplaying);
 					}
 					else
@@ -115,7 +128,7 @@ public class TestLouisPhilippeInfo {
 						status = "failed";
 						boolean isDisplaying = false;
 						
-						checkStatus.checkStatusAndTakeScreenshot(driver, folderName, mainCategoryName, prodCategoryName, status,
+						checkStatus.checkStatusAndTakeScreenshot(driver,currentDate, folderName, mainCategoryName, prodCategoryName, status,
 								product_id,isDisplaying);
 						
 					}
@@ -136,7 +149,7 @@ public class TestLouisPhilippeInfo {
 				}
 			catch(Exception e) {
 				j=1;
-				driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div[1]/div[2]/div/a/img")).click();
+				//driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div[1]/div[2]/div/a/img")).click();
 				WebElement main_category2 = driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/a"));
 				clickfirst.moveToElement_only(main_category2, driver);
 				

@@ -15,10 +15,12 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.services.utility.CheckWidgetPresentStatus;
+import com.services.utility.CreateFolder;
 import com.services.utility.GUICheckForSimilarProducts;
 import com.services.utility.InitialSetup;
 import com.services.utility.RestAPICheckForSimilarProducts;
 import com.services.utility.clickonFirstProduct;
+import com.services.utility.getSystemDate;
 
 public class TestPeterEnglandInfo {
 	
@@ -32,6 +34,7 @@ public class TestPeterEnglandInfo {
 	static String status;
 	static WebElement similar_widget ;
 	static String product_id;
+	static String currentDate = "";
 	
 	static CheckWidgetPresentStatus checkStatus;
 	static InitialSetup initSet;
@@ -51,7 +54,10 @@ public class TestPeterEnglandInfo {
 		checkStatus = new CheckWidgetPresentStatus();
 		checkProducts = new RestAPICheckForSimilarProducts();
 		checkGUI = new GUICheckForSimilarProducts();
-		
+		getSystemDate getDate = new getSystemDate();
+		CreateFolder createFolder = new CreateFolder();
+		currentDate = getDate.getPresentDate();
+		createFolder.createDateDirectory(currentDate);
 	}
   @Test
   public void testPeterEngland() throws Exception {
@@ -72,7 +78,7 @@ public class TestPeterEnglandInfo {
 		int j=1;
 		List<WebElement> child_categ_div = driver.findElements(By.xpath(".//*[@id='nav-bar']/li[1]/div/div/div"));
 		
-		for(int x=1; x<=child_categ_div.size(); x++) {
+		for(int x=3; x<=child_categ_div.size(); x++) {
 			WebElement main_category = driver.findElement(By.xpath(".//*[@id='nav-bar']/li[1]/a"));
 			clickfirst.moveToElement_only(main_category, driver);
 			Thread.sleep(2000);
@@ -104,15 +110,15 @@ public class TestPeterEnglandInfo {
 					List<String> similar_product_id = checkProducts.similarProducts(product_id,"peter_england");
 					boolean isDisplaying = checkGUI.getIdsFromGUIforPeterEngland(similar_product_id,driver);
 					
-					checkStatus.checkStatusAndTakeScreenshot(driver, folderName, mainCategoryName, prodCategoryName, status,
+					checkStatus.checkStatusAndTakeScreenshot(driver,currentDate, folderName, mainCategoryName, prodCategoryName, status,
 							product_id,isDisplaying);
 				}
 				else
 				{
 					status = "failed";
 					boolean isDisplaying = false;
-					
-					checkStatus.checkStatusAndTakeScreenshot(driver, folderName, mainCategoryName, prodCategoryName, status,
+				
+					checkStatus.checkStatusAndTakeScreenshot(driver,currentDate, folderName, mainCategoryName, prodCategoryName, status,
 							product_id,isDisplaying);
 					
 				}
@@ -131,7 +137,7 @@ public class TestPeterEnglandInfo {
 				
 				catch(Exception e) {
 					
-					j=1;
+					j=1;;
 					x++;
 					
 					
@@ -142,6 +148,7 @@ public class TestPeterEnglandInfo {
 			for(int y=1;y<=sub_categ_div.size();y++) {
 				
 				try {
+					
 					while(driver.findElement(By.xpath(".//*[@id='nav-bar']/li[1]/div/div/div["+x+"]/div["+y+"]/ul/li["+j+"]/a")).isDisplayed()) {
 						
 						WebElement main_category1 = driver.findElement(By.xpath(".//*[@id='nav-bar']/li[1]/a"));
@@ -167,7 +174,7 @@ public class TestPeterEnglandInfo {
 							List<String> similar_product_id = checkProducts.similarProducts(product_id,"peter_england");
 							boolean isDisplaying = checkGUI.getIdsFromGUIforPeterEngland(similar_product_id,driver);
 							
-							checkStatus.checkStatusAndTakeScreenshot(driver, folderName, mainCategoryName, prodCategoryName, status,
+							checkStatus.checkStatusAndTakeScreenshot(driver,currentDate, folderName, mainCategoryName, prodCategoryName, status,
 									product_id,isDisplaying);
 						}
 						else
@@ -175,7 +182,7 @@ public class TestPeterEnglandInfo {
 							status = "failed";
 							boolean isDisplaying = false;
 							
-							checkStatus.checkStatusAndTakeScreenshot(driver, folderName, mainCategoryName, prodCategoryName, status,
+							checkStatus.checkStatusAndTakeScreenshot(driver,currentDate, folderName, mainCategoryName, prodCategoryName, status,
 									product_id,isDisplaying);
 							
 						}

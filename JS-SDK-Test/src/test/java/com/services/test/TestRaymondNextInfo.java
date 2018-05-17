@@ -13,10 +13,12 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.services.utility.CheckWidgetPresentStatus;
+import com.services.utility.CreateFolder;
 import com.services.utility.GUICheckForSimilarProducts;
 import com.services.utility.InitialSetup;
 import com.services.utility.RestAPICheckForSimilarProducts;
 import com.services.utility.clickonFirstProduct;
+import com.services.utility.getSystemDate;
 
 public class TestRaymondNextInfo {
 	
@@ -30,6 +32,8 @@ public class TestRaymondNextInfo {
 	static String status;
 	static WebElement similar_widget ;
 	static String product_id;
+	static String currentDate = "";
+	
 	
 	static CheckWidgetPresentStatus checkStatus;
 	static InitialSetup initSet;
@@ -49,7 +53,10 @@ public class TestRaymondNextInfo {
 		checkStatus = new CheckWidgetPresentStatus();
 		checkProducts = new RestAPICheckForSimilarProducts();
 		checkGUI = new GUICheckForSimilarProducts();
-		
+		getSystemDate getDate = new getSystemDate();
+		CreateFolder createFolder = new CreateFolder();
+		currentDate = getDate.getPresentDate();
+		createFolder.createDateDirectory(currentDate);
 	}
   @Test
   public void testRaymondNext() throws Exception {
@@ -98,7 +105,7 @@ public class TestRaymondNextInfo {
 								List<String> similar_product_id = checkProducts.similarProducts(product_id,"raymond");
 								boolean isDisplaying = checkGUI.getIdsFromGUIforPeterEngland(similar_product_id,driver);
 								
-								checkStatus.checkStatusAndTakeScreenshot(driver, folderName, mainCategoryName, prodCategoryName, status,
+								checkStatus.checkStatusAndTakeScreenshot(driver,currentDate, folderName, mainCategoryName, prodCategoryName, status,
 										product_id,isDisplaying);
 							}
 							else
@@ -106,7 +113,7 @@ public class TestRaymondNextInfo {
 								status = "failed";
 								boolean isDisplaying = false;
 								
-								checkStatus.checkStatusAndTakeScreenshot(driver, folderName, mainCategoryName, prodCategoryName, status,
+								checkStatus.checkStatusAndTakeScreenshot(driver,currentDate, folderName, mainCategoryName, prodCategoryName, status,
 										product_id,isDisplaying);
 								
 							}
@@ -137,7 +144,7 @@ public class TestRaymondNextInfo {
 								List<String> similar_product_id = checkProducts.similarProducts(product_id,"raymond");
 								boolean isDisplaying = checkGUI.getIdsFromGUIforPeterEngland(similar_product_id,driver);
 								
-								checkStatus.checkStatusAndTakeScreenshot(driver, folderName, mainCategoryName, prodCategoryName, status,
+								checkStatus.checkStatusAndTakeScreenshot(driver,currentDate, folderName, mainCategoryName, prodCategoryName, status,
 										product_id,isDisplaying);
 							}
 							else
@@ -145,7 +152,7 @@ public class TestRaymondNextInfo {
 								status = "failed";
 								boolean isDisplaying = false;
 								
-								checkStatus.checkStatusAndTakeScreenshot(driver, folderName, mainCategoryName, prodCategoryName, status,
+								checkStatus.checkStatusAndTakeScreenshot(driver,currentDate, folderName, mainCategoryName, prodCategoryName, status,
 										product_id,isDisplaying);
 								
 							}

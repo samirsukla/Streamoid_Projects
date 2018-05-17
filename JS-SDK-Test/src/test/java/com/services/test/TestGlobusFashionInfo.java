@@ -15,10 +15,12 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.services.utility.CheckWidgetPresentStatus;
+import com.services.utility.CreateFolder;
 import com.services.utility.GUICheckForSimilarProducts;
 import com.services.utility.InitialSetup;
 import com.services.utility.RestAPICheckForSimilarProducts;
 import com.services.utility.clickonFirstProduct;
+import com.services.utility.getSystemDate;
 
 public class TestGlobusFashionInfo {
 	
@@ -32,6 +34,7 @@ public class TestGlobusFashionInfo {
 	static String status;
 	static WebElement similar_widget ;
 	static String product_id;
+	static String currentDate = "";
 	
 	static CheckWidgetPresentStatus checkStatus;
 	static InitialSetup initSet;
@@ -51,6 +54,10 @@ public class TestGlobusFashionInfo {
 		checkStatus = new CheckWidgetPresentStatus();
 		checkProducts = new RestAPICheckForSimilarProducts();
 		checkGUI = new GUICheckForSimilarProducts();
+		getSystemDate getDate = new getSystemDate();
+		CreateFolder createFolder = new CreateFolder();
+		currentDate = getDate.getPresentDate();
+		createFolder.createDateDirectory(currentDate);
 		
 	}
   @Test
@@ -104,7 +111,7 @@ public class TestGlobusFashionInfo {
 						List<String> similar_product_id = checkProducts.similarProducts(product_id,"globus");
 						boolean isDisplaying = checkGUI.getIdsFromGUIforVanHeusen(similar_product_id,driver);
 						
-						checkStatus.checkStatusAndTakeScreenshot(driver, folderName, mainCategoryName, prodCategoryName, status,
+						checkStatus.checkStatusAndTakeScreenshot(driver,currentDate, folderName, mainCategoryName, prodCategoryName, status,
 								product_id,isDisplaying);
 					}
 					else
@@ -112,7 +119,7 @@ public class TestGlobusFashionInfo {
 						status = "failed";
 						boolean isDisplaying = false;
 						
-						checkStatus.checkStatusAndTakeScreenshot(driver, folderName, mainCategoryName, prodCategoryName, status,
+						checkStatus.checkStatusAndTakeScreenshot(driver,currentDate, folderName, mainCategoryName, prodCategoryName, status,
 								product_id,isDisplaying);
 						
 					}
@@ -131,7 +138,7 @@ public class TestGlobusFashionInfo {
 			catch(Exception e) {
 				
 				j=1;
-				driver.findElement(By.xpath("/html/body/div[1]/div/div/div[1]/div[2]/div/div[3]/div/h1/a/img")).click();
+				//driver.findElement(By.xpath("/html/body/div[1]/div/div/div[1]/div[2]/div/div[3]/div/h1/a/img")).click();
 				WebElement main_category2 = driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[2]/ul/li["+i+"]/a/span"));
 				clickfirst.moveToElement_only(main_category2, driver);
 				

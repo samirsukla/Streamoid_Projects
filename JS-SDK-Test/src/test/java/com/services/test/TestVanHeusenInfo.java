@@ -3,10 +3,12 @@ package com.services.test;
 import org.testng.annotations.Test;
 
 import com.services.utility.CheckWidgetPresentStatus;
+import com.services.utility.CreateFolder;
 import com.services.utility.GUICheckForSimilarProducts;
 import com.services.utility.InitialSetup;
 import com.services.utility.RestAPICheckForSimilarProducts;
 import com.services.utility.clickonFirstProduct;
+import com.services.utility.getSystemDate;
 import com.services.utility.takeScreenShot;
 
 import java.io.IOException;
@@ -30,6 +32,7 @@ public class TestVanHeusenInfo {
 	static WebElement similar_widget ;
 	static String product_id;
 	static int z=1;
+	static String currentDate = "";
 	
 	static clickonFirstProduct clickfirst;
 	static takeScreenShot scrshot;
@@ -49,6 +52,10 @@ public class TestVanHeusenInfo {
 		checkStatus = new CheckWidgetPresentStatus();
 		checkProducts = new RestAPICheckForSimilarProducts();
 		checkGUI = new GUICheckForSimilarProducts();
+		getSystemDate getDate = new getSystemDate();
+		CreateFolder createFolder = new CreateFolder();
+		currentDate = getDate.getPresentDate();
+		createFolder.createDateDirectory(currentDate);
 		}
 	
 	@Test
@@ -111,7 +118,7 @@ public class TestVanHeusenInfo {
 							List<String> similar_product_id = checkProducts.similarProducts(product_id,"vanheusen");
 							boolean isDisplaying = checkGUI.getIdsFromGUIforVanHeusen(similar_product_id,driver);
 							
-							checkStatus.checkStatusAndTakeScreenshot(driver, folderName, mainCategoryName, prodCategoryName, status,
+							checkStatus.checkStatusAndTakeScreenshot(driver,currentDate, folderName, mainCategoryName, prodCategoryName, status,
 									product_id,isDisplaying);
 						}
 						else
@@ -119,7 +126,7 @@ public class TestVanHeusenInfo {
 							status = "failed";
 							boolean isDisplaying = false;
 							
-							checkStatus.checkStatusAndTakeScreenshot(driver, folderName, mainCategoryName, prodCategoryName, status,
+							checkStatus.checkStatusAndTakeScreenshot(driver,currentDate, folderName, mainCategoryName, prodCategoryName, status,
 									product_id,isDisplaying);
 							
 						}
@@ -174,7 +181,7 @@ public class TestVanHeusenInfo {
 						List<String> similar_product_id = checkProducts.similarProducts(product_id,"vanheusen");
 						boolean isDisplaying = checkGUI.getIdsFromGUIforVanHeusen(similar_product_id,driver);
 						
-						checkStatus.checkStatusAndTakeScreenshot(driver, folderName, mainCategoryName, prodCategoryName, status,
+						checkStatus.checkStatusAndTakeScreenshot(driver,currentDate, folderName, mainCategoryName, prodCategoryName, status,
 								product_id,isDisplaying);
 					}
 					else
@@ -182,7 +189,7 @@ public class TestVanHeusenInfo {
 						status = "failed";
 						boolean isDisplaying = false;
 						
-						checkStatus.checkStatusAndTakeScreenshot(driver, folderName, mainCategoryName, prodCategoryName, status,
+						checkStatus.checkStatusAndTakeScreenshot(driver,currentDate, folderName, mainCategoryName, prodCategoryName, status,
 								product_id,isDisplaying);
 						
 					}
@@ -233,7 +240,7 @@ public class TestVanHeusenInfo {
 							List<String> similar_product_id = checkProducts.similarProducts(product_id,"vanheusen");
 							boolean isDisplaying = checkGUI.getIdsFromGUIforVanHeusen(similar_product_id,driver);
 							
-							checkStatus.checkStatusAndTakeScreenshot(driver, folderName, mainCategoryName, prodCategoryName, status,
+							checkStatus.checkStatusAndTakeScreenshot(driver,currentDate, folderName, mainCategoryName, prodCategoryName, status,
 									product_id,isDisplaying);
 						}
 						else
@@ -241,7 +248,7 @@ public class TestVanHeusenInfo {
 							status = "failed";
 							boolean isDisplaying = false;
 							
-							checkStatus.checkStatusAndTakeScreenshot(driver, folderName, mainCategoryName, prodCategoryName, status,
+							checkStatus.checkStatusAndTakeScreenshot(driver,currentDate, folderName, mainCategoryName, prodCategoryName, status,
 									product_id,isDisplaying);
 							
 						}

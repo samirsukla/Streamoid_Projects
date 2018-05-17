@@ -14,8 +14,10 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
 import com.services.utility.CheckWidgetPresentStatus;
+import com.services.utility.CreateFolder;
 import com.services.utility.InitialSetup;
 import com.services.utility.clickonFirstProduct;
+import com.services.utility.getSystemDate;
 import com.services.utility.takeScreenShot;
 
 
@@ -28,6 +30,7 @@ public class TestPothysInfo {
 	static String mainCategoryName;
 	static String status;
 	static WebElement similar_widget ;
+	static String currentDate ="";
 	static String product_id = "NA";
 	
 	
@@ -35,6 +38,7 @@ public class TestPothysInfo {
 	static takeScreenShot scrshot;
 	static InitialSetup initSet;
 	static CheckWidgetPresentStatus checkStatus;
+	
 	
 	@BeforeClass
 	public void setUp() throws IOException {
@@ -44,6 +48,11 @@ public class TestPothysInfo {
 		className = this.getClass().getSimpleName();
 		folderName = className.replace("Test", " ").replace("Info", " ").trim();
 		checkStatus = new CheckWidgetPresentStatus();
+		getSystemDate getDate = new getSystemDate();
+		CreateFolder createFolder = new CreateFolder();
+		currentDate = getDate.getPresentDate();
+		createFolder.createDateDirectory(currentDate);
+		
 		
 		}
 	
@@ -71,6 +80,7 @@ public class TestPothysInfo {
 				Thread.sleep(2000);
 				
 				try {
+					j=1;
 					while(driver.findElement(By.xpath("/html/body/section/section[1]/section[2]/div/div/nav/div/div/div/ul/li["+i+"]/div/div/div/div["+x+"]/div/div/div[2]/div/ul/li["+j+"]/a")).isDisplayed()) {
 						
 						WebElement main_category1 = driver.findElement(By.xpath(".//*[@id='mainmenutop']/div/div/div/ul/li["+i+"]/a/span"));
@@ -101,13 +111,13 @@ public class TestPothysInfo {
 							boolean isDisplaying = true;
 						
 						
-							checkStatus.checkStatusAndTakeScreenshot(driver, folderName, mainCategoryName, prodCategoryName, status,product_id,isDisplaying);
+							checkStatus.checkStatusAndTakeScreenshot(driver, currentDate,folderName, mainCategoryName, prodCategoryName, status,product_id,isDisplaying);
 						}
 						else
 						{
 							status="failed";
 							boolean isDisplaying = false;
-							checkStatus.checkStatusAndTakeScreenshot(driver, folderName, mainCategoryName, prodCategoryName, status,product_id,isDisplaying);
+							checkStatus.checkStatusAndTakeScreenshot(driver, currentDate,folderName, mainCategoryName, prodCategoryName, status,product_id,isDisplaying);
 							
 						}
 		
@@ -122,7 +132,8 @@ public class TestPothysInfo {
 					}
 				catch(Exception e) {
 					e.printStackTrace();
-					j=1;
+					j++;
+					//j=1;
 					//driver.findElement(By.xpath("/html/body/section/section[1]/section[1]/div[2]/div/div[1]/div/a/img")).click();
 					WebElement main_category2 = driver.findElement(By.xpath(".//*[@id='mainmenutop']/div/div/div/ul/li["+i+"]/a/span"));
 					clickfirst.moveToElement_only(main_category2, driver);

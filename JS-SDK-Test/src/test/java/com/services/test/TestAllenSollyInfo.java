@@ -3,10 +3,12 @@ package com.services.test;
 import org.testng.annotations.Test;
 
 import com.services.utility.CheckWidgetPresentStatus;
+import com.services.utility.CreateFolder;
 import com.services.utility.GUICheckForSimilarProducts;
 import com.services.utility.InitialSetup;
 import com.services.utility.RestAPICheckForSimilarProducts;
 import com.services.utility.clickonFirstProduct;
+import com.services.utility.getSystemDate;
 import com.services.utility.takeScreenShot;
 
 import java.io.IOException;
@@ -28,6 +30,7 @@ public class TestAllenSollyInfo {
 	static String status;
 	static WebElement similar_widget ;
 	static String product_id;
+	static String currentDate = "";
 	static int z=1;
 	
 	static clickonFirstProduct clickfirst;
@@ -48,6 +51,10 @@ public class TestAllenSollyInfo {
 		checkStatus = new CheckWidgetPresentStatus();
 		checkProducts = new RestAPICheckForSimilarProducts();
 		checkGUI = new GUICheckForSimilarProducts();
+		getSystemDate getDate = new getSystemDate();
+		CreateFolder createFolder = new CreateFolder();
+		currentDate = getDate.getPresentDate();
+		createFolder.createDateDirectory(currentDate);
 		}
 	
 	@Test
@@ -103,14 +110,14 @@ public class TestAllenSollyInfo {
 				boolean isDisplaying = checkGUI.getIdsFromGUIforAllenSolly(similar_product_id,driver);
 				
 				
-				checkStatus.checkStatusAndTakeScreenshot(driver, folderName, mainCategoryName, prodCategoryName, status,
+				checkStatus.checkStatusAndTakeScreenshot(driver,currentDate, folderName, mainCategoryName, prodCategoryName, status,
 						product_id,isDisplaying);
 				}
 				else
 				{
 					status="failed";
 					boolean isDisplaying = false;
-					checkStatus.checkStatusAndTakeScreenshot(driver, folderName, mainCategoryName, prodCategoryName, status,
+					checkStatus.checkStatusAndTakeScreenshot(driver,currentDate, folderName, mainCategoryName, prodCategoryName, status,
 							product_id,isDisplaying);
 					
 				}
@@ -157,14 +164,14 @@ public class TestAllenSollyInfo {
 				boolean isDisplaying = checkGUI.getIdsFromGUIforAllenSolly(similar_product_id,driver);
 				
 				
-				checkStatus.checkStatusAndTakeScreenshot(driver, folderName, mainCategoryName, prodCategoryName, status,
+				checkStatus.checkStatusAndTakeScreenshot(driver,currentDate, folderName, mainCategoryName, prodCategoryName, status,
 						product_id,isDisplaying);
 				}
 				else
 				{
 					status="failed";
 					boolean isDisplaying = false;
-					checkStatus.checkStatusAndTakeScreenshot(driver, folderName, mainCategoryName, prodCategoryName, status,
+					checkStatus.checkStatusAndTakeScreenshot(driver,currentDate, folderName, mainCategoryName, prodCategoryName, status,
 							product_id,isDisplaying);
 					
 				}
@@ -222,14 +229,14 @@ public class TestAllenSollyInfo {
 						boolean isDisplaying = checkGUI.getIdsFromGUIforAllenSolly(similar_product_id,driver);
 						
 						
-						checkStatus.checkStatusAndTakeScreenshot(driver, folderName, mainCategoryName, prodCategoryName, status,
+						checkStatus.checkStatusAndTakeScreenshot(driver,currentDate, folderName, mainCategoryName, prodCategoryName, status,
 								product_id,isDisplaying);
 						}
 						else
 						{
 							status="failed";
 							boolean isDisplaying = false;
-							checkStatus.checkStatusAndTakeScreenshot(driver, folderName, mainCategoryName, prodCategoryName, status,
+							checkStatus.checkStatusAndTakeScreenshot(driver,currentDate, folderName, mainCategoryName, prodCategoryName, status,
 									product_id,isDisplaying);
 							
 						}
