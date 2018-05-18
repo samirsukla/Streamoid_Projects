@@ -127,7 +127,7 @@ public class TestPeopleInfo {
 					
 				}
 			catch(Exception e) {
-				e.printStackTrace();
+				//e.printStackTrace();
 				j=1;
 				//driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/div[1]/div/div[1]/div/a/img")).click();
 				WebElement main_category2 = driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/a"));

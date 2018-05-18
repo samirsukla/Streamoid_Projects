@@ -92,9 +92,9 @@ public class TestFabIndiaInfo {
 			if(j==2) {
 				
 				WebDriverWait wait = new WebDriverWait(driver, 10);
-				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='Productshowcase']/div[1]/div/div[2]/div/a[1]/img")));
+				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='Productshowcase']/div[1]/div/div[2]/div/a/img")));
 				
-				WebElement first_element_link = driver.findElement(By.xpath("/html/body/form/div[3]/center/div/div/center/div[1]/div[3]/div[3]/div/div/div/div[3]/div[1]/div[1]/div/div[2]"));
+				WebElement first_element_link = driver.findElement(By.xpath("//div[@id='Productshowcase']/div/div/div[2]"));
 				product_id = first_element_link.getAttribute("data-productid");
 				
 				handle.switchToNewWindow(driver);
@@ -138,10 +138,10 @@ public class TestFabIndiaInfo {
 				
 				driver.findElement(By.xpath(".//*[@id='ctl00_ContentPlaceHolder1_ctl00_Pane2']/div[2]/div[2]/div/ul/li[2]/ul/li[2]/ul/li[2]/ul/li["+i+"]/a")).click();
 			
-				WebDriverWait wait = new WebDriverWait(driver, 10);
-				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='Productshowcase']/div[1]/div/div[2]/div/a[1]/img")));
+				WebDriverWait wait = new WebDriverWait(driver, 15);
+				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='Productshowcase']/div[1]/div/div[2]/div/a/img")));
 				
-				WebElement first_element_link = driver.findElement(By.xpath("/html/body/form/div[3]/center/div/div/center/div[1]/div[3]/div[3]/div/div/div/div[3]/div[1]/div[1]/div/div[2]"));
+				WebElement first_element_link = driver.findElement(By.xpath("//div[@id='Productshowcase']/div/div/div[2]"));
 				product_id = first_element_link.getAttribute("data-productid");
 				
 				handle.switchToNewWindow(driver);
