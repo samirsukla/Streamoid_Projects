@@ -71,10 +71,11 @@ public class TestGlobusFashionInfo {
 		
 		mainCategoryName = driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[2]/ul/li["+i+"]/a/span")).getText();
 		
-		int j=1;
+		
 		List<WebElement> sub_categ_div = driver.findElements(By.xpath("/html/body/div[1]/div/div/div[2]/div[2]/ul/li["+i+"]/div/div[1]/ul/li"));
 		
 		for(int y=1; y<=sub_categ_div.size(); y++) {
+			int j=1;
 			WebElement main_category = driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[2]/ul/li["+i+"]/a/span"));
 			clickfirst.moveToElement_only(main_category, driver);
 			Thread.sleep(2000);
@@ -101,7 +102,7 @@ public class TestGlobusFashionInfo {
 					
 				    Thread.sleep(2000);
 					
-					((JavascriptExecutor) driver).executeScript("window.scrollBy(0,500)"); 
+					((JavascriptExecutor) driver).executeScript("window.scrollBy(0,600)"); 
 					
 					
 					
@@ -109,7 +110,7 @@ public class TestGlobusFashionInfo {
 					{
 						status = "passed";
 						List<String> similar_product_id = checkProducts.similarProducts(product_id,"globus");
-						boolean isDisplaying = checkGUI.getIdsFromGUIforVanHeusen(similar_product_id,driver);
+						boolean isDisplaying = checkGUI.getIdsFromGUIforGlobusFashion(similar_product_id,driver);
 						
 						checkStatus.checkStatusAndTakeScreenshot(driver,currentDate, folderName, mainCategoryName, prodCategoryName, status,
 								product_id,isDisplaying);
@@ -127,18 +128,22 @@ public class TestGlobusFashionInfo {
 
 
 					j++;
-
+					
+					((JavascriptExecutor) driver).executeScript("window.scrollTo(0,0)");
 					driver.findElement(By.xpath("/html/body/div[1]/div/div/div[1]/div[2]/div/div[3]/div/h1/a/img")).click();
 					WebElement main_category2 = driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[2]/ul/li["+i+"]/a/span"));
 					clickfirst.moveToElement_only(main_category2, driver);
+					
+					Thread.sleep(2000);
 					
 				}
 					
 				}
 			catch(Exception e) {
 				
-				j=1;
+				j++;
 				//driver.findElement(By.xpath("/html/body/div[1]/div/div/div[1]/div[2]/div/div[3]/div/h1/a/img")).click();
+				((JavascriptExecutor) driver).executeScript("window.scrollTo(0,0)");
 				WebElement main_category2 = driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[2]/ul/li["+i+"]/a/span"));
 				clickfirst.moveToElement_only(main_category2, driver);
 				

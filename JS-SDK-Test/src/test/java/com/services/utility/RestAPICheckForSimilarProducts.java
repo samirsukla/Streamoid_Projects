@@ -58,7 +58,7 @@ public class RestAPICheckForSimilarProducts {
     
     
 		}
-		//System.out.println(sim_prod_ids);
+		System.out.println(sim_prod_ids);
 		return sim_prod_ids;
 
 		}

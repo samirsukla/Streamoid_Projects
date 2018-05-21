@@ -75,16 +75,18 @@ public class TestPeterEnglandInfo {
 		
 		mainCategoryName = driver.findElement(By.xpath(".//*[@id='nav-bar']/li[1]/a")).getText();
 		
-		int j=1;
+		
 		List<WebElement> child_categ_div = driver.findElements(By.xpath(".//*[@id='nav-bar']/li[1]/div/div/div"));
 		
 		for(int x=1; x<=child_categ_div.size(); x++) {
+			int j=1;
 			WebElement main_category = driver.findElement(By.xpath(".//*[@id='nav-bar']/li[1]/a"));
 			clickfirst.moveToElement_only(main_category, driver);
 			Thread.sleep(2000);
 			
 			while(x==2) {
 				try {
+					
 				
 				WebElement main_category1 = driver.findElement(By.xpath(".//*[@id='nav-bar']/li[1]/a"));
 				WebElement product_category = driver.findElement(By.xpath(".//*[@id='nav-bar']/li[1]/div/div/div["+x+"]/ul/li["+j+"]/a"));
@@ -146,6 +148,7 @@ public class TestPeterEnglandInfo {
 			
 			List<WebElement> sub_categ_div = driver.findElements(By.xpath(".//*[@id='nav-bar']/li[1]/div/div/div["+x+"]/div"));
 			for(int y=1;y<=sub_categ_div.size();y++) {
+				j=1;
 				
 				try {
 					
@@ -201,7 +204,7 @@ public class TestPeterEnglandInfo {
 					}
 				catch(Exception e) {
 					
-					j=1;
+					j++;
 					//driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/a/img")).click();
 					WebElement main_category2 = driver.findElement(By.xpath(".//*[@id='nav-bar']/li[1]/a"));
 					clickfirst.moveToElement_only(main_category2, driver);

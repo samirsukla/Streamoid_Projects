@@ -69,11 +69,12 @@ public class TestPeopleInfo {
 		for(int i=2;i<=3; i++) {
 		
 		mainCategoryName = driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/a")).getText();
-		int j=1;
+		
 		
 		List<WebElement> sub_categ_div = driver.findElements(By.xpath(".//*[@id='nav-bar']/li["+i+"]/div/div/div/div"));
 		
 		for(int x=1; x<=sub_categ_div.size(); x++) {
+			int j=1;
 			WebElement main_category = driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/a"));
 			clickfirst.moveToElement_only(main_category, driver);
 			Thread.sleep(2000);
@@ -127,8 +128,8 @@ public class TestPeopleInfo {
 					
 				}
 			catch(Exception e) {
-				//e.printStackTrace();
-				j=1;
+				
+				j++;
 				//driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/div[1]/div/div[1]/div/a/img")).click();
 				WebElement main_category2 = driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/a"));
 				clickfirst.moveToElement_only(main_category2, driver);

@@ -76,10 +76,11 @@ public class TestVanHeusenInfo {
 		
 		mainCategoryName = driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/a")).getText();
 		
-		int j=1;
+		
 		List<WebElement> child_categ_div = driver.findElements(By.xpath(".//*[@id='nav-bar']/li["+i+"]/div/div/div"));
 		
 		for(int x=1; x<=child_categ_div.size(); x++) {
+			int j=1;
 			
 			WebElement main_category = driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/a"));
 			clickfirst.moveToElement_only(main_category, driver);
@@ -145,7 +146,7 @@ public class TestVanHeusenInfo {
 						}
 					}
 					catch(NoSuchElementException e) {
-						j=1;
+						j++;
 						driver.findElement(By.xpath("/html/body/div[2]/div/div/div[2]/div[1]/a/img")).click();
 						WebElement main_category2 = driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/a"));
 						clickfirst.moveToElement_only(main_category2, driver);
@@ -220,6 +221,7 @@ public class TestVanHeusenInfo {
 			
 			List<WebElement> sub_division = driver.findElements(By.xpath(".//*[@id='nav-bar']/li["+i+"]/div/div/div["+x+"]/ul"));
 			for (int z=1;z<=sub_division.size();z++) {
+				j=1;
 				
 				try {
 					while(driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/div/div/div["+x+"]/ul["+z+"]/li["+j+"]/a")).isDisplayed()) {
@@ -271,7 +273,7 @@ public class TestVanHeusenInfo {
 					}
 				catch(Exception e) {
 					
-					j=1;
+					j++;
 					
 					
 				}

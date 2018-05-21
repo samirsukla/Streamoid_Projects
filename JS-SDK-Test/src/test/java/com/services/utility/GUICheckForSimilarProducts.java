@@ -48,7 +48,7 @@ public class GUICheckForSimilarProducts {
 			}
 		}
 		//Collections.reverse(prodUsingUI);
-		//System.out.println(prodUsingUI);
+		System.out.println(prodUsingUI);
 		if(prodUsingApi.equals(prodUsingUI)) {
 			return true;
 		}else {

@@ -75,10 +75,11 @@ public class TestAllenSollyInfo {
 		
 		mainCategoryName = driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/a")).getText();
 		
-		int j=1;
+		
 		List<WebElement> child_categ_div = driver.findElements(By.xpath(".//*[@id='nav-bar']/li["+i+"]/div/div/div"));
 		
 		for(int x=1; x<=child_categ_div.size(); x++) {
+			int j=1;
 			
 			WebElement main_category = driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/a"));
 			clickfirst.moveToElement_only(main_category, driver);
@@ -132,7 +133,8 @@ public class TestAllenSollyInfo {
 				
 				catch(Exception e) {
 					
-					j=1;
+				//	j=1;
+					j++;
 					x++;
 					
 					
@@ -189,6 +191,7 @@ public class TestAllenSollyInfo {
 			List<WebElement> sub_categ_div = driver.findElements(By.xpath(".//*[@id='nav-bar']/li["+i+"]/div/div/div["+x+"]/div"));
 			
 			for(int y=1;y<=sub_categ_div.size(); y++) {
+				j=1;
 				
 				try {
 				if(driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/div/div/div["+x+"]/div["+y+"]/div/img")).isDisplayed()) {
@@ -252,7 +255,7 @@ public class TestAllenSollyInfo {
 					}
 				catch(Exception e) {
 					
-					j=1;
+					j++;
 					
 					
 				}
