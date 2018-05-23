@@ -84,7 +84,7 @@ public class TestGlobusFashionInfo {
 					
 					WebElement main_category1 = driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[2]/ul/li["+i+"]/a/span"));
 					WebElement product_category1 = driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[2]/ul/li["+i+"]/div/div[1]/ul/li["+y+"]/div/div/ul/li["+j+"]/a/span"));
-					String prodCategoryName = clickfirst.getCategoryName(product_category1);
+					String prodCategoryName = clickfirst.getCategoryName(product_category1).replaceAll("/", "-");
 					
 					clickfirst.moveToElementandClick(main_category1, product_category1, driver);
 					

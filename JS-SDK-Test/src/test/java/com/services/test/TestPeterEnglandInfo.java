@@ -110,7 +110,9 @@ public class TestPeterEnglandInfo {
 				
 				setZoomLevel.zoomOut(driver);
 				
-				((JavascriptExecutor) driver).executeScript("window.scrollBy(0,2650)");
+				((JavascriptExecutor) driver).executeScript("window.scrollBy(0,600)");
+				
+				Thread.sleep(2000);
 				
 				if(driver.findElement(By.cssSelector(".similar_product_view.recomdtn")).isDisplayed())
 				{
@@ -177,11 +179,12 @@ public class TestPeterEnglandInfo {
 						
 						
 						
-						Thread.sleep(3000);
+						Thread.sleep(2000);
 						
 						setZoomLevel.zoomOut(driver);
 						
 						((JavascriptExecutor) driver).executeScript("window.scrollBy(0,600)");
+						Thread.sleep(2000);
 						if(driver.findElement(By.cssSelector(".similar_product_view.recomdtn")).isDisplayed())
 						{
 							status = "passed";
