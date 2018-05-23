@@ -19,6 +19,7 @@ import com.services.utility.CreateFolder;
 import com.services.utility.GUICheckForSimilarProducts;
 import com.services.utility.InitialSetup;
 import com.services.utility.RestAPICheckForSimilarProducts;
+import com.services.utility.ZoomInAndZoomOut;
 import com.services.utility.clickonFirstProduct;
 import com.services.utility.getSystemDate;
 
@@ -41,6 +42,7 @@ public class TestPeterEnglandInfo {
 	static clickonFirstProduct clickfirst;
 	static RestAPICheckForSimilarProducts checkProducts;
 	static GUICheckForSimilarProducts checkGUI;
+	static ZoomInAndZoomOut setZoomLevel;
 	
 	
 	@BeforeClass
@@ -54,6 +56,7 @@ public class TestPeterEnglandInfo {
 		checkStatus = new CheckWidgetPresentStatus();
 		checkProducts = new RestAPICheckForSimilarProducts();
 		checkGUI = new GUICheckForSimilarProducts();
+		setZoomLevel = new ZoomInAndZoomOut();
 		getSystemDate getDate = new getSystemDate();
 		CreateFolder createFolder = new CreateFolder();
 		currentDate = getDate.getPresentDate();
@@ -105,7 +108,10 @@ public class TestPeterEnglandInfo {
 				
 				Thread.sleep(2000);
 				
+				setZoomLevel.zoomOut(driver);
+				
 				((JavascriptExecutor) driver).executeScript("window.scrollBy(0,2650)");
+				
 				if(driver.findElement(By.cssSelector(".similar_product_view.recomdtn")).isDisplayed())
 				{
 					status = "passed";
@@ -125,6 +131,7 @@ public class TestPeterEnglandInfo {
 					
 				}
 				
+				setZoomLevel.zoomIn(driver);
 				
 				j++;
 
@@ -168,9 +175,13 @@ public class TestPeterEnglandInfo {
 						
 						clickfirst.clickOnPeterEnglandProduct(driver);
 						
-						Thread.sleep(2000);
 						
-						((JavascriptExecutor) driver).executeScript("window.scrollBy(0,2650)");
+						
+						Thread.sleep(3000);
+						
+						setZoomLevel.zoomOut(driver);
+						
+						((JavascriptExecutor) driver).executeScript("window.scrollBy(0,600)");
 						if(driver.findElement(By.cssSelector(".similar_product_view.recomdtn")).isDisplayed())
 						{
 							status = "passed";
@@ -189,7 +200,7 @@ public class TestPeterEnglandInfo {
 									product_id,isDisplaying);
 							
 						}
-						
+						setZoomLevel.zoomIn(driver);
 						
 						j++;
 
@@ -205,7 +216,7 @@ public class TestPeterEnglandInfo {
 				catch(Exception e) {
 					
 					j++;
-					//driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/a/img")).click();
+					driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/a/img")).click();
 					WebElement main_category2 = driver.findElement(By.xpath(".//*[@id='nav-bar']/li[1]/a"));
 					clickfirst.moveToElement_only(main_category2, driver);
 					
