@@ -7,8 +7,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -91,11 +89,6 @@ public class TestPothysInfo {
 						clickfirst.moveToElementandClick(main_category1, product_category, driver);
 						
 						Thread.sleep(2000);
-						
-						((JavascriptExecutor) driver).executeScript("window.scrollBy(0,300)"); 
-						
-						WebDriverWait wait = new WebDriverWait(driver,15);
-						wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("/html/body/section/section[3]/div/div[3]/section/div/div[2]/ul/li[1]/div[1]/div/div[1]/div[1]/span/a/img")));
 					
 						
 						clickfirst.clickOnPothysProduct(driver);
@@ -121,6 +114,8 @@ public class TestPothysInfo {
 							checkStatus.checkStatusAndTakeScreenshot(driver, currentDate,folderName, mainCategoryName, prodCategoryName, status,product_id,isDisplaying);
 							
 						}
+						
+						((JavascriptExecutor) driver).executeScript("window.scrollTo(0,0)"); 
 		
 						j++;
 	

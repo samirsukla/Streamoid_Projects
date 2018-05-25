@@ -105,18 +105,7 @@ public class clickonFirstProduct {
 		random = new GenerateRandomNumber();
 		int randomNo = random.generateRandomNo()+1;
 		
-//		if(randomNo >=5 && randomNo<=9) {
-//			
-//			((JavascriptExecutor) driver).executeScript("window.scrollBy(0,900)"); 
-//			Thread.sleep(2000);
-//			
-//		}
-//		if(randomNo >=10) {
-//			
-//			((JavascriptExecutor) driver).executeScript("window.scrollBy(0,1700)"); 
-//			Thread.sleep(2000);
-//			
-//		}
+
 		if(randomNo<=noOfProducts) {
 			String product_url = ".//*[@id='Productshowcase']/div[1]/div/div["+randomNo+"]/div[2]/a[1]/img";
 			WebElement elementToClick = driver.findElement(By.xpath(product_url));
@@ -127,13 +116,13 @@ public class clickonFirstProduct {
 			WebElement first_element_link = driver.findElement(By.xpath("//div[@id='Productshowcase']/div/div/div["+randomNo+"]"));
 			String product_id = first_element_link.getAttribute("data-productid");
 			
-			//driver.findElement(By.xpath(product_url)).click();
+			
 			elementToClick.click();
 			return product_id;
 			
 		}
 		else {
-			//((JavascriptExecutor) driver).executeScript("window.scrollTo(0,0)"); 
+			
 			String product_url = ".//*[@id='Productshowcase']/div[1]/div/div[2]/div[2]/a[1]/img";
 			WebDriverWait wait = new WebDriverWait(driver,10);
 			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(product_url)));
@@ -229,10 +218,36 @@ public class clickonFirstProduct {
 	
 
 public void clickOnPothysProduct(WebDriver driver) throws InterruptedException {
-	Thread.sleep(2000);
-	String product ="/html/body/section/section[3]/div/div[3]/section/div/div[2]/ul/li[1]/div[1]/div/div[1]/div[1]/span/a/img";
-	WebElement firstProduct = driver.findElement(By.xpath(product));
-	((JavascriptExecutor)driver).executeScript("arguments[0].click();", firstProduct);
+	
+	List<WebElement> productList = driver.findElements(By.xpath(".//*[@id='products-grid']/li"));
+	int noOfProducts = productList.size()*3;
+	random = new GenerateRandomNumber();
+	int randomNo = random.generateRandomNo();
+	
+	int rowNum = (randomNo/3)+1;
+	int colNum = (randomNo%3)+1;
+	
+
+	if(randomNo<=noOfProducts) {
+		String product_url = ".//*[@id='products-grid']/li["+rowNum+"]/div["+colNum+"]/div/div[1]/div[1]/span/a/img";
+		WebElement elementToClick = driver.findElement(By.xpath(product_url));
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", elementToClick);
+		
+		((JavascriptExecutor)driver).executeScript("arguments[0].click();", elementToClick);
+		
+		
+	}
+	else {
+		((JavascriptExecutor) driver).executeScript("window.scrollBy(0,300)"); 
+		
+		String product_url = ".//*[@id='products-grid']/li[1]/div[1]/div/div[1]/div[1]/span/a/img";
+		WebElement elementToClick = driver.findElement(By.xpath(product_url));
+		WebDriverWait wait = new WebDriverWait(driver,10);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(product_url)));
+		
+		((JavascriptExecutor)driver).executeScript("arguments[0].click();", elementToClick);
+		
+	}
 	
 }
 
