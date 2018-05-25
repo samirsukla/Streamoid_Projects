@@ -8,11 +8,11 @@ import org.openqa.selenium.WebDriver;
 
 public class ManageWindowHandle {
 	
-	public void switchToNewWindow(WebDriver driver) throws InterruptedException {
+	public String switchToNewWindow(WebDriver driver) throws InterruptedException {
 		clickonFirstProduct clickfirst=new clickonFirstProduct();
 			
 		String parentWindow=driver.getWindowHandle();
-		clickfirst.clickOnFabIndiaProduct(driver);
+		String product_id = clickfirst.clickOnFabIndiaProduct(driver);
 		Set<String> newWindows = driver.getWindowHandles();
 		
 		for(String childWindow : newWindows) {
@@ -23,7 +23,7 @@ public class ManageWindowHandle {
 			}
 		}
 		
-		
+		return product_id;
 		
 	}
 	

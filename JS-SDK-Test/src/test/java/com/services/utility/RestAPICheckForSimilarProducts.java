@@ -45,8 +45,7 @@ public class RestAPICheckForSimilarProducts {
 				
 				JSONObject jobj1 = (JSONObject) jarr.get(j);				
 				
-//				long similar_product_id = (Long)jobj1.get("product_id");
-//				sim_prod_ids.add(Long.toString(similar_product_id));
+
 				String similar_product_id = (jobj1.get("product_id")).toString();
 				sim_prod_ids.add(similar_product_id);
 				
@@ -58,7 +57,7 @@ public class RestAPICheckForSimilarProducts {
     
     
 		}
-		System.out.println(sim_prod_ids);
+		//System.out.println(sim_prod_ids);
 		return sim_prod_ids;
 
 		}

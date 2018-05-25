@@ -17,8 +17,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 
@@ -108,14 +106,10 @@ public class TestVanHeusenInfo {
 						String prodCategoryName = clickfirst.getCategoryName(product_category);
 				
 						clickfirst.moveToElementandClick(main_category1, product_category, driver);
+						Thread.sleep(3000);
 						
-						WebDriverWait wait = new WebDriverWait(driver,10);
-						wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[3]/div[2]/div[2]/div/div[6]/div/div/div[1]/div/div[1]/div[1]/div/div/ul/li[2]/a/div/img")));
-								
-						WebElement first_element_link = driver.findElement(By.xpath("/html/body/div[3]/div[2]/div[2]/div/div[6]/div/div/div[1]/div"));
-						product_id = first_element_link.getAttribute("id").replaceAll("product_wrap_", "");
+						product_id = clickfirst.clickOnAllen_VanHProduct(driver);					
 						
-						clickfirst.clickOnABOFProduct(driver);
 						
 						Thread.sleep(3000);
 						
@@ -172,14 +166,11 @@ public class TestVanHeusenInfo {
 					clickfirst.moveToElementandClick(main_category1, product_category, driver);
 					
 		
-					WebDriverWait wait = new WebDriverWait(driver,10);
-					wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[3]/div[2]/div[2]/div/div[6]/div/div/div[1]/div/div[1]/div[1]/div/div/ul/li[2]/a/div/img")));
-							
-					WebElement first_element_link = driver.findElement(By.xpath("/html/body/div[3]/div[2]/div[2]/div/div[6]/div/div/div[1]/div"));
-					product_id = first_element_link.getAttribute("id").replaceAll("product_wrap_", "");
-		
-					clickfirst.clickOnABOFProduct(driver);
+					Thread.sleep(3000);
 					
+					product_id = clickfirst.clickOnAllen_VanHProduct(driver);	
+		
+									
 					Thread.sleep(3000);
 					
 					if(driver.findElement(By.className("vanheusen_vertical_container")).isDisplayed())
@@ -232,14 +223,11 @@ public class TestVanHeusenInfo {
 						
 						clickfirst.moveToElementandClick(main_category1, product_category, driver);
 						
-						WebDriverWait wait = new WebDriverWait(driver,10);
-						wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[3]/div[2]/div[2]/div/div[6]/div/div/div[1]/div/div[1]/div[1]/div/div/ul/li[2]/a/div/img")));
-								
-						WebElement first_element_link = driver.findElement(By.xpath("/html/body/div[3]/div[2]/div[2]/div/div[6]/div/div/div[1]/div"));
-						product_id = first_element_link.getAttribute("id").replaceAll("product_wrap_", "");
-			
-						clickfirst.clickOnABOFProduct(driver);
+						Thread.sleep(3000);
 						
+						product_id = clickfirst.clickOnAllen_VanHProduct(driver);	
+			
+											
 						Thread.sleep(3000);
 						
 						if(driver.findElement(By.className("vanheusen_vertical_container")).isDisplayed())

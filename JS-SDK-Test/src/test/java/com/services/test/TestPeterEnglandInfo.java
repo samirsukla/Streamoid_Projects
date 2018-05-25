@@ -8,8 +8,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -97,14 +95,9 @@ public class TestPeterEnglandInfo {
 				
 				clickfirst.moveToElementandClick(main_category1, product_category, driver);
 				
-				WebDriverWait wait = new WebDriverWait(driver,10);
-				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[3]/div[4]/div[1]/div[1]/div/div[1]/div/ul/li[2]/a/div/img")));
-			
+				Thread.sleep(3000);
 				
-				WebElement first_element_link = driver.findElement(By.xpath("/html/body/div[3]/div[4]/div[1]/div"));
-				product_id = first_element_link.getAttribute("data-productid");
-				
-				clickfirst.clickOnPeterEnglandProduct(driver);
+				product_id = clickfirst.clickOnPeterEnglandProduct(driver);
 				
 				Thread.sleep(2000);
 				
@@ -169,15 +162,9 @@ public class TestPeterEnglandInfo {
 						
 						clickfirst.moveToElementandClick(main_category1, product_category, driver);
 						
-						WebDriverWait wait = new WebDriverWait(driver,10);
-						wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[3]/div[4]/div[1]/div[1]/div/div[1]/div/ul/li[2]/a/div/img")));
+						Thread.sleep(3000);
 						
-						WebElement first_element_link = driver.findElement(By.xpath("/html/body/div[3]/div[4]/div[1]/div"));
-						product_id = first_element_link.getAttribute("data-productid");
-						
-						clickfirst.clickOnPeterEnglandProduct(driver);
-						
-						
+						product_id = clickfirst.clickOnPeterEnglandProduct(driver);
 						
 						Thread.sleep(2000);
 						

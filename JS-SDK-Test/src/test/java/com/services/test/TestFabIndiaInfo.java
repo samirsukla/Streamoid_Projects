@@ -5,10 +5,9 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Properties;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -67,6 +66,7 @@ public class TestFabIndiaInfo {
   public void testFabIndia() throws Exception {
 	  
 	    String url = initSet.getUrl("Fab_India");
+	    
 		driver.get(url);
 		
 		mainCategoryName = driver.findElement(By.xpath(".//*[@id='sample-menu-2']/li[2]/a/span[2]")).getText();
@@ -91,15 +91,11 @@ public class TestFabIndiaInfo {
 			
 			if(j==2) {
 				
-				WebDriverWait wait = new WebDriverWait(driver, 10);
-				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='Productshowcase']/div[1]/div/div[2]/div/a/img")));
+				Thread.sleep(2000);
+				product_id = handle.switchToNewWindow(driver);
 				
-				WebElement first_element_link = driver.findElement(By.xpath("//div[@id='Productshowcase']/div/div/div[2]"));
-				product_id = first_element_link.getAttribute("data-productid");
 				
-				handle.switchToNewWindow(driver);
-				
-				Thread.sleep(3000);
+				Thread.sleep(4000);
 				
 				if(driver.findElement(By.xpath(".//*[@id='stremoidDiv']/div")).isDisplayed()) {
 					status="passed";
@@ -138,15 +134,10 @@ public class TestFabIndiaInfo {
 				
 				driver.findElement(By.xpath(".//*[@id='ctl00_ContentPlaceHolder1_ctl00_Pane2']/div[2]/div[2]/div/ul/li[2]/ul/li[2]/ul/li[2]/ul/li["+i+"]/a")).click();
 			
-				WebDriverWait wait = new WebDriverWait(driver, 15);
-				wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='Productshowcase']/div[1]/div/div[2]/div/a/img")));
+				Thread.sleep(2000);
+				product_id = handle.switchToNewWindow(driver);
 				
-				WebElement first_element_link = driver.findElement(By.xpath("//div[@id='Productshowcase']/div/div/div[2]"));
-				product_id = first_element_link.getAttribute("data-productid");
-				
-				handle.switchToNewWindow(driver);
-				
-				Thread.sleep(3000);
+				Thread.sleep(4000);
 				
 				if(driver.findElement(By.xpath(".//*[@id='stremoidDiv']/div")).isDisplayed()) {
 					status="passed";
@@ -167,6 +158,7 @@ public class TestFabIndiaInfo {
 				}
 				
 				handle.switchToParentWindow(driver);
+				((JavascriptExecutor) driver).executeScript("window.scrollTo(0,0)"); 
 				
 				
 			}
@@ -189,9 +181,14 @@ public class TestFabIndiaInfo {
 			clickfirst.moveToElement_only(main_category2, driver);
 		}
 		catch(Exception e) {
-			e.printStackTrace();
 			
-			driver.findElement(By.xpath("/html/body/form/div[3]/center/div/div/center/div[1]/div[1]/div[3]/div/div/div[1]/a/img")).click();
+			if(j%2==0) {
+				
+				j+=3;
+			}
+			else {
+			j++;
+			}
 			WebElement main_category2 = driver.findElement(By.xpath(".//*[@id='sample-menu-2']/li[2]/a/span[2]"));
 			clickfirst.moveToElement_only(main_category2, driver);
 		}

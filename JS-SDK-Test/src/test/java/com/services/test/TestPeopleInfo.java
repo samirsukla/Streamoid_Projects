@@ -7,12 +7,9 @@ import java.util.Properties;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
-
 import com.services.utility.CheckWidgetPresentStatus;
 import com.services.utility.CreateFolder;
 import com.services.utility.GUICheckForSimilarProducts;
@@ -43,6 +40,7 @@ public class TestPeopleInfo {
 	static GUICheckForSimilarProducts checkGUI;
 	
 	
+	
 	@BeforeClass
 	public void setUp() throws IOException {
 		
@@ -54,6 +52,7 @@ public class TestPeopleInfo {
 		checkStatus = new CheckWidgetPresentStatus();
 		checkProducts = new RestAPICheckForSimilarProducts();
 		checkGUI = new GUICheckForSimilarProducts();
+		
 		getSystemDate getDate = new getSystemDate();
 		CreateFolder createFolder = new CreateFolder();
 		currentDate = getDate.getPresentDate();
@@ -87,15 +86,9 @@ public class TestPeopleInfo {
 					String prodCategoryName = clickfirst.getCategoryName(product_category);
 					
 					clickfirst.moveToElementandClick(main_category1, product_category, driver);
+					Thread.sleep(3000);
 					
-					
-					WebDriverWait wait = new WebDriverWait(driver,10);
-					wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[3]/div[1]/div[2]/div/div[6]/div/div/div[1]/div/div[1]/div[1]/div/div/ul/li[2]/a/div/img")));
-					
-					WebElement first_element_link = driver.findElement(By.xpath("/html/body/div[3]/div[1]/div[2]/div/div[6]/div/div/div[1]/div"));
-					product_id = first_element_link.getAttribute("id").replaceAll("product_wrap_", "");
-					
-					clickfirst.clickOnPeopleProduct(driver);
+					product_id = clickfirst.clickOnPeople_Planet_LouisProduct(driver);
 					
 					Thread.sleep(2000);
 					
@@ -130,7 +123,7 @@ public class TestPeopleInfo {
 			catch(Exception e) {
 				
 				j++;
-				//driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/div[1]/div/div[1]/div/a/img")).click();
+				
 				WebElement main_category2 = driver.findElement(By.xpath(".//*[@id='nav-bar']/li["+i+"]/a"));
 				clickfirst.moveToElement_only(main_category2, driver);
 				

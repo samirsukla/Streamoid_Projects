@@ -8,8 +8,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -87,20 +85,11 @@ public class TestGlobusFashionInfo {
 					String prodCategoryName = clickfirst.getCategoryName(product_category1).replaceAll("/", "-");
 					
 					clickfirst.moveToElementandClick(main_category1, product_category1, driver);
+					Thread.sleep(2000);
 					
-					WebDriverWait wait = new WebDriverWait(driver,10);
-					wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[2]/div[6]/div[5]/ul/li[1]/a/img")));
+					product_id =  clickfirst.clickOnGlobusProduct(driver);
 					
-					
-					WebElement first_element_link = driver.findElement(By.xpath("/html/body/div[1]/div/div/div[3]/div/div[2]/div[6]/div[5]/ul/li[1]/div[1]/button"));
-					product_id = first_element_link.getAttribute("sku");
-					
-					
-			    clickfirst.clickOnGlobusProduct(driver);
-					
-				
-					
-				    Thread.sleep(2000);
+					Thread.sleep(2000);
 					
 					((JavascriptExecutor) driver).executeScript("window.scrollBy(0,600)"); 
 					
@@ -116,7 +105,7 @@ public class TestGlobusFashionInfo {
 								product_id,isDisplaying);
 					}
 					else
-					{
+					{ 
 						status = "failed";
 						boolean isDisplaying = false;
 						
@@ -142,7 +131,7 @@ public class TestGlobusFashionInfo {
 			catch(Exception e) {
 				
 				j++;
-				//driver.findElement(By.xpath("/html/body/div[1]/div/div/div[1]/div[2]/div/div[3]/div/h1/a/img")).click();
+				
 				((JavascriptExecutor) driver).executeScript("window.scrollTo(0,0)");
 				WebElement main_category2 = driver.findElement(By.xpath("/html/body/div[1]/div/div/div[2]/div[2]/ul/li["+i+"]/a/span"));
 				clickfirst.moveToElement_only(main_category2, driver);

@@ -5,6 +5,7 @@
   
     <classes>
    	  <class name="com.services.test.TestAllenSollyInfo"/>	
+   	  <class name="com.services.test.TestGlobusFashionInfo"/>
    	  <class name="com.services.test.TestPeopleInfo"/>
       <class name="com.services.test.TestPlanetFashionInfo"/>
       <class name="com.services.test.TestPothysInfo"/>
