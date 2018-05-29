@@ -141,7 +141,7 @@ public class TestPeterEnglandInfo {
 				
 				catch(Exception e) {
 					
-					j=1;;
+					j=1;
 					x++;
 					
 					
@@ -206,7 +206,7 @@ public class TestPeterEnglandInfo {
 				catch(Exception e) {
 					
 					j++;
-					driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/a/img")).click();
+					//driver.findElement(By.xpath("/html/body/div[2]/div/div[1]/a/img")).click();
 					WebElement main_category2 = driver.findElement(By.xpath(".//*[@id='nav-bar']/li[1]/a"));
 					clickfirst.moveToElement_only(main_category2, driver);
 					
