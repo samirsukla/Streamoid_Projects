@@ -1,5 +1,6 @@
 package com.services.test;
 
+import org.testng.annotations.Test;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.List;
@@ -10,8 +11,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
-
 import com.services.utility.CheckWidgetPresentStatus;
 import com.services.utility.CreateFolder;
 import com.services.utility.GUICheckForSimilarProducts;
@@ -41,6 +40,7 @@ public class TestPeterEnglandInfo {
 	static RestAPICheckForSimilarProducts checkProducts;
 	static GUICheckForSimilarProducts checkGUI;
 	static ZoomInAndZoomOut setZoomLevel;
+	
 	
 	
 	@BeforeClass
@@ -217,7 +217,8 @@ public class TestPeterEnglandInfo {
   }
   
   
-  @AfterClass
+  
+@AfterClass
   public void tearDown() {
 	  
 	  driver.close();

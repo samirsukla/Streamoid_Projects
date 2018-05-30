@@ -1,0 +1,194 @@
+-------------------------------------------------------------------------------
+Test set: TestSuite
+-------------------------------------------------------------------------------
+Tests run: 31, Failures: 19, Errors: 0, Skipped: 12, Time elapsed: 172.567 sec <<< FAILURE! - in TestSuite
+testRaymondNext(com.services.test.TestRaymondNextInfo)  Time elapsed: 51.828 sec  <<< FAILURE!
+org.openqa.selenium.SessionNotCreatedException: 
+Tried to run command without establishing a connection
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'streamoid-ThinkPad-T440s', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.13.0-43-generic', java.version: '1.8.0_171'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 55.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:processID: 4525, moz:profile: /tmp/rust_mozprofile.ol2dq2..., pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.13.0-43-generic, rotatable: false, specificationLevel: 0, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 786eff70-68e5-4f2d-bac2-bbca0fb8b67a
+*** Element info: {Using=xpath, value=/html/body/div[1]/header/div/div/div[3]/div/div[1]/ul/li[1]/a}
+	at com.services.test.TestRaymondNextInfo.testRaymondNext(TestRaymondNextInfo.java:189)
+
+tearDown(com.services.test.TestRaymondNextInfo)  Time elapsed: 51.831 sec  <<< FAILURE!
+org.openqa.selenium.SessionNotCreatedException: 
+Tried to run command without establishing a connection
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'streamoid-ThinkPad-T440s', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.13.0-43-generic', java.version: '1.8.0_171'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 55.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:processID: 4525, moz:profile: /tmp/rust_mozprofile.ol2dq2..., pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.13.0-43-generic, rotatable: false, specificationLevel: 0, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 786eff70-68e5-4f2d-bac2-bbca0fb8b67a
+	at com.services.test.TestRaymondNextInfo.tearDown(TestRaymondNextInfo.java:206)
+
+testAllenSolly(com.services.test.TestAllenSollyInfo)  Time elapsed: 8.638 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+Failed to decode response from marionette
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'streamoid-ThinkPad-T440s', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.13.0-43-generic', java.version: '1.8.0_171'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 55.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:processID: 4773, moz:profile: /tmp/rust_mozprofile.qrNzyj..., pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.13.0-43-generic, rotatable: false, specificationLevel: 0, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: e9f74cb4-15b2-46f4-8763-3e38a85be6ce
+	at com.services.test.TestAllenSollyInfo.testAllenSolly(TestAllenSollyInfo.java:66)
+
+tearDown(com.services.test.TestAllenSollyInfo)  Time elapsed: 8.647 sec  <<< FAILURE!
+org.openqa.selenium.SessionNotCreatedException: 
+Tried to run command without establishing a connection
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'streamoid-ThinkPad-T440s', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.13.0-43-generic', java.version: '1.8.0_171'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 55.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:processID: 4773, moz:profile: /tmp/rust_mozprofile.qrNzyj..., pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.13.0-43-generic, rotatable: false, specificationLevel: 0, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: e9f74cb4-15b2-46f4-8763-3e38a85be6ce
+	at com.services.test.TestAllenSollyInfo.tearDown(TestAllenSollyInfo.java:262)
+
+testLouisPhilippe(com.services.test.TestLouisPhilippeInfo)  Time elapsed: 2.838 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+Failed to decode response from marionette
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'streamoid-ThinkPad-T440s', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.13.0-43-generic', java.version: '1.8.0_171'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 55.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:processID: 4998, moz:profile: /tmp/rust_mozprofile.nM1Z07..., pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.13.0-43-generic, rotatable: false, specificationLevel: 0, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: eff4fa5d-09de-4b93-aa6a-793b70d837f6
+	at com.services.test.TestLouisPhilippeInfo.testLouisPhilippe(TestLouisPhilippeInfo.java:70)
+
+tearDown(com.services.test.TestLouisPhilippeInfo)  Time elapsed: 2.843 sec  <<< FAILURE!
+org.openqa.selenium.SessionNotCreatedException: 
+Tried to run command without establishing a connection
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'streamoid-ThinkPad-T440s', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.13.0-43-generic', java.version: '1.8.0_171'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 55.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:processID: 4998, moz:profile: /tmp/rust_mozprofile.nM1Z07..., pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.13.0-43-generic, rotatable: false, specificationLevel: 0, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: eff4fa5d-09de-4b93-aa6a-793b70d837f6
+	at com.services.test.TestLouisPhilippeInfo.tearDown(TestLouisPhilippeInfo.java:174)
+
+setUp(com.services.test.TestGlobusFashionInfo)  Time elapsed: 8.135 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+Failed to decode response from marionette
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'streamoid-ThinkPad-T440s', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.13.0-43-generic', java.version: '1.8.0_171'
+Driver info: driver.version: FirefoxDriver
+remote stacktrace: 
+	at com.services.test.TestGlobusFashionInfo.setUp(TestGlobusFashionInfo.java:52)
+
+testPeterEngland(com.services.test.TestPeterEnglandInfo)  Time elapsed: 2.84 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+Failed to decode response from marionette
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'streamoid-ThinkPad-T440s', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.13.0-43-generic', java.version: '1.8.0_171'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 55.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:processID: 5230, moz:profile: /tmp/rust_mozprofile.M5EeWT..., pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.13.0-43-generic, rotatable: false, specificationLevel: 0, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 4eaddf2e-1fe4-4000-897b-6e1f779e6cac
+	at com.services.test.TestPeterEnglandInfo.testPeterEngland(TestPeterEnglandInfo.java:67)
+
+tearDown(com.services.test.TestPeterEnglandInfo)  Time elapsed: 2.846 sec  <<< FAILURE!
+org.openqa.selenium.SessionNotCreatedException: 
+Tried to run command without establishing a connection
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'streamoid-ThinkPad-T440s', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.13.0-43-generic', java.version: '1.8.0_171'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 55.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:processID: 5230, moz:profile: /tmp/rust_mozprofile.M5EeWT..., pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.13.0-43-generic, rotatable: false, specificationLevel: 0, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 4eaddf2e-1fe4-4000-897b-6e1f779e6cac
+	at com.services.test.TestPeterEnglandInfo.tearDown(TestPeterEnglandInfo.java:224)
+
+testPlanetFashion(com.services.test.TestPlanetFashionInfo)  Time elapsed: 2.707 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+Failed to decode response from marionette
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'streamoid-ThinkPad-T440s', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.13.0-43-generic', java.version: '1.8.0_171'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 55.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:processID: 5457, moz:profile: /tmp/rust_mozprofile.EVpiIr..., pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.13.0-43-generic, rotatable: false, specificationLevel: 0, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 3d661e69-4b9c-43c6-8dcf-e5419819d9eb
+	at com.services.test.TestPlanetFashionInfo.testPlanetFashion(TestPlanetFashionInfo.java:70)
+
+tearDown(com.services.test.TestPlanetFashionInfo)  Time elapsed: 2.715 sec  <<< FAILURE!
+org.openqa.selenium.SessionNotCreatedException: 
+Tried to run command without establishing a connection
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'streamoid-ThinkPad-T440s', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.13.0-43-generic', java.version: '1.8.0_171'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 55.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:processID: 5457, moz:profile: /tmp/rust_mozprofile.EVpiIr..., pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.13.0-43-generic, rotatable: false, specificationLevel: 0, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 3d661e69-4b9c-43c6-8dcf-e5419819d9eb
+	at com.services.test.TestPlanetFashionInfo.tearDown(TestPlanetFashionInfo.java:146)
+
+testPeople(com.services.test.TestPeopleInfo)  Time elapsed: 2.965 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+Failed to decode response from marionette
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'streamoid-ThinkPad-T440s', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.13.0-43-generic', java.version: '1.8.0_171'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 55.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:processID: 5683, moz:profile: /tmp/rust_mozprofile.i9vSPK..., pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.13.0-43-generic, rotatable: false, specificationLevel: 0, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: c3d83c93-0255-4323-b63a-d453acd2a19c
+	at com.services.test.TestPeopleInfo.testPeople(TestPeopleInfo.java:70)
+
+tearDown(com.services.test.TestPeopleInfo)  Time elapsed: 2.969 sec  <<< FAILURE!
+org.openqa.selenium.SessionNotCreatedException: 
+Tried to run command without establishing a connection
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'streamoid-ThinkPad-T440s', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.13.0-43-generic', java.version: '1.8.0_171'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 55.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:processID: 5683, moz:profile: /tmp/rust_mozprofile.i9vSPK..., pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.13.0-43-generic, rotatable: false, specificationLevel: 0, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: c3d83c93-0255-4323-b63a-d453acd2a19c
+	at com.services.test.TestPeopleInfo.tearDown(TestPeopleInfo.java:146)
+
+testFabIndia(com.services.test.TestFabIndiaInfo)  Time elapsed: 18.097 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+Failed to decode response from marionette
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'streamoid-ThinkPad-T440s', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.13.0-43-generic', java.version: '1.8.0_171'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 55.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:processID: 5909, moz:profile: /tmp/rust_mozprofile.xccYcB..., pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.13.0-43-generic, rotatable: false, specificationLevel: 0, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: a1a9d6bd-b97e-4d03-88c4-9e59eceba54a
+	at com.services.test.TestFabIndiaInfo.testFabIndia(TestFabIndiaInfo.java:74)
+
+tearDown(com.services.test.TestFabIndiaInfo)  Time elapsed: 18.101 sec  <<< FAILURE!
+org.openqa.selenium.SessionNotCreatedException: 
+Tried to run command without establishing a connection
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'streamoid-ThinkPad-T440s', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.13.0-43-generic', java.version: '1.8.0_171'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 55.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:processID: 5909, moz:profile: /tmp/rust_mozprofile.xccYcB..., pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.13.0-43-generic, rotatable: false, specificationLevel: 0, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: a1a9d6bd-b97e-4d03-88c4-9e59eceba54a
+	at com.services.test.TestFabIndiaInfo.tearDown(TestFabIndiaInfo.java:214)
+
+testPothys(com.services.test.TestPothysInfo)  Time elapsed: 2.507 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+Failed to decode response from marionette
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'streamoid-ThinkPad-T440s', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.13.0-43-generic', java.version: '1.8.0_171'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 55.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:processID: 6139, moz:profile: /tmp/rust_mozprofile.qkTUEz..., pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.13.0-43-generic, rotatable: false, specificationLevel: 0, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: b452645c-687a-4719-9979-f2825ee89f4a
+	at com.services.test.TestPothysInfo.testPothys(TestPothysInfo.java:68)
+
+tearDown(com.services.test.TestPothysInfo)  Time elapsed: 2.51 sec  <<< FAILURE!
+org.openqa.selenium.SessionNotCreatedException: 
+Tried to run command without establishing a connection
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'streamoid-ThinkPad-T440s', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.13.0-43-generic', java.version: '1.8.0_171'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 55.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:processID: 6139, moz:profile: /tmp/rust_mozprofile.qkTUEz..., pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.13.0-43-generic, rotatable: false, specificationLevel: 0, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: b452645c-687a-4719-9979-f2825ee89f4a
+	at com.services.test.TestPothysInfo.tearDown(TestPothysInfo.java:147)
+
+testVanHeusen(com.services.test.TestVanHeusenInfo)  Time elapsed: 2.701 sec  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+Failed to decode response from marionette
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'streamoid-ThinkPad-T440s', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.13.0-43-generic', java.version: '1.8.0_171'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 55.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:processID: 6355, moz:profile: /tmp/rust_mozprofile.V7GQ1B..., pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.13.0-43-generic, rotatable: false, specificationLevel: 0, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 455d873e-8350-400e-9867-6e1545267070
+	at com.services.test.TestVanHeusenInfo.testVanHeusen(TestVanHeusenInfo.java:67)
+
+tearDown(com.services.test.TestVanHeusenInfo)  Time elapsed: 2.705 sec  <<< FAILURE!
+org.openqa.selenium.SessionNotCreatedException: 
+Tried to run command without establishing a connection
+Build info: version: '3.11.0', revision: 'e59cfb3', time: '2018-03-11T20:26:55.152Z'
+System info: host: 'streamoid-ThinkPad-T440s', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.13.0-43-generic', java.version: '1.8.0_171'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 55.0.3, javascriptEnabled: true, moz:accessibilityChecks: false, moz:processID: 6355, moz:profile: /tmp/rust_mozprofile.V7GQ1B..., pageLoadStrategy: normal, platform: LINUX, platformName: LINUX, platformVersion: 4.13.0-43-generic, rotatable: false, specificationLevel: 0, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}}
+Session ID: 455d873e-8350-400e-9867-6e1545267070
+	at com.services.test.TestVanHeusenInfo.tearDown(TestVanHeusenInfo.java:285)
+

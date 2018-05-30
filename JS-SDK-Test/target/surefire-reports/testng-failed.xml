@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [Suite]">
+  <test name="Test(failed)">
+    <classes>
+      <class name="com.services.test.TestGlobusFashionInfo">
+        <methods>
+          <include name="setUp"/>
+          <include name="testGlobusFashion"/>
+        </methods>
+      </class> <!-- com.services.test.TestGlobusFashionInfo -->
+      <class name="com.services.test.TestPeterEnglandInfo">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="testPeterEngland"/>
+        </methods>
+      </class> <!-- com.services.test.TestPeterEnglandInfo -->
+      <class name="com.services.test.TestPlanetFashionInfo">
+        <methods>
+          <include name="testPlanetFashion"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.services.test.TestPlanetFashionInfo -->
+      <class name="com.services.test.TestVanHeusenInfo">
+        <methods>
+          <include name="setUp"/>
+          <include name="testVanHeusen"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.services.test.TestVanHeusenInfo -->
+      <class name="com.services.test.TestRaymondNextInfo">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="testRaymondNext"/>
+        </methods>
+      </class> <!-- com.services.test.TestRaymondNextInfo -->
+      <class name="com.services.test.TestAllenSollyInfo">
+        <methods>
+          <include name="testAllenSolly"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.services.test.TestAllenSollyInfo -->
+      <class name="com.services.test.TestPothysInfo">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="testPothys"/>
+        </methods>
+      </class> <!-- com.services.test.TestPothysInfo -->
+      <class name="com.services.test.TestLouisPhilippeInfo">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="testLouisPhilippe"/>
+        </methods>
+      </class> <!-- com.services.test.TestLouisPhilippeInfo -->
+      <class name="com.services.test.TestPeopleInfo">
+        <methods>
+          <include name="tearDown"/>
+          <include name="testPeople"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.services.test.TestPeopleInfo -->
+      <class name="com.services.test.TestFabIndiaInfo">
+        <methods>
+          <include name="tearDown"/>
+          <include name="testFabIndia"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.services.test.TestFabIndiaInfo -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

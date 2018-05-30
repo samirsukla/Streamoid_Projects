@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Parallel Test Run">
-  <test name="TestClientInfo">
-  
-    <classes>
-   	  <class name="com.services.test.TestAllenSollyInfo"/>	
-   	  <class name="com.services.test.TestGlobusFashionInfo"/>
-   	  <class name="com.services.test.TestPeopleInfo"/>
-      <class name="com.services.test.TestPlanetFashionInfo"/>
-      <class name="com.services.test.TestPothysInfo"/>
-      <class name="com.services.test.TestPeterEnglandInfo"/>
-      <class name="com.services.test.TestVanHeusenInfo"/>
-      <class name="com.services.test.TestLouisPhilippeInfo"/>
-      <class name="com.services.test.TestFabIndiaInfo"/>
-    </classes>
-  </test> <!-- Test -->
+<suite name="Suite">
+	<test name="Test">
+		<classes>
+			<class name="com.services.test.TestLouisPhilippeInfo" />
+			<class name="com.services.test.TestAllenSollyInfo" />
+			<class name="com.services.test.TestGlobusFashionInfo" />
+			<class name="com.services.test.TestPeterEnglandInfo" />
+			<class name="com.services.test.TestPlanetFashionInfo" />
+			<class name="com.services.test.TestPeopleInfo" />
+			<class name="com.services.test.TestFabIndiaInfo" />
+			<class name="com.services.test.TestPothysInfo" />
+			<class name="com.services.test.TestVanHeusenInfo" />
+		</classes>
+	</test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -1,5 +1,8 @@
 package com.services.test;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import com.services.utility.CheckWidgetPresentStatus;
@@ -40,6 +43,7 @@ public class TestVanHeusenInfo {
 	static GUICheckForSimilarProducts checkGUI;
 	
 	
+	@BeforeMethod
 	@BeforeClass
 	public void setUp() throws IOException {
 		initSet = new InitialSetup();
@@ -274,6 +278,7 @@ public class TestVanHeusenInfo {
 		
 	}
 	
+	@AfterMethod
 	@AfterClass
 	public void tearDown() {
 		

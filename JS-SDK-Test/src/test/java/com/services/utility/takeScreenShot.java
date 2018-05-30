@@ -21,10 +21,10 @@ public class takeScreenShot {
 		createFolder.createDirectory(currentDate, folderName);
 		File scrfile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		if(folderStatus.equals("PASSED")){
-		FileUtils.copyFile(scrfile,new File(folderPath+currentDate+"/"+folderName+"/"+"PASSED"+"/"+mainCat+"_"+prodCat+"_"+product_id+".png"));
+		FileUtils.copyFile(scrfile,new File(folderPath+currentDate+"/"+folderName+"/"+"PASSED"+"/"+mainCat+"_"+prodCat+"_"+product_id+".jpeg"));
 	}
 		else {
-			FileUtils.copyFile(scrfile,new File(folderPath+currentDate+"/"+folderName+"/"+"FAILED"+"/"+mainCat+"_"+prodCat+"_"+product_id+".png"));
+			FileUtils.copyFile(scrfile,new File(folderPath+currentDate+"/"+folderName+"/"+"FAILED"+"/"+mainCat+"_"+prodCat+"_"+product_id+".jpeg"));
 		}
 
 		

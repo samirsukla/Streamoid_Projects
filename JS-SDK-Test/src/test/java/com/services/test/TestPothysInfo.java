@@ -1,5 +1,8 @@
 package com.services.test;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
 import java.io.IOException;
 import java.util.List;
 
@@ -38,6 +41,7 @@ public class TestPothysInfo {
 	static CheckWidgetPresentStatus checkStatus;
 	
 	
+	@BeforeMethod
 	@BeforeClass
 	public void setUp() throws IOException {
 		initSet = new InitialSetup();
@@ -136,7 +140,8 @@ public class TestPothysInfo {
 	  }
 		
   }
-  @AfterClass
+  @AfterMethod
+@AfterClass
 	public void tearDown() {
 		
 		driver.close();

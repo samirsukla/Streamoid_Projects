@@ -1,5 +1,8 @@
 package com.services.test;
 
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeMethod;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.List;
@@ -41,6 +44,7 @@ public class TestGlobusFashionInfo {
 	static GUICheckForSimilarProducts checkGUI;
 	
 	
+	@BeforeMethod
 	@BeforeClass
 	public void setUp() throws IOException {
 		
@@ -143,7 +147,8 @@ public class TestGlobusFashionInfo {
   }
   
   
-  @AfterClass
+  @AfterMethod
+@AfterClass
   public void tearDown() {
 	  
 	  driver.close();
