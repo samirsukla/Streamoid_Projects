@@ -1,8 +1,6 @@
 package com.services.test;
 
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
-import org.testng.annotations.BeforeMethod;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.List;
@@ -13,8 +11,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Test;
-
 import com.services.utility.CheckWidgetPresentStatus;
 import com.services.utility.CreateFolder;
 import com.services.utility.GUICheckForSimilarProducts;
@@ -47,7 +43,7 @@ public class TestFabIndiaInfo {
 	static ManageWindowHandle handle;
 	
 	
-	@BeforeMethod
+	
 	@BeforeClass
 	public void setUp() throws IOException {
 		
@@ -199,15 +195,9 @@ public class TestFabIndiaInfo {
 		
 		}
 		
-		
-	  
-	  
-		
-	  
-  }
+ }
   
   
-  @AfterMethod
 @AfterClass
   public void tearDown() {
 	  
