@@ -67,7 +67,7 @@ public class TestLouisPhilippeInfo {
 		
 		if(driver.findElement(By.xpath("/html/body/div[3]/div/div[4]/div/div")).isDisplayed()) {
 			
-			driver.findElement(By.xpath("html/body/div[3]/div/div[4]/div/div/div[1]/button")).click();
+			driver.findElement(By.xpath("/html/body/div[3]/div/div[4]/div/div/div[1]/button")).click();
 		}
 		
 		Thread.sleep(2000);
