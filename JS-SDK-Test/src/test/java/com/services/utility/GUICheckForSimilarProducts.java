@@ -23,7 +23,7 @@ public class GUICheckForSimilarProducts {
 			prodUsingUI.add(id1);
 			
 		}
-		Collections.reverse(prodUsingUI);
+		//Collections.reverse(prodUsingUI);
 		//System.out.println(prodUsingUI);
 		if(prodUsingApi.equals(prodUsingUI)) {
 			return true;
@@ -69,7 +69,7 @@ public boolean getIdsFromGUIforLouisPhilippe(List<String> prodUsingApi ,WebDrive
 			prodUsingUI.add(id1);
 			
 		}
-		Collections.reverse(prodUsingUI);
+		//Collections.reverse(prodUsingUI);
 		//System.out.println(prodUsingUI);
 		if(prodUsingApi.equals(prodUsingUI)) {
 			return true;
@@ -90,7 +90,7 @@ public boolean getIdsFromGUIforVanHeusen(List<String> prodUsingApi ,WebDriver dr
 		prodUsingUI.add(id1);
 		
 	}
-	Collections.reverse(prodUsingUI);
+	//Collections.reverse(prodUsingUI);
 	//System.out.println(prodUsingUI);
 	if(prodUsingApi.equals(prodUsingUI)) {
 		return true;
@@ -153,7 +153,7 @@ public boolean getIdsFromGUIforPeople(List<String> prodUsingApi ,WebDriver drive
 		prodUsingUI.add(id1);
 		
 	}
-	Collections.reverse(prodUsingUI);
+	//Collections.reverse(prodUsingUI);
 	//System.out.println(prodUsingUI);
 	if(prodUsingApi.equals(prodUsingUI)) {
 		return true;
@@ -174,7 +174,7 @@ public boolean getIdsFromGUIforPlanetFashion(List<String> prodUsingApi ,WebDrive
 		prodUsingUI.add(id1);
 		
 	}
-	Collections.reverse(prodUsingUI);
+	//Collections.reverse(prodUsingUI);
 	//System.out.println(prodUsingUI);
 	if(prodUsingApi.equals(prodUsingUI)) {
 		return true;

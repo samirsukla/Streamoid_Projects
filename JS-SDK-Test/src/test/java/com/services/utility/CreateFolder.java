@@ -6,7 +6,7 @@ public class CreateFolder {
 	
 	public void createDirectory(String date_folder, String folder_name) {
 	
-		String path ="/home/streamoid/Desktop/Samir_Streamoid/Selenium_Setup/Eclipse_program/My First Project/JS-SDK-Test/Output/";
+		String path ="/Users/samirsukla/Desktop/Samir_Streamoid/Selenium_Setup/Eclipse_program/Streamoid Projects/automation-scripts/JS-SDK-Test/Output/";
 		File dir = new File(path+ date_folder+ "/"+folder_name);
 		if(!dir.exists()) {
 		  dir.mkdir();
@@ -21,7 +21,7 @@ public class CreateFolder {
 	
 	public void createDateDirectory(String date_folder) {
 		
-		String path ="/home/streamoid/Desktop/Samir_Streamoid/Selenium_Setup/Eclipse_program/My First Project/JS-SDK-Test/Output/";
+		String path ="/Users/samirsukla/Desktop/Samir_Streamoid/Selenium_Setup/Eclipse_program/Streamoid Projects/automation-scripts/JS-SDK-Test/Output/";
 		File dir = new File(path+"/"+date_folder);
 		if(!dir.exists()) {
 		  dir.mkdir();

@@ -14,7 +14,7 @@ public class takeScreenShot {
 	
 	public void captureScreenShot(WebDriver driver,String currentDate,String folderName, String mainCat, String prodCat,String folderStatus,
 			String product_id) throws IOException {
-		String folderPath = "/home/streamoid/Desktop/Samir_Streamoid/Selenium_Setup/Eclipse_program/My First Project/JS-SDK-Test/Output/";
+		String folderPath = "/Users/samirsukla/Desktop/Samir_Streamoid/Selenium_Setup/Eclipse_program/Streamoid Projects/automation-scripts/JS-SDK-Test/Output/";
 //		getDate = new getSystemDate();
 		createFolder = new CreateFolder();
 //		String date = getDate.getPresentDate();

@@ -8,7 +8,7 @@ import java.util.*;
     	 int min = 1;
     	 Random r = new Random();
     	 int randomNo = r.nextInt((max-min)+1)+1;
-    	 System.out.println(randomNo);
+    	 //System.out.println(randomNo);
     	 return randomNo;
           
      }

@@ -17,7 +17,7 @@ public class InitialSetup {
 	
 	public WebDriver initialSetup() throws IOException {
 		
-		System.setProperty("webdriver.gecko.driver", "/home/streamoid/geckodriver");
+		System.setProperty("webdriver.gecko.driver", "src/test/resources/geckodriver");
 		FirefoxProfile fprofile = new FirefoxProfile();
 		fprofile.setPreference("dom.webnotifications.enabled", false);
 		fprofile.setPreference("dom.push.enabled", false);

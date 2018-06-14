@@ -81,7 +81,7 @@ public class TestPothysInfo {
 				try {
 					
 					while(driver.findElement(By.xpath("/html/body/section/section[1]/section[2]/div/div/nav/div/div/div/ul/li["+i+"]/div/div/div/div["+x+"]/div/div/div[2]/div/ul/li["+j+"]/a")).isDisplayed()) {
-						
+					
 						WebElement main_category1 = driver.findElement(By.xpath(".//*[@id='mainmenutop']/div/div/div/ul/li["+i+"]/a/span"));
 						WebElement product_category = driver.findElement(By.xpath("/html/body/section/section[1]/section[2]/div/div/nav/div/div/div/ul/li["+i+"]/div/div/div/div["+x+"]/div/div/div[2]/div/ul/li["+j+"]/a"));
 						String prodCategoryName = clickfirst.getCategoryName(product_category).replaceAll("/", "-");
