@@ -1,0 +1,8 @@
+{
+  "apps" : [
+    {
+      "name"      : "JS-SDK-Test",
+      "script"    : "index.js"
+    }
+  ]
+}
