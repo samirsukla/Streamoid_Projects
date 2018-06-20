@@ -1,7 +1,6 @@
 package com.services.utility;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import org.openqa.selenium.By;

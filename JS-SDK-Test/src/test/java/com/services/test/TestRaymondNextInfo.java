@@ -16,8 +16,8 @@ import com.services.utility.CreateFolder;
 import com.services.utility.GUICheckForSimilarProducts;
 import com.services.utility.InitialSetup;
 import com.services.utility.RestAPICheckForSimilarProducts;
-import com.services.utility.clickonFirstProduct;
-import com.services.utility.getSystemDate;
+import com.services.utility.ClickonFirstProduct;
+import com.services.utility.GetSystemDate;
 
 public class TestRaymondNextInfo {
 	
@@ -36,7 +36,7 @@ public class TestRaymondNextInfo {
 	
 	static CheckWidgetPresentStatus checkStatus;
 	static InitialSetup initSet;
-	static clickonFirstProduct clickfirst;
+	static ClickonFirstProduct clickfirst;
 	static RestAPICheckForSimilarProducts checkProducts;
 	static GUICheckForSimilarProducts checkGUI;
 	
@@ -47,13 +47,13 @@ public class TestRaymondNextInfo {
 		
 		initSet = new InitialSetup();
 		driver = initSet.initialSetup();
-		clickfirst = new clickonFirstProduct();
+		clickfirst = new ClickonFirstProduct();
 		className = this.getClass().getSimpleName();
 		folderName = className.replace("Test", " ").replace("Info", " ").trim();
 		checkStatus = new CheckWidgetPresentStatus();
 		checkProducts = new RestAPICheckForSimilarProducts();
 		checkGUI = new GUICheckForSimilarProducts();
-		getSystemDate getDate = new getSystemDate();
+		GetSystemDate getDate = new GetSystemDate();
 		CreateFolder createFolder = new CreateFolder();
 		currentDate = getDate.getPresentDate();
 		createFolder.createDateDirectory(currentDate);
@@ -199,6 +199,6 @@ public class TestRaymondNextInfo {
 @AfterClass
   public void tearDown() {
 	  
-	  driver.close();
+	  driver.quit();
   }
 }

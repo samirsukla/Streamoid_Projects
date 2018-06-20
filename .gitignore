@@ -4,3 +4,4 @@
 /.metadata/
 **/test-output/**
 JS-SDK-Test/target/test-classes/com/**
+JS-SDK-Test/Output/ScreenShots/**

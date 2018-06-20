@@ -3,9 +3,12 @@ package com.services.utility;
 import java.io.File;
 
 public class DeleteFolderDateWise {
+	
+	static CreateAbsolutePath createabs;
 
 	public static void main(String[] args) {
-		String filePath = "/Users/samirsukla/Desktop/Samir_Streamoid/Selenium_Setup/Eclipse_program/Streamoid Projects/automation-scripts/JS-SDK-Test/Output";
+		createabs=new CreateAbsolutePath();
+		String filePath = createabs.makeAbsolutePath();
 		DeleteFolderDateWise del = new DeleteFolderDateWise();
 		del.deleteFilesOlderThanNdays(4,filePath);
 

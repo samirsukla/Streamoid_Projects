@@ -12,13 +12,13 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import com.services.utility.CheckWidgetPresentStatus;
+import com.services.utility.ClickonFirstProduct;
 import com.services.utility.CreateFolder;
 import com.services.utility.GUICheckForSimilarProducts;
 import com.services.utility.InitialSetup;
 import com.services.utility.RestAPICheckForSimilarProducts;
 import com.services.utility.ZoomInAndZoomOut;
-import com.services.utility.clickonFirstProduct;
-import com.services.utility.getSystemDate;
+import com.services.utility.GetSystemDate;
 
 public class TestPeterEnglandInfo {
 	
@@ -36,7 +36,7 @@ public class TestPeterEnglandInfo {
 	
 	static CheckWidgetPresentStatus checkStatus;
 	static InitialSetup initSet;
-	static clickonFirstProduct clickfirst;
+	static ClickonFirstProduct clickfirst;
 	static RestAPICheckForSimilarProducts checkProducts;
 	static GUICheckForSimilarProducts checkGUI;
 	static ZoomInAndZoomOut setZoomLevel;
@@ -48,14 +48,14 @@ public class TestPeterEnglandInfo {
 		
 		initSet = new InitialSetup();
 		driver = initSet.initialSetup();
-		clickfirst = new clickonFirstProduct();
+		clickfirst = new ClickonFirstProduct();
 		className = this.getClass().getSimpleName();
 		folderName = className.replace("Test", " ").replace("Info", " ").trim();
 		checkStatus = new CheckWidgetPresentStatus();
 		checkProducts = new RestAPICheckForSimilarProducts();
 		checkGUI = new GUICheckForSimilarProducts();
 		setZoomLevel = new ZoomInAndZoomOut();
-		getSystemDate getDate = new getSystemDate();
+		GetSystemDate getDate = new GetSystemDate();
 		CreateFolder createFolder = new CreateFolder();
 		currentDate = getDate.getPresentDate();
 		createFolder.createDateDirectory(currentDate);
@@ -221,6 +221,6 @@ public class TestPeterEnglandInfo {
 @AfterClass
   public void tearDown() {
 	  
-	  driver.close();
+	  driver.quit();
   }
 }

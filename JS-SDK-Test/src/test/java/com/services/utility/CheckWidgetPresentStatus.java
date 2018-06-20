@@ -10,16 +10,16 @@ public class CheckWidgetPresentStatus {
 	
 	public void checkStatusAndTakeScreenshot(WebDriver driver,String currentDate,String folderName,String mainCategoryName, String 
 			prodCategoryName,String status,String product_id,boolean isDisplaying) throws IOException{
-		takeScreenShot scrshot;
+		TakeScreenShot scrshot;
 		
 		if(status=="passed" && isDisplaying== true) {
 			
 			String folderStatus = "PASSED";
-			scrshot = new takeScreenShot();
+			scrshot = new TakeScreenShot();
 			scrshot.captureScreenShot(driver,currentDate,folderName,mainCategoryName,prodCategoryName,folderStatus,product_id);
 		}else {
 			String folderStatus = "FAILED";
-			scrshot = new takeScreenShot();
+			scrshot = new TakeScreenShot();
 			scrshot.captureScreenShot(driver,currentDate,folderName,mainCategoryName,prodCategoryName,folderStatus,product_id);
 		}
 	}

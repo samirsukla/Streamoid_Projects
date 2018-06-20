@@ -11,11 +11,11 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import com.services.utility.CheckWidgetPresentStatus;
+import com.services.utility.ClickonFirstProduct;
 import com.services.utility.CreateFolder;
 import com.services.utility.InitialSetup;
-import com.services.utility.clickonFirstProduct;
-import com.services.utility.getSystemDate;
-import com.services.utility.takeScreenShot;
+import com.services.utility.TakeScreenShot;
+import com.services.utility.GetSystemDate;
 
 
 
@@ -31,8 +31,8 @@ public class TestPothysInfo {
 	static String product_id = "NA";
 	
 	
-	static clickonFirstProduct clickfirst;
-	static takeScreenShot scrshot;
+	static ClickonFirstProduct clickfirst;
+	static TakeScreenShot scrshot;
 	static InitialSetup initSet;
 	static CheckWidgetPresentStatus checkStatus;
 	
@@ -42,11 +42,11 @@ public class TestPothysInfo {
 	public void setUp() throws IOException {
 		initSet = new InitialSetup();
 		driver = initSet.initialSetup();
-		clickfirst = new clickonFirstProduct();
+		clickfirst = new ClickonFirstProduct();
 		className = this.getClass().getSimpleName();
 		folderName = className.replace("Test", " ").replace("Info", " ").trim();
 		checkStatus = new CheckWidgetPresentStatus();
-		getSystemDate getDate = new getSystemDate();
+		GetSystemDate getDate = new GetSystemDate();
 		CreateFolder createFolder = new CreateFolder();
 		currentDate = getDate.getPresentDate();
 		createFolder.createDateDirectory(currentDate);
@@ -140,6 +140,6 @@ public class TestPothysInfo {
 @AfterClass
 	public void tearDown() {
 		
-		driver.close();
+		driver.quit();
 	}
 }

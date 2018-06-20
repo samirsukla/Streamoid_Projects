@@ -9,7 +9,7 @@ import org.openqa.selenium.WebDriver;
 public class ManageWindowHandle {
 	
 	public String switchToNewWindow(WebDriver driver) throws InterruptedException {
-		clickonFirstProduct clickfirst=new clickonFirstProduct();
+		ClickonFirstProduct clickfirst=new ClickonFirstProduct();
 			
 		String parentWindow=driver.getWindowHandle();
 		String product_id = clickfirst.clickOnFabIndiaProduct(driver);

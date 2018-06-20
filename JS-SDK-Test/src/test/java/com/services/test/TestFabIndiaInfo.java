@@ -12,13 +12,13 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import com.services.utility.CheckWidgetPresentStatus;
+import com.services.utility.ClickonFirstProduct;
 import com.services.utility.CreateFolder;
 import com.services.utility.GUICheckForSimilarProducts;
 import com.services.utility.InitialSetup;
 import com.services.utility.ManageWindowHandle;
 import com.services.utility.RestAPICheckForOutfitter;
-import com.services.utility.clickonFirstProduct;
-import com.services.utility.getSystemDate;
+import com.services.utility.GetSystemDate;
 
 public class TestFabIndiaInfo {
 	
@@ -37,7 +37,7 @@ public class TestFabIndiaInfo {
 	
 	static CheckWidgetPresentStatus checkStatus;
 	static InitialSetup initSet;
-	static clickonFirstProduct clickfirst;
+	static ClickonFirstProduct clickfirst;
 	static RestAPICheckForOutfitter checkProducts;
 	static GUICheckForSimilarProducts checkGUI;
 	static ManageWindowHandle handle;
@@ -49,14 +49,14 @@ public class TestFabIndiaInfo {
 		
 		initSet = new InitialSetup();
 		driver = initSet.initialSetup();
-		clickfirst = new clickonFirstProduct();
+		clickfirst = new ClickonFirstProduct();
 		className = this.getClass().getSimpleName();
 		folderName = className.replace("Test", " ").replace("Info", " ").trim();
 		checkStatus = new CheckWidgetPresentStatus();
 		checkProducts = new RestAPICheckForOutfitter();
 		checkGUI = new GUICheckForSimilarProducts();
 		handle = new ManageWindowHandle();
-		getSystemDate getDate = new getSystemDate();
+		GetSystemDate getDate = new GetSystemDate();
 		CreateFolder createFolder = new CreateFolder();
 		currentDate = getDate.getPresentDate();
 		createFolder.createDateDirectory(currentDate);
@@ -201,6 +201,6 @@ public class TestFabIndiaInfo {
 @AfterClass
   public void tearDown() {
 	  
-	  driver.close();
+	  driver.quit();
   }
 }
