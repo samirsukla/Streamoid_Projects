@@ -1,6 +1,7 @@
 package com.services.test;
 
 import org.testng.annotations.Test;
+
 import com.services.utility.CheckWidgetPresentStatus;
 import com.services.utility.ClickonFirstProduct;
 import com.services.utility.CreateFolder;
@@ -9,6 +10,7 @@ import com.services.utility.GetSystemDate;
 import com.services.utility.InitialSetup;
 import com.services.utility.RestAPICheckForSimilarProducts;
 import com.services.utility.TakeScreenShot;
+
 import java.io.IOException;
 import java.util.List;
 import org.openqa.selenium.By;
@@ -35,6 +37,7 @@ public class TestAllenSollyInfo {
 	static CheckWidgetPresentStatus checkStatus;
 	static RestAPICheckForSimilarProducts checkProducts;
 	static GUICheckForSimilarProducts checkGUI;
+	
 	
 	
 	
@@ -249,6 +252,7 @@ public class TestAllenSollyInfo {
 		}
 	
 	}
+	
 	
 	
 	@AfterClass

@@ -1,24 +1,26 @@
 package com.services.test;
 
-import org.testng.annotations.Test;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.List;
 import java.util.Properties;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
 import com.services.utility.CheckWidgetPresentStatus;
 import com.services.utility.ClickonFirstProduct;
 import com.services.utility.CreateFolder;
 import com.services.utility.GUICheckForSimilarProducts;
+import com.services.utility.GetSystemDate;
 import com.services.utility.InitialSetup;
 import com.services.utility.ManageWindowHandle;
 import com.services.utility.RestAPICheckForOutfitter;
-import com.services.utility.GetSystemDate;
 
 public class TestFabIndiaInfo {
 	
@@ -41,6 +43,7 @@ public class TestFabIndiaInfo {
 	static RestAPICheckForOutfitter checkProducts;
 	static GUICheckForSimilarProducts checkGUI;
 	static ManageWindowHandle handle;
+	
 	
 	
 	
@@ -198,6 +201,7 @@ public class TestFabIndiaInfo {
  }
   
   
+
 @AfterClass
   public void tearDown() {
 	  

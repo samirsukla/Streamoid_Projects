@@ -41,8 +41,6 @@ public class TestPeterEnglandInfo {
 	static GUICheckForSimilarProducts checkGUI;
 	static ZoomInAndZoomOut setZoomLevel;
 	
-	
-	
 	@BeforeClass
 	public void setUp() throws IOException {
 		
@@ -218,6 +216,7 @@ public class TestPeterEnglandInfo {
   
   
   
+
 @AfterClass
   public void tearDown() {
 	  

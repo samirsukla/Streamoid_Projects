@@ -42,6 +42,7 @@ public class TestPeopleInfo {
 	
 	
 	
+	
 	@BeforeClass
 	public void setUp() throws IOException {
 		
@@ -136,6 +137,7 @@ public class TestPeopleInfo {
 	  
 		}
   
+
 @AfterClass
   public void tearDown() {
 	  

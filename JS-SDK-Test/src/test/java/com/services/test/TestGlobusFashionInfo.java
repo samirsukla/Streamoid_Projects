@@ -41,6 +41,7 @@ public class TestGlobusFashionInfo {
 	
 	
 	
+	
 	@BeforeClass
 	public void setUp() throws IOException {
 		
@@ -143,6 +144,7 @@ public class TestGlobusFashionInfo {
   }
   
   
+
 
 @AfterClass
   public void tearDown() {

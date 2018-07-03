@@ -24,7 +24,7 @@ public class InitialSetup {
 		FirefoxOptions option = new FirefoxOptions(); 
 		option.setProfile(fprofile);
 		driver = new FirefoxDriver(option);
-		driver.manage().window().maximize();
+		driver.manage().window().fullscreen();
 		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		props = new Properties();
 		finput = new FileInputStream("src/test/resources/URLInfo.properties");

@@ -40,6 +40,7 @@ public class TestVanHeusenInfo {
 	
 	
 
+	
 	@BeforeClass
 	public void setUp() throws IOException {
 		initSet = new InitialSetup();
@@ -273,6 +274,7 @@ public class TestVanHeusenInfo {
 		}
 		
 	}
+	
 	
 	
 	@AfterClass
