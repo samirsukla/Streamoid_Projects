@@ -50,9 +50,9 @@ public class RestAPICheckForSimilarProducts {
 				sim_prod_ids.add(similar_product_id);
 				
 				
-				if(j==4) {
-					break;
-				}
+//				if(j==4) {
+//					break;
+//				}
 			}
     
     
