@@ -42,9 +42,9 @@ public class GUICheckForSimilarProducts {
 		for(WebElement elem : similar_Ids) {
 			String id1 = elem.getAttribute("id");
 			prodUsingUI.add(id1);
-			if(prodUsingUI.size()==5) {
-				break;
-			}
+//			if(prodUsingUI.size()==5) {
+//				break;
+//			}
 		}
 		//Collections.reverse(prodUsingUI);
 		//System.out.println(prodUsingUI);
