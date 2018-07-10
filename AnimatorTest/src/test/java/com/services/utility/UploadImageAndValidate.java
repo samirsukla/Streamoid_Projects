@@ -14,14 +14,17 @@ public class UploadImageAndValidate {
 	static ImageDownloadFromURL imgdwnld;
 	static GetSourceToken getsrc;
 	static WebDriver driver;
+	static CreateAbsolutePath createPath;
 	
   public boolean uploadImageAndCheckMatchEntry( String imageName,String token) throws ParseException, IOException {
+	  createPath = new CreateAbsolutePath();
+	  String pathToAnimatorImage = createPath.pathToAnimatorImage();
 	 
 	  
 	  RequestSpecification req = RestAssured.given();
 	 	
 		
-		String resp= req.multiPart("uploadedfile", new File("/Users/samirsukla/Desktop/Animator_Images/"+imageName)).
+		String resp= req.multiPart("uploadedfile", new File(pathToAnimatorImage+"/"+imageName)).
 				formParam("appID",token).
 				contentType("multipart/form-data").when().
 				post("https://backend.animator.streamoid.com/animator/image-upload").then().statusCode(200).extract().response().asString();

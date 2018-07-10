@@ -3,6 +3,7 @@ package com.services.utility;
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.Properties;
 import java.util.Scanner;
 
 import org.json.simple.JSONObject;
@@ -10,8 +11,9 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 public class GetSourceToken {
+	
  
-  public String getToken() throws ParseException, IOException {
+  public String getToken(Properties prop) throws ParseException, IOException {
 	  
 		URL url = new URL("https://backend.animator.streamoid.com/images/query.php?action=getSources");
 		String inline="";
@@ -37,7 +39,7 @@ public class GetSourceToken {
 			JSONObject jobj = (JSONObject)jpar.parse(inline);
 			
 			JSONObject jobj1 = (JSONObject) jobj.get("data");
-			String tokenId = (jobj1.get("sales_demo")).toString();
+			String tokenId = (jobj1.get(prop.getProperty("url1"))).toString();
 			
 			
 		//System.out.println(tokenId);

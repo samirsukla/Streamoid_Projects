@@ -7,10 +7,13 @@ import java.io.OutputStream;
 import java.net.URL;
 
 public class ImageDownloadFromURL {
+	static CreateAbsolutePath createPath;
   
   public String downloadImage(String imageUrl) throws IOException {
-	    String imageName = imageUrl.replaceAll("https://s3.eu-west-1.amazonaws.com/streamoid.animator.images/", "");
-		String destinationFile = "/Users/samirsukla/Desktop/Animator_Images/"+imageName;
+	  createPath=new CreateAbsolutePath();
+	  String pathToImageFolder=createPath.pathToAnimatorImage();
+	    String imageName = imageUrl.replaceAll("https://d1z7sptgse6ho6.cloudfront.net/", "");
+		String destinationFile = pathToImageFolder+"/"+imageName;
 		URL url = new URL(imageUrl);
 		InputStream is = url.openStream();
 		OutputStream os = new FileOutputStream(destinationFile);
