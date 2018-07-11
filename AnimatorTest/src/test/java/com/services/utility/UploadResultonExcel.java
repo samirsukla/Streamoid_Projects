@@ -11,6 +11,7 @@ import org.apache.poi.ss.usermodel.Row;
 
 public class UploadResultonExcel {
 	static CreateAbsolutePath createpath;
+	static GetSystemDate getDate;
   
   public void writeResultToExcel(String clickableImageURL, String id, String status,int rowCount) throws IOException {
 	  createpath = new CreateAbsolutePath();
@@ -22,10 +23,10 @@ public class UploadResultonExcel {
 	  
 	  Row row = sheet.createRow(rowCount+1);
 	  
-	  Cell cell = row.createCell(0);
-	  cell.setCellValue(id + " : " + clickableImageURL);
-	  Cell cell1 = row.createCell(1);
-	  cell1.setCellValue(status);
+	  Cell url = row.createCell(0);
+	  url.setCellValue(id + " : " + clickableImageURL);
+	  Cell imageStatus = row.createCell(1);
+	  imageStatus.setCellValue(status);
 	  FileOutputStream fos = new FileOutputStream(pathToResultFile+"/ResultSheet.xls");
 	  workbook.write(fos);
 	  fos.close();
@@ -35,11 +36,14 @@ public class UploadResultonExcel {
 	  
   }
   
-  public void resultSummary(int total, int matched, int unmatched) throws IOException {
-	  double failPercentage= (double)((unmatched*100)/total);
+  public void resultSummary(int totalImage, int matched, int unmatched, String sourceName) throws IOException {
+	  double failPercentage= (double)((unmatched*100)/totalImage);
 	  
 	  createpath = new CreateAbsolutePath();
 	  String pathToResultFile = createpath.makeAbsolutePath();
+	  
+	  getDate = new GetSystemDate();
+	  String currentDate = getDate.getCurrentDateAndTime();
 	  
 	  FileInputStream fis = new FileInputStream(pathToResultFile+"/ResultSheet.xls");
 	  HSSFWorkbook workbook = new HSSFWorkbook(fis);
@@ -47,15 +51,19 @@ public class UploadResultonExcel {
 	 
 	  Row row = sheet.createRow(1);
 	  
-	  Cell cell = row.createCell(0);
-	  cell.setCellValue(total);
-	  Cell cell1 = row.createCell(1);
-	  cell1.setCellValue(matched);
-	  Cell cell2 = row.createCell(2);
-	  cell2.setCellValue(unmatched);
+	  Cell total = row.createCell(0);
+	  total.setCellValue(totalImage);
+	  Cell pass = row.createCell(1);
+	  pass.setCellValue(matched);
+	  Cell fail = row.createCell(2);
+	  fail.setCellValue(unmatched);
 
-	  Cell cell3 = row.createCell(3);
-	  cell3.setCellValue(failPercentage);
+	  Cell percentage = row.createCell(3);
+	  percentage.setCellValue(failPercentage);
+	  Cell source = row.createCell(4);
+	  source.setCellValue(sourceName);
+	  Cell timeOfTest = row.createCell(5);
+	  timeOfTest.setCellValue(currentDate);
 
 	  FileOutputStream fos = new FileOutputStream(pathToResultFile+"/ResultSheet.xls");
 	  workbook.write(fos);

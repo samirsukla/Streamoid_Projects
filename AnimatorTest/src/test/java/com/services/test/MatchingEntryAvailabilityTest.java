@@ -103,7 +103,7 @@ public class MatchingEntryAvailabilityTest {
 				}
 				}
   deleteRows.deleteExtraRows(totalImage+1);		
-  uploadexcel.resultSummary(totalImage, passCount, failCount);
+  uploadexcel.resultSummary(totalImage, passCount, failCount,sourceName);
   
   
 		}
