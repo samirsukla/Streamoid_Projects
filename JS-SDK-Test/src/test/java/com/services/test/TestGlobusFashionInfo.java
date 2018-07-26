@@ -17,6 +17,7 @@ import com.services.utility.CreateFolder;
 import com.services.utility.GUICheckForSimilarProducts;
 import com.services.utility.InitialSetup;
 import com.services.utility.RestAPICheckForSimilarProducts;
+import com.services.utility.ZoomInAndZoomOut;
 import com.services.utility.GetSystemDate;
 
 public class TestGlobusFashionInfo {
@@ -38,6 +39,7 @@ public class TestGlobusFashionInfo {
 	static ClickonFirstProduct clickfirst;
 	static RestAPICheckForSimilarProducts checkProducts;
 	static GUICheckForSimilarProducts checkGUI;
+	static ZoomInAndZoomOut setZoomLevel;
 	
 	
 	
@@ -57,6 +59,7 @@ public class TestGlobusFashionInfo {
 		CreateFolder createFolder = new CreateFolder();
 		currentDate = getDate.getPresentDate();
 		createFolder.createDateDirectory(currentDate);
+		setZoomLevel = new ZoomInAndZoomOut();
 		
 	}
   @Test
@@ -92,9 +95,10 @@ public class TestGlobusFashionInfo {
 					
 					Thread.sleep(2000);
 					
+					setZoomLevel.zoomOutGlobal(driver);
 					((JavascriptExecutor) driver).executeScript("window.scrollBy(0,600)"); 
 					
-					
+					Thread.sleep(2000);
 					
 					if(driver.findElement(By.className("globus_container")).isDisplayed())
 					{
@@ -115,7 +119,7 @@ public class TestGlobusFashionInfo {
 						
 					}
 					
-
+					setZoomLevel.zoomIn(driver);
 
 					j++;
 					
