@@ -1,0 +1,479 @@
+{
+  "$id": "http://example.com/example.json",
+  "type": "object",
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "properties": {
+    "data": {
+      "$id": "/properties/data",
+      "type": "array",
+      "items": {
+        "$id": "/properties/data/items",
+        "type": "object",
+        "properties": {
+          "items": {
+            "$id": "/properties/data/items/properties/items",
+            "type": "array",
+            "items": {
+              "$id": "/properties/data/items/properties/items/items",
+              "type": "array",
+              "items": {
+                "$id": "/properties/data/items/properties/items/items/items",
+                "type": "object",
+                "properties": {
+                  "category": {
+                    "$id": "/properties/data/items/properties/items/items/items/properties/category",
+                    "type": "string",
+                    "title": "The Category Schema ",
+                    "default": "",
+                    "examples": [
+                      "Jeans & Shorts"
+                    ]
+                  },
+                  "pattern_url": {
+                    "$id": "/properties/data/items/properties/items/items/items/properties/pattern_url",
+                    "type": "string",
+                    "title": "The Pattern_url Schema ",
+                    "default": "",
+                    "examples": [
+                      "http://d1q9qhpdr6ehzh.cloudfront.net/82d500bb86a82b8a475d583ecbbe59c7"
+                    ]
+                  },
+                  "product_type": {
+                    "$id": "/properties/data/items/properties/items/items/items/properties/product_type",
+                    "type": "string",
+                    "title": "The Product_type Schema ",
+                    "default": "",
+                    "examples": [
+                      "Jeans & Shorts"
+                    ]
+                  },
+                  "product_id": {
+                    "$id": "/properties/data/items/properties/items/items/items/properties/product_id",
+                    "type": "string",
+                    "title": "The Product_id Schema ",
+                    "default": "",
+                    "examples": [
+                      "216387059716"
+                    ]
+                  },
+                  "title": {
+                    "$id": "/properties/data/items/properties/items/items/items/properties/title",
+                    "type": "string",
+                    "title": "The Title Schema ",
+                    "default": "",
+                    "examples": [
+                      "ColorPlus Medium Blue Regular Fit Jeans"
+                    ]
+                  },
+                  "discounted_price": {
+                    "$id": "/properties/data/items/properties/items/items/items/properties/discounted_price",
+                    "type": "number",
+                    "title": "The Discounted_price Schema ",
+                    "default": 0,
+                    "examples": [
+                      1349
+                    ]
+                  },
+                  "gender": {
+                    "$id": "/properties/data/items/properties/items/items/items/properties/gender",
+                    "type": "string",
+                    "title": "The Gender Schema ",
+                    "default": "",
+                    "examples": [
+                      "Men"
+                    ]
+                  },
+                  "brand": {
+                    "$id": "/properties/data/items/properties/items/items/items/properties/brand",
+                    "type": "string",
+                    "title": "The Brand Schema ",
+                    "default": "",
+                    "examples": [
+                      "ColorPlus"
+                    ]
+                  },
+                  "tags": {
+                    "$id": "/properties/data/items/properties/items/items/items/properties/tags",
+                    "type": "string",
+                    "title": "The Tags Schema ",
+                    "default": "",
+                    "examples": [
+                      "20%, 36, 50%, After Hours, AW17, Casuals, ColorPlus, Cotton, Deals, Jeans, Medium Blue, Men, Regular Fit, Rs.1001 to Rs.1499, Solid, Upto 50%, Upto 60%"
+                    ]
+                  },
+                  "body_html": {
+                    "$id": "/properties/data/items/properties/items/items/items/properties/body_html",
+                    "type": "string",
+                    "title": "The Body_html Schema ",
+                    "default": "",
+                    "examples": [
+                      "<p>Rocking an impressive casual look to boost your classy street style will never go wrong with this pair of blue jeans from ColorPlus. With its mid-washed effect and whiskered impressions adding versatility to it, this pair of jeans also has 5 pockets and a straight-fit silhouette that complete its ever-trendy look. It will look cool with an orange polo T-shirt and a pair of white sneakers.</p> <div id=\"details-page\">\n<div class=\"box\">\n<b>Composition</b><br><i>Cotton</i>\n</div>\n<div class=\"box\">\n<b>Brand</b><br><i>ColorPlus</i>\n</div>\n<div class=\"box\">\n<b>Color</b><br><i>Medium Blue</i>\n</div>\n<div class=\"box\">\n<b>Fit</b><br><i>Regular Fit</i>\n</div>\n<div class=\"box\">\n<b>Pattern</b><br><i>Solid</i>\n</div>\n</div>"
+                    ]
+                  },
+                  "image_urls": {
+                    "$id": "/properties/data/items/properties/items/items/items/properties/image_urls",
+                    "type": "array",
+                    "items": {
+                      "$id": "/properties/data/items/properties/items/items/items/properties/image_urls/items",
+                      "type": "string",
+                      "title": "The 0th Schema ",
+                      "default": "",
+                      "examples": [
+                        "https://d1q9qhpdr6ehzh.cloudfront.net/82d500bb86a82b8a475d583ecbbe59c7"
+                      ]
+                    }
+                  },
+                  "product_url": {
+                    "$id": "/properties/data/items/properties/items/items/items/properties/product_url",
+                    "type": "string",
+                    "title": "The Product_url Schema ",
+                    "default": "",
+                    "examples": [
+                      "https://raymondnext.com/products/colorplus-medium-blue-regular-fit-jeans-cmys00610-b491f030"
+                    ]
+                  },
+                  "currency": {
+                    "$id": "/properties/data/items/properties/items/items/items/properties/currency",
+                    "type": "string",
+                    "title": "The Currency Schema ",
+                    "default": "",
+                    "examples": [
+                      "INR"
+                    ]
+                  },
+                  "thumbnail_url": {
+                    "$id": "/properties/data/items/properties/items/items/items/properties/thumbnail_url",
+                    "type": "string",
+                    "title": "The Thumbnail_url Schema ",
+                    "default": "",
+                    "examples": [
+                      "https://d1q9qhpdr6ehzh.cloudfront.net/82d500bb86a82b8a475d583ecbbe59c7"
+                    ]
+                  },
+                  "unique_id": {
+                    "$id": "/properties/data/items/properties/items/items/items/properties/unique_id",
+                    "type": "string",
+                    "title": "The Unique_id Schema ",
+                    "default": "",
+                    "examples": [
+                      "c6554183fc9b43e4b20c26ba61bf7b6e"
+                    ]
+                  },
+                  "variants": {
+                    "$id": "/properties/data/items/properties/items/items/items/properties/variants",
+                    "type": "array",
+                    "items": {
+                      "$id": "/properties/data/items/properties/items/items/items/properties/variants/items",
+                      "type": "object",
+                      "properties": {
+                        "weight": {
+                          "$id": "/properties/data/items/properties/items/items/items/properties/variants/items/properties/weight",
+                          "type": "number",
+                          "title": "The Weight Schema ",
+                          "default": 0,
+                          "examples": [
+                            300
+                          ]
+                        },
+                        "requires_shipping": {
+                          "$id": "/properties/data/items/properties/items/items/items/properties/variants/items/properties/requires_shipping",
+                          "type": "boolean",
+                          "title": "The Requires_shipping Schema ",
+                          "default": false,
+                          "examples": [
+                            true
+                          ]
+                        },
+                        "updated_at": {
+                          "$id": "/properties/data/items/properties/items/items/items/properties/variants/items/properties/updated_at",
+                          "type": "string",
+                          "title": "The Updated_at Schema ",
+                          "default": "",
+                          "examples": [
+                            "2018-05-09T18:04:08+05:30"
+                          ]
+                        },
+                        "inventory_quantity": {
+                          "$id": "/properties/data/items/properties/items/items/items/properties/variants/items/properties/inventory_quantity",
+                          "type": "integer",
+                          "title": "The Inventory_quantity Schema ",
+                          "default": 0,
+                          "examples": [
+                            0
+                          ]
+                        },
+                        "compare_at_price": {
+                          "$id": "/properties/data/items/properties/items/items/items/properties/variants/items/properties/compare_at_price",
+                          "type": ["string","null"],
+                          "title": "The Compare_at_price Schema ",
+                          "default": "",
+                          "examples": [
+                            "2699.00"
+                          ]
+                        },
+                        "id": {
+                          "$id": "/properties/data/items/properties/items/items/items/properties/variants/items/properties/id",
+                          "type": "integer",
+                          "title": "The Id Schema ",
+                          "default": 0,
+                          "examples": [
+                            812815253508
+                          ]
+                        },
+                        "sku": {
+                          "$id": "/properties/data/items/properties/items/items/items/properties/variants/items/properties/sku",
+                          "type": "string",
+                          "title": "The Sku Schema ",
+                          "default": "",
+                          "examples": [
+                            "CMYS00610-B491F030"
+                          ]
+                        },
+                        "title": {
+                          "$id": "/properties/data/items/properties/items/items/items/properties/variants/items/properties/title",
+                          "type": "string",
+                          "title": "The Title Schema ",
+                          "default": "",
+                          "examples": [
+                            "30"
+                          ]
+                        },
+                        "inventory_policy": {
+                          "$id": "/properties/data/items/properties/items/items/items/properties/variants/items/properties/inventory_policy",
+                          "type": "string",
+                          "title": "The Inventory_policy Schema ",
+                          "default": "",
+                          "examples": [
+                            "deny"
+                          ]
+                        },
+                        "inventory_management": {
+                          "$id": "/properties/data/items/properties/items/items/items/properties/variants/items/properties/inventory_management",
+                          "type": "string",
+                          "title": "The Inventory_management Schema ",
+                          "default": "",
+                          "examples": [
+                            "shopify"
+                          ]
+                        },
+                        "fulfillment_service": {
+                          "$id": "/properties/data/items/properties/items/items/items/properties/variants/items/properties/fulfillment_service",
+                          "type": "string",
+                          "title": "The Fulfillment_service Schema ",
+                          "default": "",
+                          "examples": [
+                            "manual"
+                          ]
+                        },
+                        "option2": {
+                          "$id": "/properties/data/items/properties/items/items/items/properties/variants/items/properties/option2",
+                          "type": "null",
+                          "title": "The Option2 Schema ",
+                          "default": null,
+                          "examples": [
+                            null
+                          ]
+                        },
+                        "option3": {
+                          "$id": "/properties/data/items/properties/items/items/items/properties/variants/items/properties/option3",
+                          "type": "null",
+                          "title": "The Option3 Schema ",
+                          "default": null,
+                          "examples": [
+                            null
+                          ]
+                        },
+                        "weight_unit": {
+                          "$id": "/properties/data/items/properties/items/items/items/properties/variants/items/properties/weight_unit",
+                          "type": "string",
+                          "title": "The Weight_unit Schema ",
+                          "default": "",
+                          "examples": [
+                            "g"
+                          ]
+                        },
+                        "option1": {
+                          "$id": "/properties/data/items/properties/items/items/items/properties/variants/items/properties/option1",
+                          "type": "string",
+                          "title": "The Option1 Schema ",
+                          "default": "",
+                          "examples": [
+                            "30"
+                          ]
+                        },
+                        "price": {
+                          "$id": "/properties/data/items/properties/items/items/items/properties/variants/items/properties/price",
+                          "type": "string",
+                          "title": "The Price Schema ",
+                          "default": "",
+                          "examples": [
+                            "1349.00"
+                          ]
+                        },
+                        "barcode": {
+                          "$id": "/properties/data/items/properties/items/items/items/properties/variants/items/properties/barcode",
+                          "type": "null",
+                          "title": "The Barcode Schema ",
+                          "default": null,
+                          "examples": [
+                            null
+                          ]
+                        },
+                        "image_id": {
+                          "$id": "/properties/data/items/properties/items/items/items/properties/variants/items/properties/image_id",
+                          "type": "null",
+                          "title": "The Image_id Schema ",
+                          "default": null,
+                          "examples": [
+                            null
+                          ]
+                        },
+                        "taxable": {
+                          "$id": "/properties/data/items/properties/items/items/items/properties/variants/items/properties/taxable",
+                          "type": "boolean",
+                          "title": "The Taxable Schema ",
+                          "default": false,
+                          "examples": [
+                            false
+                          ]
+                        },
+                        "old_inventory_quantity": {
+                          "$id": "/properties/data/items/properties/items/items/items/properties/variants/items/properties/old_inventory_quantity",
+                          "type": "integer",
+                          "title": "The Old_inventory_quantity Schema ",
+                          "default": 0,
+                          "examples": [
+                            0
+                          ]
+                        },
+                        "product_id": {
+                          "$id": "/properties/data/items/properties/items/items/items/properties/variants/items/properties/product_id",
+                          "type": "integer",
+                          "title": "The Product_id Schema ",
+                          "default": 0,
+                          "examples": [
+                            216387059716
+                          ]
+                        },
+                        "grams": {
+                          "$id": "/properties/data/items/properties/items/items/items/properties/variants/items/properties/grams",
+                          "type": "integer",
+                          "title": "The Grams Schema ",
+                          "default": 0,
+                          "examples": [
+                            300
+                          ]
+                        },
+                        "created_at": {
+                          "$id": "/properties/data/items/properties/items/items/items/properties/variants/items/properties/created_at",
+                          "type": "string",
+                          "title": "The Created_at Schema ",
+                          "default": "",
+                          "examples": [
+                            "2017-12-15T12:33:51+05:30"
+                          ]
+                        },
+                        "tax_code": {
+                          "$id": "/properties/data/items/properties/items/items/items/properties/variants/items/properties/tax_code",
+                          "type": "string",
+                          "title": "The Tax_code Schema ",
+                          "default": "",
+                          "examples": [
+                            ""
+                          ]
+                        },
+                        "admin_graphql_api_id": {
+                          "$id": "/properties/data/items/properties/items/items/items/properties/variants/items/properties/admin_graphql_api_id",
+                          "type": "string",
+                          "title": "The Admin_graphql_api_id Schema ",
+                          "default": "",
+                          "examples": [
+                            "gid://shopify/ProductVariant/812815253508"
+                          ]
+                        },
+                        "inventory_item_id": {
+                          "$id": "/properties/data/items/properties/items/items/items/properties/variants/items/properties/inventory_item_id",
+                          "type": "integer",
+                          "title": "The Inventory_item_id Schema ",
+                          "default": 0,
+                          "examples": [
+                            823102341124
+                          ]
+                        },
+                        "position": {
+                          "$id": "/properties/data/items/properties/items/items/items/properties/variants/items/properties/position",
+                          "type": "integer",
+                          "title": "The Position Schema ",
+                          "default": 0,
+                          "examples": [
+                            1
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  "price": {
+                    "$id": "/properties/data/items/properties/items/items/items/properties/price",
+                    "type": "number",
+                    "title": "The Price Schema ",
+                    "default": 0,
+                    "examples": [
+                      2699
+                    ]
+                  },
+                  "availability": {
+                    "$id": "/properties/data/items/properties/items/items/items/properties/availability",
+                    "type": "integer",
+                    "title": "The Availability Schema ",
+                    "default": 0,
+                    "examples": [
+                      1
+                    ]
+                  },
+                  "chatbot_image": {
+                    "$id": "/properties/data/items/properties/items/items/items/properties/chatbot_image",
+                    "type": "string",
+                    "title": "The Chatbot_image Schema ",
+                    "default": "",
+                    "examples": [
+                      ""
+                    ]
+                  },
+                  "pattern_mask": {
+                    "$id": "/properties/data/items/properties/items/items/items/properties/pattern_mask",
+                    "type": "string",
+                    "title": "The Pattern_mask Schema ",
+                    "default": "",
+                    "examples": [
+                      "http://d1q9qhpdr6ehzh.cloudfront.net/masks/82d500bb86a82b8a475d583ecbbe59c7"
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "previewImage": {
+            "$id": "/properties/data/items/properties/previewImage",
+            "type": "object",
+            "properties": {
+              "images": {
+                "$id": "/properties/data/items/properties/previewImage/properties/images",
+                "type": "array"
+              },
+              "previewImage": {
+                "$id": "/properties/data/items/properties/previewImage/properties/previewImage",
+                "type": "string",
+                "title": "The Previewimage Schema ",
+                "default": "",
+                "examples": [
+                  "http://streamoid.fashion.images.s3.amazonaws.com/outfitter_collages/landscape2/eb226a74-3969-4e7c-9503-01f0234ef0e2.png"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

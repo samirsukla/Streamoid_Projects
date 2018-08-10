@@ -1,0 +1,2568 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "object",
+      "properties": {
+        "code": {
+          "type": "integer"
+        },
+        "color": {
+          "type": "string"
+        },
+        "crop": {
+          "type": "object",
+          "properties": {
+            "xmin": {
+              "type": "number"
+            },
+            "ymin": {
+              "type": "number"
+            },
+            "ymax": {
+              "type": "number"
+            },
+            "xmax": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "xmin",
+            "ymin",
+            "ymax",
+            "xmax"
+          ]
+        },
+        "imageId": {
+          "type": "string"
+        },
+        "attributes": {
+          "type": "object"
+        },
+        "message": {
+          "type": "string"
+        },
+        "scored_subset_size": {
+          "type": "integer"
+        },
+        "query_subset_size": {
+          "type": "integer"
+        },
+        "pattern": {
+          "type": "string"
+        },
+        "maskId": {
+          "type": "string"
+        },
+        "detected": {
+          "type": "object",
+          "properties": {
+            "category": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "gender": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          "required": [
+            "category",
+            "gender"
+          ]
+        },
+        "visual_worker_id": {
+          "type": "string"
+        },
+        "filterApplied": {
+          "type": "object",
+          "properties": {
+            "gender": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "comprehensive_category": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          "required": [
+            "gender",
+            "comprehensive_category"
+          ]
+        },
+        "maskUrl": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "code",
+        "color",
+        "crop",
+        "imageId",
+        "attributes",
+        "message",
+        "scored_subset_size",
+        "query_subset_size",
+        "pattern",
+        "maskId",
+        "detected",
+        "visual_worker_id",
+        "filterApplied",
+        "maskUrl"
+      ]
+    },
+    "data": {
+      "type": "array",
+      "items": [
+        {
+          "type": "object",
+          "properties": {
+            "category": {
+              "type": "string"
+            },
+            "pattern_url": {
+              "type": "string"
+            },
+            "product_id": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "discounted_price": {
+              "type": "number"
+            },
+            "gender": {
+              "type": "string"
+            },
+            "price": {
+              "type": "number"
+            },
+            "scores": {
+              "type": "object",
+              "properties": {
+                "color": {
+                  "type": "number"
+                },
+                "pattern": {
+                  "type": "number"
+                },
+                "combined": {
+                  "type": "number"
+                },
+                "pattern_class": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "color",
+                "pattern",
+                "combined",
+                "pattern_class"
+              ]
+            },
+            "image_urls": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "product_url": {
+              "type": "string"
+            },
+            "currency": {
+              "type": "string"
+            },
+            "thumbnail_url": {
+              "type": "string"
+            },
+            "discount_percent": {
+              "type": "number"
+            },
+            "chatbot_image": {
+              "type": "string"
+            },
+            "availability": {
+              "type": "integer"
+            },
+            "unique_id": {
+              "type": "string"
+            },
+            "pattern_mask": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "category",
+            "pattern_url",
+            "product_id",
+            "title",
+            "discounted_price",
+            "gender",
+            "price",
+            "scores",
+            "image_urls",
+            "product_url",
+            "currency",
+            "thumbnail_url",
+            "discount_percent",
+            "chatbot_image",
+            "availability",
+            "unique_id",
+            "pattern_mask"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "category": {
+              "type": "string"
+            },
+            "pattern_url": {
+              "type": "string"
+            },
+            "product_id": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "discounted_price": {
+              "type": "number"
+            },
+            "gender": {
+              "type": "string"
+            },
+            "price": {
+              "type": "number"
+            },
+            "scores": {
+              "type": "object",
+              "properties": {
+                "color": {
+                  "type": "number"
+                },
+                "pattern": {
+                  "type": "number"
+                },
+                "combined": {
+                  "type": "number"
+                },
+                "pattern_class": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "color",
+                "pattern",
+                "combined",
+                "pattern_class"
+              ]
+            },
+            "image_urls": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "product_url": {
+              "type": "string"
+            },
+            "currency": {
+              "type": "string"
+            },
+            "thumbnail_url": {
+              "type": "string"
+            },
+            "discount_percent": {
+              "type": "number"
+            },
+            "chatbot_image": {
+              "type": "string"
+            },
+            "availability": {
+              "type": "integer"
+            },
+            "unique_id": {
+              "type": "string"
+            },
+            "pattern_mask": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "category",
+            "pattern_url",
+            "product_id",
+            "title",
+            "discounted_price",
+            "gender",
+            "price",
+            "scores",
+            "image_urls",
+            "product_url",
+            "currency",
+            "thumbnail_url",
+            "discount_percent",
+            "chatbot_image",
+            "availability",
+            "unique_id",
+            "pattern_mask"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "category": {
+              "type": "string"
+            },
+            "pattern_url": {
+              "type": "string"
+            },
+            "product_id": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "discounted_price": {
+              "type": "number"
+            },
+            "gender": {
+              "type": "string"
+            },
+            "price": {
+              "type": "number"
+            },
+            "scores": {
+              "type": "object",
+              "properties": {
+                "color": {
+                  "type": "number"
+                },
+                "pattern": {
+                  "type": "number"
+                },
+                "combined": {
+                  "type": "number"
+                },
+                "pattern_class": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "color",
+                "pattern",
+                "combined",
+                "pattern_class"
+              ]
+            },
+            "image_urls": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "product_url": {
+              "type": "string"
+            },
+            "currency": {
+              "type": "string"
+            },
+            "thumbnail_url": {
+              "type": "string"
+            },
+            "discount_percent": {
+              "type": "number"
+            },
+            "chatbot_image": {
+              "type": "string"
+            },
+            "availability": {
+              "type": "integer"
+            },
+            "unique_id": {
+              "type": "string"
+            },
+            "pattern_mask": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "category",
+            "pattern_url",
+            "product_id",
+            "title",
+            "discounted_price",
+            "gender",
+            "price",
+            "scores",
+            "image_urls",
+            "product_url",
+            "currency",
+            "thumbnail_url",
+            "discount_percent",
+            "chatbot_image",
+            "availability",
+            "unique_id",
+            "pattern_mask"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "category": {
+              "type": "string"
+            },
+            "pattern_url": {
+              "type": "string"
+            },
+            "product_id": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "discounted_price": {
+              "type": "number"
+            },
+            "gender": {
+              "type": "string"
+            },
+            "price": {
+              "type": "number"
+            },
+            "scores": {
+              "type": "object",
+              "properties": {
+                "color": {
+                  "type": "number"
+                },
+                "pattern": {
+                  "type": "number"
+                },
+                "combined": {
+                  "type": "number"
+                },
+                "pattern_class": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "color",
+                "pattern",
+                "combined",
+                "pattern_class"
+              ]
+            },
+            "image_urls": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "product_url": {
+              "type": "string"
+            },
+            "currency": {
+              "type": "string"
+            },
+            "thumbnail_url": {
+              "type": "string"
+            },
+            "discount_percent": {
+              "type": "number"
+            },
+            "chatbot_image": {
+              "type": "string"
+            },
+            "availability": {
+              "type": "integer"
+            },
+            "unique_id": {
+              "type": "string"
+            },
+            "pattern_mask": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "category",
+            "pattern_url",
+            "product_id",
+            "title",
+            "discounted_price",
+            "gender",
+            "price",
+            "scores",
+            "image_urls",
+            "product_url",
+            "currency",
+            "thumbnail_url",
+            "discount_percent",
+            "chatbot_image",
+            "availability",
+            "unique_id",
+            "pattern_mask"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "category": {
+              "type": "string"
+            },
+            "pattern_url": {
+              "type": "string"
+            },
+            "product_id": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "discounted_price": {
+              "type": "number"
+            },
+            "gender": {
+              "type": "string"
+            },
+            "price": {
+              "type": "number"
+            },
+            "scores": {
+              "type": "object",
+              "properties": {
+                "color": {
+                  "type": "number"
+                },
+                "pattern": {
+                  "type": "number"
+                },
+                "combined": {
+                  "type": "number"
+                },
+                "pattern_class": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "color",
+                "pattern",
+                "combined",
+                "pattern_class"
+              ]
+            },
+            "image_urls": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "product_url": {
+              "type": "string"
+            },
+            "currency": {
+              "type": "string"
+            },
+            "thumbnail_url": {
+              "type": "string"
+            },
+            "discount_percent": {
+              "type": "number"
+            },
+            "chatbot_image": {
+              "type": "string"
+            },
+            "availability": {
+              "type": "integer"
+            },
+            "unique_id": {
+              "type": "string"
+            },
+            "pattern_mask": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "category",
+            "pattern_url",
+            "product_id",
+            "title",
+            "discounted_price",
+            "gender",
+            "price",
+            "scores",
+            "image_urls",
+            "product_url",
+            "currency",
+            "thumbnail_url",
+            "discount_percent",
+            "chatbot_image",
+            "availability",
+            "unique_id",
+            "pattern_mask"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "category": {
+              "type": "string"
+            },
+            "pattern_url": {
+              "type": "string"
+            },
+            "product_id": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "discounted_price": {
+              "type": "number"
+            },
+            "gender": {
+              "type": "string"
+            },
+            "price": {
+              "type": "number"
+            },
+            "scores": {
+              "type": "object",
+              "properties": {
+                "color": {
+                  "type": "number"
+                },
+                "pattern": {
+                  "type": "number"
+                },
+                "combined": {
+                  "type": "number"
+                },
+                "pattern_class": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "color",
+                "pattern",
+                "combined",
+                "pattern_class"
+              ]
+            },
+            "image_urls": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "product_url": {
+              "type": "string"
+            },
+            "currency": {
+              "type": "string"
+            },
+            "thumbnail_url": {
+              "type": "string"
+            },
+            "discount_percent": {
+              "type": "number"
+            },
+            "chatbot_image": {
+              "type": "string"
+            },
+            "availability": {
+              "type": "integer"
+            },
+            "unique_id": {
+              "type": "string"
+            },
+            "pattern_mask": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "category",
+            "pattern_url",
+            "product_id",
+            "title",
+            "discounted_price",
+            "gender",
+            "price",
+            "scores",
+            "image_urls",
+            "product_url",
+            "currency",
+            "thumbnail_url",
+            "discount_percent",
+            "chatbot_image",
+            "availability",
+            "unique_id",
+            "pattern_mask"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "category": {
+              "type": "string"
+            },
+            "pattern_url": {
+              "type": "string"
+            },
+            "product_id": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "discounted_price": {
+              "type": "number"
+            },
+            "gender": {
+              "type": "string"
+            },
+            "price": {
+              "type": "number"
+            },
+            "scores": {
+              "type": "object",
+              "properties": {
+                "color": {
+                  "type": "number"
+                },
+                "pattern": {
+                  "type": "number"
+                },
+                "combined": {
+                  "type": "number"
+                },
+                "pattern_class": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "color",
+                "pattern",
+                "combined",
+                "pattern_class"
+              ]
+            },
+            "image_urls": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "product_url": {
+              "type": "string"
+            },
+            "currency": {
+              "type": "string"
+            },
+            "thumbnail_url": {
+              "type": "string"
+            },
+            "discount_percent": {
+              "type": "number"
+            },
+            "chatbot_image": {
+              "type": "string"
+            },
+            "availability": {
+              "type": "integer"
+            },
+            "unique_id": {
+              "type": "string"
+            },
+            "pattern_mask": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "category",
+            "pattern_url",
+            "product_id",
+            "title",
+            "discounted_price",
+            "gender",
+            "price",
+            "scores",
+            "image_urls",
+            "product_url",
+            "currency",
+            "thumbnail_url",
+            "discount_percent",
+            "chatbot_image",
+            "availability",
+            "unique_id",
+            "pattern_mask"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "category": {
+              "type": "string"
+            },
+            "pattern_url": {
+              "type": "string"
+            },
+            "product_id": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "discounted_price": {
+              "type": "number"
+            },
+            "gender": {
+              "type": "string"
+            },
+            "price": {
+              "type": "number"
+            },
+            "scores": {
+              "type": "object",
+              "properties": {
+                "color": {
+                  "type": "number"
+                },
+                "pattern": {
+                  "type": "number"
+                },
+                "combined": {
+                  "type": "number"
+                },
+                "pattern_class": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "color",
+                "pattern",
+                "combined",
+                "pattern_class"
+              ]
+            },
+            "image_urls": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "product_url": {
+              "type": "string"
+            },
+            "currency": {
+              "type": "string"
+            },
+            "thumbnail_url": {
+              "type": "string"
+            },
+            "discount_percent": {
+              "type": "number"
+            },
+            "chatbot_image": {
+              "type": "string"
+            },
+            "availability": {
+              "type": "integer"
+            },
+            "unique_id": {
+              "type": "string"
+            },
+            "pattern_mask": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "category",
+            "pattern_url",
+            "product_id",
+            "title",
+            "discounted_price",
+            "gender",
+            "price",
+            "scores",
+            "image_urls",
+            "product_url",
+            "currency",
+            "thumbnail_url",
+            "discount_percent",
+            "chatbot_image",
+            "availability",
+            "unique_id",
+            "pattern_mask"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "category": {
+              "type": "string"
+            },
+            "pattern_url": {
+              "type": "string"
+            },
+            "product_id": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "discounted_price": {
+              "type": "number"
+            },
+            "gender": {
+              "type": "string"
+            },
+            "price": {
+              "type": "number"
+            },
+            "scores": {
+              "type": "object",
+              "properties": {
+                "color": {
+                  "type": "number"
+                },
+                "pattern": {
+                  "type": "number"
+                },
+                "combined": {
+                  "type": "number"
+                },
+                "pattern_class": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "color",
+                "pattern",
+                "combined",
+                "pattern_class"
+              ]
+            },
+            "image_urls": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "product_url": {
+              "type": "string"
+            },
+            "currency": {
+              "type": "string"
+            },
+            "thumbnail_url": {
+              "type": "string"
+            },
+            "discount_percent": {
+              "type": "number"
+            },
+            "chatbot_image": {
+              "type": "string"
+            },
+            "availability": {
+              "type": "integer"
+            },
+            "unique_id": {
+              "type": "string"
+            },
+            "pattern_mask": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "category",
+            "pattern_url",
+            "product_id",
+            "title",
+            "discounted_price",
+            "gender",
+            "price",
+            "scores",
+            "image_urls",
+            "product_url",
+            "currency",
+            "thumbnail_url",
+            "discount_percent",
+            "chatbot_image",
+            "availability",
+            "unique_id",
+            "pattern_mask"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "category": {
+              "type": "string"
+            },
+            "pattern_url": {
+              "type": "string"
+            },
+            "product_id": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "discounted_price": {
+              "type": "number"
+            },
+            "gender": {
+              "type": "string"
+            },
+            "price": {
+              "type": "number"
+            },
+            "scores": {
+              "type": "object",
+              "properties": {
+                "color": {
+                  "type": "number"
+                },
+                "pattern": {
+                  "type": "number"
+                },
+                "combined": {
+                  "type": "number"
+                },
+                "pattern_class": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "color",
+                "pattern",
+                "combined",
+                "pattern_class"
+              ]
+            },
+            "image_urls": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "product_url": {
+              "type": "string"
+            },
+            "currency": {
+              "type": "string"
+            },
+            "thumbnail_url": {
+              "type": "string"
+            },
+            "discount_percent": {
+              "type": "number"
+            },
+            "chatbot_image": {
+              "type": "string"
+            },
+            "availability": {
+              "type": "integer"
+            },
+            "unique_id": {
+              "type": "string"
+            },
+            "pattern_mask": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "category",
+            "pattern_url",
+            "product_id",
+            "title",
+            "discounted_price",
+            "gender",
+            "price",
+            "scores",
+            "image_urls",
+            "product_url",
+            "currency",
+            "thumbnail_url",
+            "discount_percent",
+            "chatbot_image",
+            "availability",
+            "unique_id",
+            "pattern_mask"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "category": {
+              "type": "string"
+            },
+            "pattern_url": {
+              "type": "string"
+            },
+            "product_id": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "discounted_price": {
+              "type": "number"
+            },
+            "gender": {
+              "type": "string"
+            },
+            "price": {
+              "type": "number"
+            },
+            "scores": {
+              "type": "object",
+              "properties": {
+                "color": {
+                  "type": "number"
+                },
+                "pattern": {
+                  "type": "number"
+                },
+                "combined": {
+                  "type": "number"
+                },
+                "pattern_class": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "color",
+                "pattern",
+                "combined",
+                "pattern_class"
+              ]
+            },
+            "image_urls": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "product_url": {
+              "type": "string"
+            },
+            "currency": {
+              "type": "string"
+            },
+            "thumbnail_url": {
+              "type": "string"
+            },
+            "discount_percent": {
+              "type": "number"
+            },
+            "chatbot_image": {
+              "type": "string"
+            },
+            "availability": {
+              "type": "integer"
+            },
+            "unique_id": {
+              "type": "string"
+            },
+            "pattern_mask": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "category",
+            "pattern_url",
+            "product_id",
+            "title",
+            "discounted_price",
+            "gender",
+            "price",
+            "scores",
+            "image_urls",
+            "product_url",
+            "currency",
+            "thumbnail_url",
+            "discount_percent",
+            "chatbot_image",
+            "availability",
+            "unique_id",
+            "pattern_mask"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "category": {
+              "type": "string"
+            },
+            "pattern_url": {
+              "type": "string"
+            },
+            "product_id": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "discounted_price": {
+              "type": "number"
+            },
+            "gender": {
+              "type": "string"
+            },
+            "price": {
+              "type": "number"
+            },
+            "scores": {
+              "type": "object",
+              "properties": {
+                "color": {
+                  "type": "number"
+                },
+                "pattern": {
+                  "type": "number"
+                },
+                "combined": {
+                  "type": "number"
+                },
+                "pattern_class": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "color",
+                "pattern",
+                "combined",
+                "pattern_class"
+              ]
+            },
+            "image_urls": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "product_url": {
+              "type": "string"
+            },
+            "currency": {
+              "type": "string"
+            },
+            "thumbnail_url": {
+              "type": "string"
+            },
+            "discount_percent": {
+              "type": "number"
+            },
+            "chatbot_image": {
+              "type": "string"
+            },
+            "availability": {
+              "type": "integer"
+            },
+            "unique_id": {
+              "type": "string"
+            },
+            "pattern_mask": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "category",
+            "pattern_url",
+            "product_id",
+            "title",
+            "discounted_price",
+            "gender",
+            "price",
+            "scores",
+            "image_urls",
+            "product_url",
+            "currency",
+            "thumbnail_url",
+            "discount_percent",
+            "chatbot_image",
+            "availability",
+            "unique_id",
+            "pattern_mask"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "category": {
+              "type": "string"
+            },
+            "pattern_url": {
+              "type": "string"
+            },
+            "product_id": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "discounted_price": {
+              "type": "number"
+            },
+            "gender": {
+              "type": "string"
+            },
+            "price": {
+              "type": "number"
+            },
+            "scores": {
+              "type": "object",
+              "properties": {
+                "color": {
+                  "type": "number"
+                },
+                "pattern": {
+                  "type": "number"
+                },
+                "combined": {
+                  "type": "number"
+                },
+                "pattern_class": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "color",
+                "pattern",
+                "combined",
+                "pattern_class"
+              ]
+            },
+            "image_urls": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "product_url": {
+              "type": "string"
+            },
+            "currency": {
+              "type": "string"
+            },
+            "thumbnail_url": {
+              "type": "string"
+            },
+            "discount_percent": {
+              "type": "number"
+            },
+            "chatbot_image": {
+              "type": "string"
+            },
+            "availability": {
+              "type": "integer"
+            },
+            "unique_id": {
+              "type": "string"
+            },
+            "pattern_mask": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "category",
+            "pattern_url",
+            "product_id",
+            "title",
+            "discounted_price",
+            "gender",
+            "price",
+            "scores",
+            "image_urls",
+            "product_url",
+            "currency",
+            "thumbnail_url",
+            "discount_percent",
+            "chatbot_image",
+            "availability",
+            "unique_id",
+            "pattern_mask"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "category": {
+              "type": "string"
+            },
+            "pattern_url": {
+              "type": "string"
+            },
+            "product_id": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "discounted_price": {
+              "type": "number"
+            },
+            "gender": {
+              "type": "string"
+            },
+            "price": {
+              "type": "number"
+            },
+            "scores": {
+              "type": "object",
+              "properties": {
+                "color": {
+                  "type": "number"
+                },
+                "pattern": {
+                  "type": "number"
+                },
+                "combined": {
+                  "type": "number"
+                },
+                "pattern_class": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "color",
+                "pattern",
+                "combined",
+                "pattern_class"
+              ]
+            },
+            "image_urls": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "product_url": {
+              "type": "string"
+            },
+            "currency": {
+              "type": "string"
+            },
+            "thumbnail_url": {
+              "type": "string"
+            },
+            "discount_percent": {
+              "type": "number"
+            },
+            "chatbot_image": {
+              "type": "string"
+            },
+            "availability": {
+              "type": "integer"
+            },
+            "unique_id": {
+              "type": "string"
+            },
+            "pattern_mask": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "category",
+            "pattern_url",
+            "product_id",
+            "title",
+            "discounted_price",
+            "gender",
+            "price",
+            "scores",
+            "image_urls",
+            "product_url",
+            "currency",
+            "thumbnail_url",
+            "discount_percent",
+            "chatbot_image",
+            "availability",
+            "unique_id",
+            "pattern_mask"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "category": {
+              "type": "string"
+            },
+            "pattern_url": {
+              "type": "string"
+            },
+            "product_id": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "discounted_price": {
+              "type": "number"
+            },
+            "gender": {
+              "type": "string"
+            },
+            "price": {
+              "type": "number"
+            },
+            "scores": {
+              "type": "object",
+              "properties": {
+                "color": {
+                  "type": "number"
+                },
+                "pattern": {
+                  "type": "number"
+                },
+                "combined": {
+                  "type": "number"
+                },
+                "pattern_class": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "color",
+                "pattern",
+                "combined",
+                "pattern_class"
+              ]
+            },
+            "image_urls": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "product_url": {
+              "type": "string"
+            },
+            "currency": {
+              "type": "string"
+            },
+            "thumbnail_url": {
+              "type": "string"
+            },
+            "discount_percent": {
+              "type": "number"
+            },
+            "chatbot_image": {
+              "type": "string"
+            },
+            "availability": {
+              "type": "integer"
+            },
+            "unique_id": {
+              "type": "string"
+            },
+            "pattern_mask": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "category",
+            "pattern_url",
+            "product_id",
+            "title",
+            "discounted_price",
+            "gender",
+            "price",
+            "scores",
+            "image_urls",
+            "product_url",
+            "currency",
+            "thumbnail_url",
+            "discount_percent",
+            "chatbot_image",
+            "availability",
+            "unique_id",
+            "pattern_mask"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "category": {
+              "type": "string"
+            },
+            "pattern_url": {
+              "type": "string"
+            },
+            "product_id": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "discounted_price": {
+              "type": "number"
+            },
+            "gender": {
+              "type": "string"
+            },
+            "price": {
+              "type": "number"
+            },
+            "scores": {
+              "type": "object",
+              "properties": {
+                "color": {
+                  "type": "number"
+                },
+                "pattern": {
+                  "type": "number"
+                },
+                "combined": {
+                  "type": "number"
+                },
+                "pattern_class": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "color",
+                "pattern",
+                "combined",
+                "pattern_class"
+              ]
+            },
+            "image_urls": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "product_url": {
+              "type": "string"
+            },
+            "currency": {
+              "type": "string"
+            },
+            "thumbnail_url": {
+              "type": "string"
+            },
+            "discount_percent": {
+              "type": "number"
+            },
+            "chatbot_image": {
+              "type": "string"
+            },
+            "availability": {
+              "type": "integer"
+            },
+            "unique_id": {
+              "type": "string"
+            },
+            "pattern_mask": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "category",
+            "pattern_url",
+            "product_id",
+            "title",
+            "discounted_price",
+            "gender",
+            "price",
+            "scores",
+            "image_urls",
+            "product_url",
+            "currency",
+            "thumbnail_url",
+            "discount_percent",
+            "chatbot_image",
+            "availability",
+            "unique_id",
+            "pattern_mask"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "category": {
+              "type": "string"
+            },
+            "pattern_url": {
+              "type": "string"
+            },
+            "product_id": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "discounted_price": {
+              "type": "number"
+            },
+            "gender": {
+              "type": "string"
+            },
+            "price": {
+              "type": "number"
+            },
+            "scores": {
+              "type": "object",
+              "properties": {
+                "color": {
+                  "type": "number"
+                },
+                "pattern": {
+                  "type": "number"
+                },
+                "combined": {
+                  "type": "number"
+                },
+                "pattern_class": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "color",
+                "pattern",
+                "combined",
+                "pattern_class"
+              ]
+            },
+            "image_urls": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "product_url": {
+              "type": "string"
+            },
+            "currency": {
+              "type": "string"
+            },
+            "thumbnail_url": {
+              "type": "string"
+            },
+            "discount_percent": {
+              "type": "number"
+            },
+            "chatbot_image": {
+              "type": "string"
+            },
+            "availability": {
+              "type": "integer"
+            },
+            "unique_id": {
+              "type": "string"
+            },
+            "pattern_mask": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "category",
+            "pattern_url",
+            "product_id",
+            "title",
+            "discounted_price",
+            "gender",
+            "price",
+            "scores",
+            "image_urls",
+            "product_url",
+            "currency",
+            "thumbnail_url",
+            "discount_percent",
+            "chatbot_image",
+            "availability",
+            "unique_id",
+            "pattern_mask"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "category": {
+              "type": "string"
+            },
+            "pattern_url": {
+              "type": "string"
+            },
+            "product_id": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "discounted_price": {
+              "type": "number"
+            },
+            "gender": {
+              "type": "string"
+            },
+            "price": {
+              "type": "number"
+            },
+            "scores": {
+              "type": "object",
+              "properties": {
+                "color": {
+                  "type": "number"
+                },
+                "pattern": {
+                  "type": "number"
+                },
+                "combined": {
+                  "type": "number"
+                },
+                "pattern_class": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "color",
+                "pattern",
+                "combined",
+                "pattern_class"
+              ]
+            },
+            "image_urls": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "product_url": {
+              "type": "string"
+            },
+            "currency": {
+              "type": "string"
+            },
+            "thumbnail_url": {
+              "type": "string"
+            },
+            "discount_percent": {
+              "type": "number"
+            },
+            "chatbot_image": {
+              "type": "string"
+            },
+            "availability": {
+              "type": "integer"
+            },
+            "unique_id": {
+              "type": "string"
+            },
+            "pattern_mask": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "category",
+            "pattern_url",
+            "product_id",
+            "title",
+            "discounted_price",
+            "gender",
+            "price",
+            "scores",
+            "image_urls",
+            "product_url",
+            "currency",
+            "thumbnail_url",
+            "discount_percent",
+            "chatbot_image",
+            "availability",
+            "unique_id",
+            "pattern_mask"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "category": {
+              "type": "string"
+            },
+            "pattern_url": {
+              "type": "string"
+            },
+            "product_id": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "discounted_price": {
+              "type": "number"
+            },
+            "gender": {
+              "type": "string"
+            },
+            "price": {
+              "type": "number"
+            },
+            "scores": {
+              "type": "object",
+              "properties": {
+                "color": {
+                  "type": "number"
+                },
+                "pattern": {
+                  "type": "number"
+                },
+                "combined": {
+                  "type": "number"
+                },
+                "pattern_class": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "color",
+                "pattern",
+                "combined",
+                "pattern_class"
+              ]
+            },
+            "image_urls": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "product_url": {
+              "type": "string"
+            },
+            "currency": {
+              "type": "string"
+            },
+            "thumbnail_url": {
+              "type": "string"
+            },
+            "discount_percent": {
+              "type": "number"
+            },
+            "chatbot_image": {
+              "type": "string"
+            },
+            "availability": {
+              "type": "integer"
+            },
+            "unique_id": {
+              "type": "string"
+            },
+            "pattern_mask": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "category",
+            "pattern_url",
+            "product_id",
+            "title",
+            "discounted_price",
+            "gender",
+            "price",
+            "scores",
+            "image_urls",
+            "product_url",
+            "currency",
+            "thumbnail_url",
+            "discount_percent",
+            "chatbot_image",
+            "availability",
+            "unique_id",
+            "pattern_mask"
+          ]
+        },
+        {
+          "type": "object",
+          "properties": {
+            "category": {
+              "type": "string"
+            },
+            "pattern_url": {
+              "type": "string"
+            },
+            "product_id": {
+              "type": "integer"
+            },
+            "title": {
+              "type": "string"
+            },
+            "discounted_price": {
+              "type": "number"
+            },
+            "gender": {
+              "type": "string"
+            },
+            "price": {
+              "type": "number"
+            },
+            "scores": {
+              "type": "object",
+              "properties": {
+                "color": {
+                  "type": "number"
+                },
+                "pattern": {
+                  "type": "number"
+                },
+                "combined": {
+                  "type": "number"
+                },
+                "pattern_class": {
+                  "type": "number"
+                }
+              },
+              "required": [
+                "color",
+                "pattern",
+                "combined",
+                "pattern_class"
+              ]
+            },
+            "image_urls": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "product_url": {
+              "type": "string"
+            },
+            "currency": {
+              "type": "string"
+            },
+            "thumbnail_url": {
+              "type": "string"
+            },
+            "discount_percent": {
+              "type": "number"
+            },
+            "chatbot_image": {
+              "type": "string"
+            },
+            "availability": {
+              "type": "integer"
+            },
+            "unique_id": {
+              "type": "string"
+            },
+            "pattern_mask": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "category",
+            "pattern_url",
+            "product_id",
+            "title",
+            "discounted_price",
+            "gender",
+            "price",
+            "scores",
+            "image_urls",
+            "product_url",
+            "currency",
+            "thumbnail_url",
+            "discount_percent",
+            "chatbot_image",
+            "availability",
+            "unique_id",
+            "pattern_mask"
+          ]
+        }
+      ]
+    }
+  },
+  "required": [
+    "status",
+    "data"
+  ]
+}
