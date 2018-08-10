@@ -1,0 +1,213 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "string"
+        },
+        "code": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "message",
+        "code"
+      ]
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "requestTCIN": {
+          "type": "string"
+        },
+        "requestId": {
+          "type": "string"
+        },
+        "outfits": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "hashtags": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ]
+                },
+                "outfit": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "parentTCIN": {
+                          "type": "string"
+                        },
+                        "TCIN": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "parentTCIN",
+                        "TCIN"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "parentTCIN": {
+                          "type": "string"
+                        },
+                        "TCIN": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "parentTCIN",
+                        "TCIN"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "parentTCIN": {
+                          "type": "string"
+                        },
+                        "TCIN": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "parentTCIN",
+                        "TCIN"
+                      ]
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "hashtags",
+                "outfit"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "hashtags": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ]
+                },
+                "outfit": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "object",
+                      "properties": {
+                        "parentTCIN": {
+                          "type": "string"
+                        },
+                        "TCIN": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "parentTCIN",
+                        "TCIN"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "parentTCIN": {
+                          "type": "string"
+                        },
+                        "TCIN": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "parentTCIN",
+                        "TCIN"
+                      ]
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "parentTCIN": {
+                          "type": "string"
+                        },
+                        "TCIN": {
+                          "type": "string"
+                        }
+                      },
+                      "required": [
+                        "parentTCIN",
+                        "TCIN"
+                      ]
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "hashtags",
+                "outfit"
+              ]
+            }
+          ]
+        }
+      },
+      "required": [
+        "requestTCIN",
+        "requestId",
+        "outfits"
+      ]
+    }
+  },
+  "required": [
+    "status",
+    "data"
+  ]
+}

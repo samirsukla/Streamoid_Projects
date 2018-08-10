@@ -1,0 +1,81 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "string"
+        },
+        "code": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "message",
+        "code"
+      ]
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "facets": {
+          "type": "object"
+        },
+        "requestTCIN": {
+          "type": "string"
+        },
+        "products": {
+          "type": "array",
+          "items": {}
+        },
+        "requestId": {
+          "type": "string"
+        },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "Color": {
+              "type": "integer"
+            },
+            "Neck line": {
+              "type": "integer"
+            },
+            "Print": {
+              "type": "integer"
+            },
+            "Style": {
+              "type": "integer"
+            },
+            "Sleeve length": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "Color",
+            "Neck line",
+            "Print",
+            "Style",
+            "Sleeve length"
+          ]
+        },
+        "resultCount": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "facets",
+        "requestTCIN",
+        "products",
+        "requestId",
+        "attributes",
+        "resultCount"
+      ]
+    }
+  },
+  "required": [
+    "status",
+    "data"
+  ]
+}
