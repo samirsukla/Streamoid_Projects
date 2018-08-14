@@ -31,7 +31,7 @@ public class SimilarImageUploadTest {
 			
 			//System.out.println(instantResp);
 			
-			InputStream inputStream = new FileInputStream(new File ("src/test/resources/similarImageUpload.json"));
+			InputStream inputStream = new FileInputStream(new File ("src/test/resources/SimilarImageUpload.json"));
 			JSONObject rawSchema = new JSONObject(new JSONTokener(inputStream));
 			Schema schema = SchemaLoader.load(rawSchema);
 			try {
