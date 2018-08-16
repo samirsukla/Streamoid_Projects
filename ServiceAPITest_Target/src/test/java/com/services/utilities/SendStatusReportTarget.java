@@ -1,23 +1,24 @@
 package com.services.utilities;
 
 
+import org.apache.commons.io.IOUtils;
 import org.testng.annotations.Test;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.StringWriter;
 import java.util.*;
 
-import javax.activation.DataHandler;
-import javax.activation.DataSource;
-import javax.activation.FileDataSource;
 import javax.mail.*;
 import javax.mail.internet.*;
-
-import javax.mail.Session;
-import javax.mail.Transport;
  
  
 public class SendStatusReportTarget 
 {
  @Test
-	public void sendMail()
+	public void sendMail() throws FileNotFoundException, IOException
    {    
 	 
 	 String[] sendTo = new String[] {"kinshuk@streamoid.com","hemang@streamoid.com"};
@@ -53,18 +54,28 @@ public class SendStatusReportTarget
          message.addRecipients(Message.RecipientType.CC, mailAddressCC);
          message.setSubject("Similar & Outfitter Service Status Report - Target");
          
+         
+         /*HTML Embedded Mail Body*/
+         StringWriter writer = new StringWriter();
+         IOUtils.copy(new FileInputStream(new File("target/surefire-reports/emailable-report.html")), writer, "ISO-8859-1");
+         MimeBodyPart messageBodyPart = new MimeBodyPart();
+         messageBodyPart.setContent(writer.toString(), "text/html");
+         Multipart multipart = new MimeMultipart();
+         multipart.addBodyPart(messageBodyPart);
+         message.setContent(multipart); 
+         
          /*Attachment Section*/
-         BodyPart messageBodyPart1 = new MimeBodyPart();  
-         messageBodyPart1.setText("Please find the status report attached for Similar and Outfitter services for Target"); 
-         MimeBodyPart messageBodyPart2 = new MimeBodyPart();  
-         String filename = "target/surefire-reports/emailable-report.html";
-         DataSource source = new FileDataSource(filename);  
-         messageBodyPart2.setDataHandler(new DataHandler(source));  
-         messageBodyPart2.setFileName(filename);
-         Multipart multipart = new MimeMultipart();  
-         multipart.addBodyPart(messageBodyPart1);  
-         multipart.addBodyPart(messageBodyPart2);
-         message.setContent(multipart );  
+//         BodyPart messageBodyPart1 = new MimeBodyPart();  
+//         messageBodyPart1.setText("Please find the status report attached for Similar and Outfitter services for Target"); 
+//         MimeBodyPart messageBodyPart2 = new MimeBodyPart();  
+//         String filename = "target/surefire-reports/emailable-report.html";
+//         DataSource source = new FileDataSource(filename);  
+//         messageBodyPart2.setDataHandler(new DataHandler(source));  
+//         messageBodyPart2.setFileName(filename);
+//         Multipart multipart = new MimeMultipart();  
+//         multipart.addBodyPart(messageBodyPart1);  
+//         multipart.addBodyPart(messageBodyPart2);
+//         message.setContent(multipart );  
          /*Attachment Section*/
          
          Transport.send(message);
