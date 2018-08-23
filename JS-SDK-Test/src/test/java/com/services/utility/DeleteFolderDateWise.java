@@ -10,8 +10,7 @@ public class DeleteFolderDateWise {
 		createabs=new CreateAbsolutePath();
 		String filePath = createabs.makeAbsolutePath();
 		DeleteFolderDateWise del = new DeleteFolderDateWise();
-		del.deleteFilesOlderThanNdays(4,filePath);
-
+		del.deleteFilesOlderThanNdays(30,filePath);
 	}
 
 	public void deleteFilesOlderThanNdays(final int daysBack, final String filePath) {
