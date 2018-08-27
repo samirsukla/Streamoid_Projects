@@ -16,7 +16,7 @@ public class DeleteFolderDateWise {
 		del.deleteFilesOlderThanNdays(31,filePath);
 	}
 
-	public void deleteFilesOlderThanNdays(final int daysBack, final String filePath) {
+	public void deleteFilesOlderThanNdays(final long daysBack, final String filePath) {
 
 	   
 		final File directory = new File(filePath);
@@ -24,7 +24,6 @@ public class DeleteFolderDateWise {
 	        System.out.println(" Directory Exists");
 	        final File[] listFiles = directory.listFiles();          
 	        final long purgeTime = System.currentTimeMillis() - (daysBack * 24 * 60 * 60 * 1000);
-
 	        for(File listFile : listFiles) {
 	            
 	        	if(listFile.lastModified() < purgeTime) {
