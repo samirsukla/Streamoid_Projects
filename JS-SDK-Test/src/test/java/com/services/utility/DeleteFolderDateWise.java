@@ -2,15 +2,18 @@ package com.services.utility;
 
 import java.io.File;
 
+import org.testng.annotations.Test;
+
 public class DeleteFolderDateWise {
 	
 	static CreateAbsolutePath createabs;
 
-	public static void main(String[] args) {
+	@Test
+	public void deleteFiles(){
 		createabs=new CreateAbsolutePath();
 		String filePath = createabs.makeAbsolutePath();
 		DeleteFolderDateWise del = new DeleteFolderDateWise();
-		del.deleteFilesOlderThanNdays(30,filePath);
+		del.deleteFilesOlderThanNdays(31,filePath);
 	}
 
 	public void deleteFilesOlderThanNdays(final int daysBack, final String filePath) {
