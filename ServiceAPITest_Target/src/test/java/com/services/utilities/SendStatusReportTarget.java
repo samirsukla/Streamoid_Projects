@@ -17,10 +17,13 @@ import javax.mail.internet.*;
  
 public class SendStatusReportTarget 
 {
+	static GetSystemDate getDate;
  @Test
 	public void sendMail() throws FileNotFoundException, IOException
    {    
 	 
+	 getDate = new GetSystemDate();
+	 String todaysDate = getDate.getPresentDate();
 	 String[] sendTo = new String[] {"kinshuk@streamoid.com","hemang@streamoid.com"};
 	 String[] sendCC = new String [] {"sar@streamoid.com", "prathaban@streamoid.com", "dash@streamoid.com", "naveen@streamoid.com", "samir@streamoid.com"};
 	 
@@ -52,7 +55,8 @@ public class SendStatusReportTarget
          MimeMessage message = new MimeMessage(session);
          message.addRecipients(Message.RecipientType.TO, mailAddressTO);
          message.addRecipients(Message.RecipientType.CC, mailAddressCC);
-         message.setSubject("Similar & Outfitter Service Status Report - Target");
+         String mailSubject = "Similar & Outfitter Service Status Report - Target on " + todaysDate;
+         message.setSubject(mailSubject);
          
          
          /*HTML Embedded Mail Body*/

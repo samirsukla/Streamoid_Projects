@@ -20,10 +20,13 @@ import javax.mail.Transport;
  
 public class SendStatusReport
 {
+	static GetSystemDate getDate;
  @Test
 	public void sendMail() throws FileNotFoundException, IOException
    {    
 	 
+	 getDate = new GetSystemDate();
+	 String todaysDate = getDate.getPresentDate();
 	 String[] sendTo = new String[] {"kinshuk@streamoid.com", "hemang@streamoid.com"};
 	 String[] sendCC = new String [] {"sar@streamoid.com", "prathaban@streamoid.com", "dash@streamoid.com", "naveen@streamoid.com", "samir@streamoid.com"};
 	 
@@ -57,7 +60,8 @@ public class SendStatusReport
          MimeMessage message = new MimeMessage(session);
          message.addRecipients(Message.RecipientType.TO, mailAddressTO);
          message.addRecipients(Message.RecipientType.CC, mailAddressCC);
-         message.setSubject("Similar & Outfitter Service Status Report - Common Vendors");
+         String mailSubject = "Similar & Outfitter Service Status Report - Common Vendors on " + todaysDate;
+         message.setSubject(mailSubject);
          
          /* HTML Embedded Mail Body */
 //         BodyPart messageBodyPart1 = new MimeBodyPart();  

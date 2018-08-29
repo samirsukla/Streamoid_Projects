@@ -18,9 +18,12 @@ import javax.mail.Transport;
  
 public class SendEmailJSSDK
 {
+	static GetSystemDate getDate;
  @Test
 	public void sendMail() throws FileNotFoundException, IOException
    {    
+	 getDate = new GetSystemDate();
+	 String todaysDate = getDate.getPresentDate();
 	 
 	 String[] sendTo = new String[] {"murtaza.ali@streamoid.com","vivekb@streamoid.com"};
 	 String[] sendCC = new String [] {"sar@streamoid.com", "prathaban@streamoid.com", "dash@streamoid.com", "naveen@streamoid.com", "samir@streamoid.com","kinshuk@streamoid.com","hemang@streamoid.com","malini@streamoid.com"};
@@ -55,7 +58,8 @@ public class SendEmailJSSDK
          MimeMessage message = new MimeMessage(session);
          message.addRecipients(Message.RecipientType.TO, mailAddressTO);
          message.addRecipients(Message.RecipientType.CC, mailAddressCC);
-         message.setSubject("JS-SDK Test Automation Report");
+         String mailSubject = "JS-SDK Test Automation Report on " + todaysDate;
+         message.setSubject(mailSubject);
          
          /* HTML Embedded Mail Body */
 //         BodyPart messageBodyPart1 = new MimeBodyPart();  
