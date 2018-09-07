@@ -15,6 +15,7 @@ import com.services.utility.ClickonFirstProduct;
 import com.services.utility.CreateFolder;
 import com.services.utility.InitialSetup;
 import com.services.utility.TakeScreenShot;
+import com.services.utility.ZoomInAndZoomOut;
 import com.services.utility.GetSystemDate;
 
 
@@ -35,6 +36,7 @@ public class TestPothysInfo {
 	static TakeScreenShot scrshot;
 	static InitialSetup initSet;
 	static CheckWidgetPresentStatus checkStatus;
+	static ZoomInAndZoomOut setZoomLevel;
 	
 	
 	
@@ -51,6 +53,7 @@ public class TestPothysInfo {
 		CreateFolder createFolder = new CreateFolder();
 		currentDate = getDate.getPresentDate();
 		createFolder.createDateDirectory(currentDate);
+		setZoomLevel = new ZoomInAndZoomOut();
 		
 		
 		}
@@ -94,7 +97,9 @@ public class TestPothysInfo {
 						
 						clickfirst.clickOnPothysProduct(driver);
 						
-						Thread.sleep(3000);
+						Thread.sleep(4000);
+						
+//						setZoomLevel.zoomOutPothys(driver);
 						
 						WebElement similar_widget = driver.findElement(By.xpath("//div[@data-service='similar']"));
 						((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", similar_widget);
@@ -116,6 +121,7 @@ public class TestPothysInfo {
 							
 						}
 						
+//						setZoomLevel.zoomIn(driver);
 						((JavascriptExecutor) driver).executeScript("window.scrollTo(0,0)"); 
 		
 						j++;

@@ -24,4 +24,9 @@ public class ZoomInAndZoomOut {
 	 
   }
   
+  public void zoomOutPothys(WebDriver driver) throws AWTException {
+      JavascriptExecutor js = (JavascriptExecutor) driver;
+	  js.executeScript("document.body.style.transform = 'scale(0.80)';");
+	 
+  }
 }
