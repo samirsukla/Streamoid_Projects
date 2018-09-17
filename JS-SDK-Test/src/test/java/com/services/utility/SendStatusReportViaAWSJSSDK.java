@@ -1,4 +1,4 @@
-package com.services.utilities;
+package com.services.utility;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -16,17 +16,18 @@ import com.amazonaws.services.simpleemail.model.Content;
 import com.amazonaws.services.simpleemail.model.Destination;
 import com.amazonaws.services.simpleemail.model.Message;
 import com.amazonaws.services.simpleemail.model.SendEmailRequest;
-import com.services.utilities.GetSystemDate;
+import com.services.utility.GetSystemDate;
 
-public class SendStatusReport {
+public class SendStatusReportViaAWSJSSDK {
 	static String statusReportLocation = "target/surefire-reports/emailable-report.html";
 
 	static GetSystemDate getDate;
 	static final String FROM = "test-automation@streamoid.com";
 
-	String[] sendTo = new String[] { "kinshuk@streamoid.com", "hemang@streamoid.com" };
+	String[] sendTo = new String[] { "murtaza.ali@streamoid.com", "vivekb@streamoid.com" };
 	String[] sendCC = new String[] { "sar@streamoid.com", "prathaban@streamoid.com", "dash@streamoid.com",
-			"naveen@streamoid.com", "samir@streamoid.com" };
+			"naveen@streamoid.com", "samir@streamoid.com", "kinshuk@streamoid.com", "hemang@streamoid.com",
+			"malini@streamoid.com" };
 
 	@Test
 	public void sendMail() throws IOException {
@@ -38,7 +39,7 @@ public class SendStatusReport {
 		IOUtils.copy(new FileInputStream(new File(statusReportLocation)), writer, "ISO-8859-1");
 		String HTMLBODY = writer.toString();
 
-		String SUBJECT = "Similar & Outfitter Service Status Report - Common Vendors on " + todaysDate;
+		String SUBJECT = "JS-SDK Test Automation Report on " + todaysDate;
 
 		try {
 			AmazonSimpleEmailService client = AmazonSimpleEmailServiceClientBuilder.standard()
