@@ -251,6 +251,45 @@ public void clickOnPothysProduct(WebDriver driver) throws InterruptedException {
 	
 }
 
+public String clickOnAbofProduct(WebDriver driver) throws InterruptedException {
+	List<WebElement> productList = driver.findElements(By.xpath("/html/body/div[2]/div/div/div[3]/div[2]/div/div[2]/div[2]/div"));
+	int noOfProducts = productList.size();
+	random = new GenerateRandomNumber();
+	int randomNo = random.generateRandomNo();
+	
+	if(randomNo >=4) {
+		
+		((JavascriptExecutor) driver).executeScript("window.scrollBy(0,500)"); 
+		Thread.sleep(2000);
+		
+	}
+	if(randomNo<=noOfProducts) {
+		String product_url = "/html/body/div[2]/div/div/div[3]/div[2]/div/div[2]/div[2]/div["+randomNo+"]/div[1]/div[1]/div/ul/li[2]/a/div/img";
+		WebDriverWait wait = new WebDriverWait(driver,10);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(product_url)));
+		
+		WebElement element_link = driver.findElement(By.xpath("/html/body/div[2]/div/div/div[3]/div[2]/div/div[2]/div[2]/div["+randomNo+"]/input"));
+		String product_id = element_link.getAttribute("id").replaceAll("dyProductID_", "");
+		
+		driver.findElement(By.xpath(product_url)).click();
+		return product_id;
+		
+	}
+	else {
+		((JavascriptExecutor) driver).executeScript("window.scrollTo(0,0)"); 
+		String product_url = "/html/body/div[2]/div/div/div[3]/div[2]/div/div[2]/div[2]/div[1]/div[1]/div[1]/div/ul/li[2]/a/div/img";
+		WebDriverWait wait = new WebDriverWait(driver,10);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(product_url)));
+		
+		WebElement element_link = driver.findElement(By.xpath("/html/body/div[2]/div/div/div[3]/div[2]/div/div[2]/div[2]/div[1]/input"));
+		String product_id = element_link.getAttribute("id").replaceAll("dyProductID_", "");
+		
+		driver.findElement(By.xpath(product_url)).click();
+		return product_id;
+	}
+	
+}
+
 public void clickOnRaymondProduct_1(WebDriver driver) throws InterruptedException {
 	Thread.sleep(2000);
 		String product_url ="/html/body/div[1]/main/div[2]/div/div[2]/div[2]/div[1]/div/div/div[1]/div[1]/a/div";
