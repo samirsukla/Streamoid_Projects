@@ -12,6 +12,7 @@
       <class name="com.services.test.TestPeopleInfo"/>
       <class name="com.services.test.TestPothysInfo"/>
       <class name="com.services.test.TestVanHeusenInfo"/>
+      <class name="com.services.test.TestAbofInfo"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
