@@ -65,12 +65,14 @@ public class TestLouisPhilippeInfo {
 	    String url = initSet.getUrl("Louis_Philippe");
 		driver.get(url);
 		
+		Thread.sleep(2000);
+		
 		if(driver.findElement(By.xpath("/html/body/div[3]/div/div[4]/div/div")).isDisplayed()) {
 			
 			driver.findElement(By.xpath("/html/body/div[3]/div/div[4]/div/div/div[1]/button")).click();
 		}
 		
-		Thread.sleep(2000);
+		Thread.sleep(1000);
 		if(driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div[1]/div[3]/div[1]/ul/li[4]/div/img")).isDisplayed())
 		{
 

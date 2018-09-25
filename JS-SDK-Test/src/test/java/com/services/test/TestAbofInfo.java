@@ -67,6 +67,7 @@ public class TestAbofInfo {
 	  
 	    String url = initSet.getUrl("Abof");
 		driver.get(url);
+		Thread.sleep(2000);
 		
 		if(driver.findElement(By.xpath("//div[@id='landingModal']/div/div/div/div/div[2]")).isDisplayed()) {
 			
