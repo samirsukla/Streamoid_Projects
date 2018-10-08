@@ -2,7 +2,7 @@ package com.services.utility;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.IOException;
+import java.io.IOException; 
 import java.io.StringWriter;
 
 import org.apache.commons.io.IOUtils;
@@ -26,7 +26,7 @@ public class SendStatusReportViaAWSJSSDK {
 
 	String[] sendTo = new String[] { "murtaza.ali@streamoid.com", "vivekb@streamoid.com" };
 	String[] sendCC = new String[] { "sar@streamoid.com", "prathaban@streamoid.com", "dash@streamoid.com",
-			"naveen@streamoid.com", "samir@streamoid.com", "kinshuk@streamoid.com", "hemang@streamoid.com",
+			"naveen@streamoid.com", "samir@streamoid.com", "kinshuk@streamoid.com",
 			"malini@streamoid.com" };
 
 	@Test

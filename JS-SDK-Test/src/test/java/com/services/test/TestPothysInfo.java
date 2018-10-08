@@ -38,9 +38,6 @@ public class TestPothysInfo {
 	static CheckWidgetPresentStatus checkStatus;
 	static ZoomInAndZoomOut setZoomLevel;
 	
-	
-	
-
 	@BeforeClass
 	public void setUp() throws IOException {
 		initSet = new InitialSetup();
@@ -55,11 +52,7 @@ public class TestPothysInfo {
 		createFolder.createDateDirectory(currentDate);
 		setZoomLevel = new ZoomInAndZoomOut();
 		
-		
 		}
-	
-	
-	
 	
   @Test
   public void testPothys() throws InterruptedException {
@@ -91,15 +84,10 @@ public class TestPothysInfo {
 						String prodCategoryName = clickfirst.getCategoryName(product_category).replaceAll("/", "-");
 						
 						clickfirst.moveToElementandClick(main_category1, product_category, driver);
-						
 						Thread.sleep(2000);
-					
-						
 						clickfirst.clickOnPothysProduct(driver);
 						
 						Thread.sleep(4000);
-						
-//						setZoomLevel.zoomOutPothys(driver);
 						
 						WebElement similar_widget = driver.findElement(By.xpath("//div[@data-service='similar']"));
 						((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", similar_widget);
@@ -120,8 +108,7 @@ public class TestPothysInfo {
 							checkStatus.checkStatusAndTakeScreenshot(driver, currentDate,folderName, mainCategoryName, prodCategoryName, status,product_id,isDisplaying);
 							
 						}
-						
-//						setZoomLevel.zoomIn(driver);
+					
 						((JavascriptExecutor) driver).executeScript("window.scrollTo(0,0)"); 
 		
 						j++;
@@ -135,6 +122,8 @@ public class TestPothysInfo {
 					}
 				catch(Exception e) {
 					j++;
+					//((JavascriptExecutor) driver).executeScript("window.scrollTo(0,0)"); 
+					//driver.findElement(By.xpath("/html/body/section/section[1]/section[1]/div[2]/div/div[1]/div/a/img")).click();
 					WebElement main_category2 = driver.findElement(By.xpath(".//*[@id='mainmenutop']/div/div/div/ul/li["+i+"]/a/span"));
 					clickfirst.moveToElement_only(main_category2, driver);
 					
