@@ -290,6 +290,122 @@ public String clickOnAbofProduct(WebDriver driver) throws InterruptedException {
 	
 }
 
+public String[] clickOnTargetProduct(WebDriver driver) throws InterruptedException {
+	String[] str = new String[2];
+	List<WebElement> productList = driver.findElements(By.cssSelector("ul.h-padding-t-wide.Row-fhyc8j-0.gGOZwz > li"));
+	int noOfProducts = productList.size();
+	random = new GenerateRandomNumber();
+	int randomNo = random.generateRandomNo_Target();
+	System.out.println("Random Number = " + randomNo);
+
+	
+    List<WebElement> allSimilarLinks = driver.findElements(By.linkText("Find similar items"));
+    
+	if(randomNo<=noOfProducts) {
+		allSimilarLinks.get(randomNo).click();
+		Thread.sleep(2000);
+		
+		String pageUrl = driver.getCurrentUrl();
+		String product_id = pageUrl.substring(pageUrl.length()-8);
+		str[0] = product_id;
+		str[1] = Integer.toString(randomNo);
+		return str;
+		
+	}
+	else {
+		allSimilarLinks.get(0).click();
+		Thread.sleep(2000);
+		
+		String pageUrl = driver.getCurrentUrl();
+		String product_id = pageUrl.substring(pageUrl.length()-8);
+		str[0] = product_id;
+		str[1] = Integer.toString(randomNo);
+		return str;
+	}
+	
+}
+
+public String clickOnSimonCarterProduct(WebDriver driver) throws InterruptedException {
+	List<WebElement> productList = driver.findElements(By.xpath("/html/body/div[2]/div/div/div[2]/div[2]/div/div[2]/div[2]/div"));
+	int noOfProducts = productList.size();
+	random = new GenerateRandomNumber();
+	int randomNo = random.generateRandomNo();
+	
+	if(randomNo >=4) {
+		
+		((JavascriptExecutor) driver).executeScript("window.scrollBy(0,500)"); 
+		Thread.sleep(2000);
+		
+	}
+	if(randomNo<=noOfProducts) {
+		String product_url = "/html/body/div[2]/div/div/div[2]/div[2]/div/div[2]/div[2]/div["+randomNo+"]/div[1]/div[1]/div/ul/li[2]/a/div/img";
+		WebDriverWait wait = new WebDriverWait(driver,10);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(product_url)));
+		
+		WebElement element_link = driver.findElement(By.xpath("/html/body/div[2]/div/div/div[2]/div[2]/div/div[2]/div[2]/div["+randomNo+"]/input"));
+		String product_id = element_link.getAttribute("id").replaceAll("dyProductID_", "");
+		
+		driver.findElement(By.xpath(product_url)).click();
+		return product_id;
+		
+	}
+	else {
+		((JavascriptExecutor) driver).executeScript("window.scrollTo(0,0)"); 
+		String product_url = "/html/body/div[2]/div/div/div[2]/div[2]/div/div[2]/div[2]/div[1]/div[1]/div[1]/div/ul/li[2]/a/div/img";
+		WebDriverWait wait = new WebDriverWait(driver,10);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(product_url)));
+		
+		WebElement element_link = driver.findElement(By.xpath("/html/body/div[2]/div/div/div[2]/div[2]/div/div[2]/div[2]/div[1]/input"));
+		String product_id = element_link.getAttribute("id").replaceAll("dyProductID_", "");
+		
+		driver.findElement(By.xpath(product_url)).click();
+		return product_id;
+	}
+	
+}
+
+
+public String clickOnPantaloonsProduct(WebDriver driver) throws InterruptedException {
+	List<WebElement> productList = driver.findElements(By.xpath("/html/body/div[4]/div/div[2]/div/div[5]/div"));
+	int noOfProducts = productList.size();
+	random = new GenerateRandomNumber();
+	int randomNo = random.generateRandomNo();
+	
+	if(randomNo >=4) {
+		
+		((JavascriptExecutor) driver).executeScript("window.scrollBy(0,500)"); 
+		Thread.sleep(2000);
+		
+	}
+	if(randomNo<=noOfProducts) {
+		String product_url = "/html/body/div[4]/div/div[2]/div/div[5]/div["+randomNo+"]/div/div[1]/div[1]/div/div/ul/li[2]/a/div/img";
+		WebDriverWait wait = new WebDriverWait(driver,10);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(product_url)));
+		
+		WebElement element_link = driver.findElement(By.xpath("/html/body/div[3]/div/div[2]/div/div[5]div["+randomNo+"]/div"));
+		String product_id = element_link.getAttribute("id").replaceAll("product_wrap_", "");
+		
+		driver.findElement(By.xpath(product_url)).click();
+		return product_id;
+		
+	}
+	else {
+		((JavascriptExecutor) driver).executeScript("window.scrollTo(0,0)"); 
+		String product_url = "/html/body/div[4]/div/div[2]/div/div[5]/div[1]/div/div[1]/div[1]/div/div/ul/li[2]/a/div/img";
+		WebDriverWait wait = new WebDriverWait(driver,10);
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(product_url)));
+		
+		WebElement element_link = driver.findElement(By.xpath("/html/body/div[3]/div/div[2]/div/div[5]div[1]/div"));
+		String product_id = element_link.getAttribute("id").replaceAll("product_wrap_", "");
+		
+		driver.findElement(By.xpath(product_url)).click();
+		return product_id;
+	}
+	
+}
+
+
+
 public void clickOnRaymondProduct_1(WebDriver driver) throws InterruptedException {
 	Thread.sleep(2000);
 		String product_url ="/html/body/div[1]/main/div[2]/div/div[2]/div[2]/div[1]/div/div/div[1]/div[1]/a/div";
@@ -307,13 +423,8 @@ public void clickOnRaymondProduct_2(WebDriver driver) throws InterruptedExceptio
 
 
 
-
-
-
-
-
-
-	public void moveToElementandClick(WebElement main_category , WebElement product_category , WebDriver driver) {
+	public void moveToElementandClick(WebElement main_category , WebElement product_category , WebDriver driver) throws InterruptedException {
+		Thread.sleep(1000);
 		action = new Actions(driver);
 		action.moveToElement(main_category).moveToElement(product_category).click().build().perform();
 	}

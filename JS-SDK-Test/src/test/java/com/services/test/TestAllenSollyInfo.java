@@ -99,7 +99,10 @@ public class TestAllenSollyInfo {
 				
 				Thread.sleep(3000);
 				
-				if(driver.findElement(By.className("allen_solly_vertical_container")).isDisplayed()) {
+				int widgetCount = driver.findElements(By.className("allen_solly_vertical_container")).size();
+				
+				if(widgetCount > 0)
+				{
 					status="passed";
 				
 				List<String> similar_product_id = checkProducts.similarProducts(product_id,"allen_solly");
@@ -148,7 +151,9 @@ public class TestAllenSollyInfo {
 				
 				Thread.sleep(3000);
 				
-				if(driver.findElement(By.className("allen_solly_vertical_container")).isDisplayed()) 
+				int widgetCount = driver.findElements(By.className("allen_solly_vertical_container")).size();
+				
+				if(widgetCount > 0)
 				{
 					status="passed";
 				
@@ -210,7 +215,10 @@ public class TestAllenSollyInfo {
 						
 						Thread.sleep(3000);
 						
-						if(driver.findElement(By.className("allen_solly_vertical_container")).isDisplayed()) {
+						int widgetCount = driver.findElements(By.className("allen_solly_vertical_container")).size();
+						
+						if(widgetCount > 0)
+						{
 							status="passed";
 						
 						List<String> similar_product_id = checkProducts.similarProducts(product_id,"allen_solly");

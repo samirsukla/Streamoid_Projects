@@ -100,7 +100,9 @@ public class TestGlobusFashionInfo {
 					
 					Thread.sleep(2000);
 					
-					if(driver.findElement(By.className("globus_container")).isDisplayed())
+					int widgetCount = driver.findElements(By.className("globus_container")).size();
+					
+					if(widgetCount > 0)
 					{
 						status = "passed";
 						List<String> similar_product_id = checkProducts.similarProducts(product_id,"globus");

@@ -93,8 +93,9 @@ public class TestPlanetFashionInfo {
 					
 					
 					Thread.sleep(3000);
+					int widgetCount = driver.findElements(By.className("planet_fashion_vertical_container")).size();
 					
-					if(driver.findElement(By.className("planet_fashion_vertical_container")).isDisplayed())
+					if(widgetCount > 0)
 					{
 						status = "passed";
 						List<String> similar_product_id = checkProducts.similarProducts(product_id,"planet_fashion");

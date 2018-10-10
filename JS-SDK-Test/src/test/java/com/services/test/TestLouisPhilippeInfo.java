@@ -115,8 +115,10 @@ public class TestLouisPhilippeInfo {
 					
 					
 					Thread.sleep(3000);
+					int widgetCount = driver.findElements(By.className("louis_philippe_vertical_container")).size();
 					
-					if(driver.findElement(By.className("louis_philippe_vertical_container")).isDisplayed())
+					if(widgetCount > 0)
+					
 					{
 						status = "passed";
 						List<String> similar_product_id = checkProducts.similarProducts(product_id,"louis_philippe");

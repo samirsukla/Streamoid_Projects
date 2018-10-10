@@ -94,7 +94,9 @@ public class TestPeopleInfo {
 					
 					Thread.sleep(2000);
 					
-					if(driver.findElement(By.className("people_vertical_container")).isDisplayed())
+					int widgetCount = driver.findElements(By.className("people_vertical_container")).size();
+					
+					if(widgetCount > 0)
 					{
 						status = "passed";
 						List<String> similar_product_id = checkProducts.similarProducts(product_id,"people");
@@ -130,6 +132,7 @@ public class TestPeopleInfo {
 				clickfirst.moveToElement_only(main_category2, driver);
 				
 			}
+			
 			}
 			
 		

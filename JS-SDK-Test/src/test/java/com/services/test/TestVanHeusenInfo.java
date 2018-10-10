@@ -113,8 +113,9 @@ public class TestVanHeusenInfo {
 						
 						
 						Thread.sleep(3000);
+						int widgetCount = driver.findElements(By.className("vanheusen_vertical_container")).size();
 						
-						if(driver.findElement(By.className("vanheusen_vertical_container")).isDisplayed())
+						if(widgetCount > 0)
 						{
 							status = "passed";
 							List<String> similar_product_id = checkProducts.similarProducts(product_id,"vanheusen");
@@ -174,7 +175,9 @@ public class TestVanHeusenInfo {
 									
 					Thread.sleep(3000);
 					
-					if(driver.findElement(By.className("vanheusen_vertical_container")).isDisplayed())
+					int widgetCount = driver.findElements(By.className("vanheusen_vertical_container")).size();
+					
+					if(widgetCount > 0)
 					{
 						status = "passed";
 						List<String> similar_product_id = checkProducts.similarProducts(product_id,"vanheusen");
@@ -231,7 +234,9 @@ public class TestVanHeusenInfo {
 											
 						Thread.sleep(3000);
 						
-						if(driver.findElement(By.className("vanheusen_vertical_container")).isDisplayed())
+						int widgetCount = driver.findElements(By.className("vanheusen_vertical_container")).size();
+						
+						if(widgetCount > 0)
 						{
 							status = "passed";
 							List<String> similar_product_id = checkProducts.similarProducts(product_id,"vanheusen");

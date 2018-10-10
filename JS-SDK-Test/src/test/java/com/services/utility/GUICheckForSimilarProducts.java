@@ -208,7 +208,49 @@ public boolean getIdsFromGUIforRaymondNext(List<String> prodUsingApi ,WebDriver 
 public boolean getIdsFromGUIforAbof(List<String> prodUsingApi ,WebDriver driver)  {
 	
 	
-	List<WebElement> similar_Ids=driver.findElements(By.xpath("/html/body/div[3]/div[3]/div/div[@class='v_abof_container']/a"));
+	List<WebElement> similar_Ids=driver.findElements(By.xpath("/html/body/div[3]/div[3]/div/div[@class='simon_carter_container']/a"));
+	List<String> prodUsingUI = new ArrayList<String>();
+	
+	for(WebElement elem : similar_Ids) {
+		String id1 = elem.getAttribute("id");
+		prodUsingUI.add(id1);
+		
+	}
+	//Collections.reverse(prodUsingUI);
+	//System.out.println(prodUsingUI);
+	if(prodUsingApi.equals(prodUsingUI)) {
+		return true;
+	}else {
+		return false;
+	}
+	
+	
+}
+public boolean getIdsFromGUIforSimonCarter(List<String> prodUsingApi ,WebDriver driver)  {
+	
+	
+	List<WebElement> similar_Ids=driver.findElements(By.xpath("/html/body/div[2]/div[3]/div/div[@class='simon_carter_container']/a"));
+	List<String> prodUsingUI = new ArrayList<String>();
+	
+	for(WebElement elem : similar_Ids) {
+		String id1 = elem.getAttribute("id");
+		prodUsingUI.add(id1);
+		
+	}
+	//Collections.reverse(prodUsingUI);
+	//System.out.println(prodUsingUI);
+	if(prodUsingApi.equals(prodUsingUI)) {
+		return true;
+	}else {
+		return false;
+	}
+	
+	
+}
+public boolean getIdsFromGUIforPantaloons(List<String> prodUsingApi ,WebDriver driver)  {
+	
+	
+	List<WebElement> similar_Ids=driver.findElements(By.xpath("/html/body/section/div[1]/div[3]/div/div[4]/div/div[@class='pantaloons_container']/a"));
 	List<String> prodUsingUI = new ArrayList<String>();
 	
 	for(WebElement elem : similar_Ids) {

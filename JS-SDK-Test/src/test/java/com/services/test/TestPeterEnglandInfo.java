@@ -104,8 +104,9 @@ public class TestPeterEnglandInfo {
 				((JavascriptExecutor) driver).executeScript("window.scrollBy(0,600)");
 				
 				Thread.sleep(2000);
+				int widgetCount = driver.findElements(By.cssSelector(".similar_product_view.recomdtn")).size();
 				
-				if(driver.findElement(By.cssSelector(".similar_product_view.recomdtn")).isDisplayed())
+				if(widgetCount > 0)
 				{
 					status = "passed";
 					List<String> similar_product_id = checkProducts.similarProducts(product_id,"peter_england");
@@ -170,7 +171,9 @@ public class TestPeterEnglandInfo {
 						
 						((JavascriptExecutor) driver).executeScript("window.scrollBy(0,600)");
 						Thread.sleep(2000);
-						if(driver.findElement(By.cssSelector(".similar_product_view.recomdtn")).isDisplayed())
+						int widgetCount = driver.findElements(By.cssSelector(".similar_product_view.recomdtn")).size();
+						
+						if(widgetCount > 0)
 						{
 							status = "passed";
 							List<String> similar_product_id = checkProducts.similarProducts(product_id,"peter_england");
