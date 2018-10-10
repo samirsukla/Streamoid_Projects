@@ -208,7 +208,7 @@ public boolean getIdsFromGUIforRaymondNext(List<String> prodUsingApi ,WebDriver 
 public boolean getIdsFromGUIforAbof(List<String> prodUsingApi ,WebDriver driver)  {
 	
 	
-	List<WebElement> similar_Ids=driver.findElements(By.xpath("/html/body/div[3]/div[3]/div/div[@class='simon_carter_container']/a"));
+	List<WebElement> similar_Ids=driver.findElements(By.xpath("/html/body/div[3]/div[3]/div/div[@class='v_abof_container']/a"));
 	List<String> prodUsingUI = new ArrayList<String>();
 	
 	for(WebElement elem : similar_Ids) {
