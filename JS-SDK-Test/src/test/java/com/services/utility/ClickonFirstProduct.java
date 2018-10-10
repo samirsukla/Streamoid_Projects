@@ -290,7 +290,7 @@ public String clickOnAbofProduct(WebDriver driver) throws InterruptedException {
 	
 }
 
-public String[] clickOnTargetProduct(WebDriver driver) throws InterruptedException {
+/*public String[] clickOnTargetProduct(WebDriver driver) throws InterruptedException {
 	String[] str = new String[2];
 	List<WebElement> productList = driver.findElements(By.cssSelector("ul.h-padding-t-wide.Row-fhyc8j-0.gGOZwz > li"));
 	int noOfProducts = productList.size();
@@ -323,7 +323,7 @@ public String[] clickOnTargetProduct(WebDriver driver) throws InterruptedExcepti
 		return str;
 	}
 	
-}
+}*/
 
 public String clickOnSimonCarterProduct(WebDriver driver) throws InterruptedException {
 	List<WebElement> productList = driver.findElements(By.xpath("/html/body/div[2]/div/div/div[2]/div[2]/div/div[2]/div[2]/div"));
