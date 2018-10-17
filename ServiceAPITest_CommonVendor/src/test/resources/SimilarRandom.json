@@ -26,33 +26,51 @@
             "category": {
               "type": "string"
             },
-            "pattern_url": {
+            "patternURL": {
               "type": "string"
             },
-            "product_id": {
-              "type": "integer"
-            },
-            "title": {
+            "description": {
               "type": "string"
             },
-            "discounted_price": {
+            "discountPercent": {
               "type": "number"
             },
             "gender": {
               "type": "string"
             },
+            "brand": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "patternMask": {
+              "type": "string"
+            },
             "price": {
               "type": "number"
             },
-            "image_urls": {
+            "currency": {
+              "type": "string"
+            },
+            "productURL": {
+              "type": "string"
+            },
+            "discountedPrice": {
+              "type": "number"
+            },
+            "uniqueId": {
+              "type": "string"
+            },
+            "chatbotImage": {
+              "type": "string"
+            },
+            "thumbnailURL": {
+              "type": "string"
+            },
+            "imageURLs": {
               "type": "array",
               "items": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "string"
-                },
                 {
                   "type": "string"
                 },
@@ -76,48 +94,32 @@
                 }
               ]
             },
-            "product_url": {
-              "type": "string"
-            },
-            "currency": {
-              "type": "string"
-            },
-            "thumbnail_url": {
-              "type": "string"
-            },
-            "discount_percent": {
-              "type": "number"
-            },
-            "chatbot_image": {
-              "type": "string"
-            },
             "availability": {
               "type": "integer"
             },
-            "unique_id": {
-              "type": "string"
-            },
-            "pattern_mask": {
+            "productId": {
               "type": "string"
             }
           },
           "required": [
             "category",
-            "pattern_url",
-            "product_id",
-            "title",
-            "discounted_price",
+            "patternURL",
+            "description",
+            "discountPercent",
             "gender",
+            "brand",
+            "title",
+            "patternMask",
             "price",
-            "image_urls",
-            "product_url",
             "currency",
-            "thumbnail_url",
-            "discount_percent",
-            "chatbot_image",
+            "productURL",
+            "discountedPrice",
+            "uniqueId",
+            "chatbotImage",
+            "thumbnailURL",
+            "imageURLs",
             "availability",
-            "unique_id",
-            "pattern_mask"
+            "productId"
           ]
         },
         {
@@ -126,27 +128,63 @@
             "category": {
               "type": "string"
             },
-            "pattern_url": {
+            "patternURL": {
               "type": "string"
             },
-            "product_id": {
-              "type": "integer"
-            },
-            "title": {
+            "description": {
               "type": "string"
             },
-            "discounted_price": {
+            "discountPercent": {
               "type": "number"
             },
             "gender": {
               "type": "string"
             },
+            "brand": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "patternMask": {
+              "type": "string"
+            },
             "price": {
               "type": "number"
             },
-            "image_urls": {
+            "currency": {
+              "type": "string"
+            },
+            "productURL": {
+              "type": "string"
+            },
+            "discountedPrice": {
+              "type": "number"
+            },
+            "uniqueId": {
+              "type": "string"
+            },
+            "chatbotImage": {
+              "type": "string"
+            },
+            "thumbnailURL": {
+              "type": "string"
+            },
+            "imageURLs": {
               "type": "array",
               "items": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
                 {
                   "type": "string"
                 },
@@ -170,48 +208,32 @@
                 }
               ]
             },
-            "product_url": {
-              "type": "string"
-            },
-            "currency": {
-              "type": "string"
-            },
-            "thumbnail_url": {
-              "type": "string"
-            },
-            "discount_percent": {
-              "type": "number"
-            },
-            "chatbot_image": {
-              "type": "string"
-            },
             "availability": {
               "type": "integer"
             },
-            "unique_id": {
-              "type": "string"
-            },
-            "pattern_mask": {
+            "productId": {
               "type": "string"
             }
           },
           "required": [
             "category",
-            "pattern_url",
-            "product_id",
-            "title",
-            "discounted_price",
+            "patternURL",
+            "description",
+            "discountPercent",
             "gender",
+            "brand",
+            "title",
+            "patternMask",
             "price",
-            "image_urls",
-            "product_url",
             "currency",
-            "thumbnail_url",
-            "discount_percent",
-            "chatbot_image",
+            "productURL",
+            "discountedPrice",
+            "uniqueId",
+            "chatbotImage",
+            "thumbnailURL",
+            "imageURLs",
             "availability",
-            "unique_id",
-            "pattern_mask"
+            "productId"
           ]
         },
         {
@@ -220,36 +242,51 @@
             "category": {
               "type": "string"
             },
-            "pattern_url": {
+            "patternURL": {
               "type": "string"
             },
-            "product_id": {
-              "type": "integer"
-            },
-            "title": {
+            "description": {
               "type": "string"
             },
-            "discounted_price": {
+            "discountPercent": {
               "type": "number"
             },
             "gender": {
               "type": "string"
             },
+            "brand": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "patternMask": {
+              "type": "string"
+            },
             "price": {
               "type": "number"
             },
-            "image_urls": {
+            "currency": {
+              "type": "string"
+            },
+            "productURL": {
+              "type": "string"
+            },
+            "discountedPrice": {
+              "type": "number"
+            },
+            "uniqueId": {
+              "type": "string"
+            },
+            "chatbotImage": {
+              "type": "string"
+            },
+            "thumbnailURL": {
+              "type": "string"
+            },
+            "imageURLs": {
               "type": "array",
               "items": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "string"
-                },
                 {
                   "type": "string"
                 },
@@ -282,48 +319,32 @@
                 }
               ]
             },
-            "product_url": {
-              "type": "string"
-            },
-            "currency": {
-              "type": "string"
-            },
-            "thumbnail_url": {
-              "type": "string"
-            },
-            "discount_percent": {
-              "type": "number"
-            },
-            "chatbot_image": {
-              "type": "string"
-            },
             "availability": {
               "type": "integer"
             },
-            "unique_id": {
-              "type": "string"
-            },
-            "pattern_mask": {
+            "productId": {
               "type": "string"
             }
           },
           "required": [
             "category",
-            "pattern_url",
-            "product_id",
-            "title",
-            "discounted_price",
+            "patternURL",
+            "description",
+            "discountPercent",
             "gender",
+            "brand",
+            "title",
+            "patternMask",
             "price",
-            "image_urls",
-            "product_url",
             "currency",
-            "thumbnail_url",
-            "discount_percent",
-            "chatbot_image",
+            "productURL",
+            "discountedPrice",
+            "uniqueId",
+            "chatbotImage",
+            "thumbnailURL",
+            "imageURLs",
             "availability",
-            "unique_id",
-            "pattern_mask"
+            "productId"
           ]
         },
         {
@@ -332,30 +353,51 @@
             "category": {
               "type": "string"
             },
-            "pattern_url": {
+            "patternURL": {
               "type": "string"
             },
-            "product_id": {
-              "type": "integer"
-            },
-            "title": {
+            "description": {
               "type": "string"
             },
-            "discounted_price": {
+            "discountPercent": {
               "type": "number"
             },
             "gender": {
               "type": "string"
             },
+            "brand": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "patternMask": {
+              "type": "string"
+            },
             "price": {
               "type": "number"
             },
-            "image_urls": {
+            "currency": {
+              "type": "string"
+            },
+            "productURL": {
+              "type": "string"
+            },
+            "discountedPrice": {
+              "type": "number"
+            },
+            "uniqueId": {
+              "type": "string"
+            },
+            "chatbotImage": {
+              "type": "string"
+            },
+            "thumbnailURL": {
+              "type": "string"
+            },
+            "imageURLs": {
               "type": "array",
               "items": [
-                {
-                  "type": "string"
-                },
                 {
                   "type": "string"
                 },
@@ -382,48 +424,32 @@
                 }
               ]
             },
-            "product_url": {
-              "type": "string"
-            },
-            "currency": {
-              "type": "string"
-            },
-            "thumbnail_url": {
-              "type": "string"
-            },
-            "discount_percent": {
-              "type": "number"
-            },
-            "chatbot_image": {
-              "type": "string"
-            },
             "availability": {
               "type": "integer"
             },
-            "unique_id": {
-              "type": "string"
-            },
-            "pattern_mask": {
+            "productId": {
               "type": "string"
             }
           },
           "required": [
             "category",
-            "pattern_url",
-            "product_id",
-            "title",
-            "discounted_price",
+            "patternURL",
+            "description",
+            "discountPercent",
             "gender",
+            "brand",
+            "title",
+            "patternMask",
             "price",
-            "image_urls",
-            "product_url",
             "currency",
-            "thumbnail_url",
-            "discount_percent",
-            "chatbot_image",
+            "productURL",
+            "discountedPrice",
+            "uniqueId",
+            "chatbotImage",
+            "thumbnailURL",
+            "imageURLs",
             "availability",
-            "unique_id",
-            "pattern_mask"
+            "productId"
           ]
         },
         {
@@ -432,33 +458,51 @@
             "category": {
               "type": "string"
             },
-            "pattern_url": {
+            "patternURL": {
               "type": "string"
             },
-            "product_id": {
-              "type": "integer"
-            },
-            "title": {
+            "description": {
               "type": "string"
             },
-            "discounted_price": {
+            "discountPercent": {
               "type": "number"
             },
             "gender": {
               "type": "string"
             },
+            "brand": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "patternMask": {
+              "type": "string"
+            },
             "price": {
               "type": "number"
             },
-            "image_urls": {
+            "currency": {
+              "type": "string"
+            },
+            "productURL": {
+              "type": "string"
+            },
+            "discountedPrice": {
+              "type": "number"
+            },
+            "uniqueId": {
+              "type": "string"
+            },
+            "chatbotImage": {
+              "type": "string"
+            },
+            "thumbnailURL": {
+              "type": "string"
+            },
+            "imageURLs": {
               "type": "array",
               "items": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "string"
-                },
                 {
                   "type": "string"
                 },
@@ -479,48 +523,32 @@
                 }
               ]
             },
-            "product_url": {
-              "type": "string"
-            },
-            "currency": {
-              "type": "string"
-            },
-            "thumbnail_url": {
-              "type": "string"
-            },
-            "discount_percent": {
-              "type": "number"
-            },
-            "chatbot_image": {
-              "type": "string"
-            },
             "availability": {
               "type": "integer"
             },
-            "unique_id": {
-              "type": "string"
-            },
-            "pattern_mask": {
+            "productId": {
               "type": "string"
             }
           },
           "required": [
             "category",
-            "pattern_url",
-            "product_id",
-            "title",
-            "discounted_price",
+            "patternURL",
+            "description",
+            "discountPercent",
             "gender",
+            "brand",
+            "title",
+            "patternMask",
             "price",
-            "image_urls",
-            "product_url",
             "currency",
-            "thumbnail_url",
-            "discount_percent",
-            "chatbot_image",
+            "productURL",
+            "discountedPrice",
+            "uniqueId",
+            "chatbotImage",
+            "thumbnailURL",
+            "imageURLs",
             "availability",
-            "unique_id",
-            "pattern_mask"
+            "productId"
           ]
         },
         {
@@ -529,30 +557,51 @@
             "category": {
               "type": "string"
             },
-            "pattern_url": {
+            "patternURL": {
               "type": "string"
             },
-            "product_id": {
-              "type": "integer"
-            },
-            "title": {
+            "description": {
               "type": "string"
             },
-            "discounted_price": {
+            "discountPercent": {
               "type": "number"
             },
             "gender": {
               "type": "string"
             },
+            "brand": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "patternMask": {
+              "type": "string"
+            },
             "price": {
               "type": "number"
             },
-            "image_urls": {
+            "currency": {
+              "type": "string"
+            },
+            "productURL": {
+              "type": "string"
+            },
+            "discountedPrice": {
+              "type": "number"
+            },
+            "uniqueId": {
+              "type": "string"
+            },
+            "chatbotImage": {
+              "type": "string"
+            },
+            "thumbnailURL": {
+              "type": "string"
+            },
+            "imageURLs": {
               "type": "array",
               "items": [
-                {
-                  "type": "string"
-                },
                 {
                   "type": "string"
                 },
@@ -579,48 +628,32 @@
                 }
               ]
             },
-            "product_url": {
-              "type": "string"
-            },
-            "currency": {
-              "type": "string"
-            },
-            "thumbnail_url": {
-              "type": "string"
-            },
-            "discount_percent": {
-              "type": "number"
-            },
-            "chatbot_image": {
-              "type": "string"
-            },
             "availability": {
               "type": "integer"
             },
-            "unique_id": {
-              "type": "string"
-            },
-            "pattern_mask": {
+            "productId": {
               "type": "string"
             }
           },
           "required": [
             "category",
-            "pattern_url",
-            "product_id",
-            "title",
-            "discounted_price",
+            "patternURL",
+            "description",
+            "discountPercent",
             "gender",
+            "brand",
+            "title",
+            "patternMask",
             "price",
-            "image_urls",
-            "product_url",
             "currency",
-            "thumbnail_url",
-            "discount_percent",
-            "chatbot_image",
+            "productURL",
+            "discountedPrice",
+            "uniqueId",
+            "chatbotImage",
+            "thumbnailURL",
+            "imageURLs",
             "availability",
-            "unique_id",
-            "pattern_mask"
+            "productId"
           ]
         },
         {
@@ -629,27 +662,66 @@
             "category": {
               "type": "string"
             },
-            "pattern_url": {
+            "patternURL": {
               "type": "string"
             },
-            "product_id": {
-              "type": "integer"
-            },
-            "title": {
+            "description": {
               "type": "string"
             },
-            "discounted_price": {
+            "discountPercent": {
               "type": "number"
             },
             "gender": {
               "type": "string"
             },
+            "brand": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "patternMask": {
+              "type": "string"
+            },
             "price": {
               "type": "number"
             },
-            "image_urls": {
+            "currency": {
+              "type": "string"
+            },
+            "productURL": {
+              "type": "string"
+            },
+            "discountedPrice": {
+              "type": "number"
+            },
+            "uniqueId": {
+              "type": "string"
+            },
+            "chatbotImage": {
+              "type": "string"
+            },
+            "thumbnailURL": {
+              "type": "string"
+            },
+            "imageURLs": {
               "type": "array",
               "items": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
                 {
                   "type": "string"
                 },
@@ -673,48 +745,32 @@
                 }
               ]
             },
-            "product_url": {
-              "type": "string"
-            },
-            "currency": {
-              "type": "string"
-            },
-            "thumbnail_url": {
-              "type": "string"
-            },
-            "discount_percent": {
-              "type": "number"
-            },
-            "chatbot_image": {
-              "type": "string"
-            },
             "availability": {
               "type": "integer"
             },
-            "unique_id": {
-              "type": "string"
-            },
-            "pattern_mask": {
+            "productId": {
               "type": "string"
             }
           },
           "required": [
             "category",
-            "pattern_url",
-            "product_id",
-            "title",
-            "discounted_price",
+            "patternURL",
+            "description",
+            "discountPercent",
             "gender",
+            "brand",
+            "title",
+            "patternMask",
             "price",
-            "image_urls",
-            "product_url",
             "currency",
-            "thumbnail_url",
-            "discount_percent",
-            "chatbot_image",
+            "productURL",
+            "discountedPrice",
+            "uniqueId",
+            "chatbotImage",
+            "thumbnailURL",
+            "imageURLs",
             "availability",
-            "unique_id",
-            "pattern_mask"
+            "productId"
           ]
         },
         {
@@ -723,30 +779,51 @@
             "category": {
               "type": "string"
             },
-            "pattern_url": {
+            "patternURL": {
               "type": "string"
             },
-            "product_id": {
-              "type": "integer"
-            },
-            "title": {
+            "description": {
               "type": "string"
             },
-            "discounted_price": {
+            "discountPercent": {
               "type": "number"
             },
             "gender": {
               "type": "string"
             },
+            "brand": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "patternMask": {
+              "type": "string"
+            },
             "price": {
               "type": "number"
             },
-            "image_urls": {
+            "currency": {
+              "type": "string"
+            },
+            "productURL": {
+              "type": "string"
+            },
+            "discountedPrice": {
+              "type": "number"
+            },
+            "uniqueId": {
+              "type": "string"
+            },
+            "chatbotImage": {
+              "type": "string"
+            },
+            "thumbnailURL": {
+              "type": "string"
+            },
+            "imageURLs": {
               "type": "array",
               "items": [
-                {
-                  "type": "string"
-                },
                 {
                   "type": "string"
                 },
@@ -776,48 +853,32 @@
                 }
               ]
             },
-            "product_url": {
-              "type": "string"
-            },
-            "currency": {
-              "type": "string"
-            },
-            "thumbnail_url": {
-              "type": "string"
-            },
-            "discount_percent": {
-              "type": "number"
-            },
-            "chatbot_image": {
-              "type": "string"
-            },
             "availability": {
               "type": "integer"
             },
-            "unique_id": {
-              "type": "string"
-            },
-            "pattern_mask": {
+            "productId": {
               "type": "string"
             }
           },
           "required": [
             "category",
-            "pattern_url",
-            "product_id",
-            "title",
-            "discounted_price",
+            "patternURL",
+            "description",
+            "discountPercent",
             "gender",
+            "brand",
+            "title",
+            "patternMask",
             "price",
-            "image_urls",
-            "product_url",
             "currency",
-            "thumbnail_url",
-            "discount_percent",
-            "chatbot_image",
+            "productURL",
+            "discountedPrice",
+            "uniqueId",
+            "chatbotImage",
+            "thumbnailURL",
+            "imageURLs",
             "availability",
-            "unique_id",
-            "pattern_mask"
+            "productId"
           ]
         },
         {
@@ -826,39 +887,51 @@
             "category": {
               "type": "string"
             },
-            "pattern_url": {
+            "patternURL": {
               "type": "string"
             },
-            "product_id": {
-              "type": "integer"
-            },
-            "title": {
+            "description": {
               "type": "string"
             },
-            "discounted_price": {
+            "discountPercent": {
               "type": "number"
             },
             "gender": {
               "type": "string"
             },
+            "brand": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "patternMask": {
+              "type": "string"
+            },
             "price": {
               "type": "number"
             },
-            "image_urls": {
+            "currency": {
+              "type": "string"
+            },
+            "productURL": {
+              "type": "string"
+            },
+            "discountedPrice": {
+              "type": "number"
+            },
+            "uniqueId": {
+              "type": "string"
+            },
+            "chatbotImage": {
+              "type": "string"
+            },
+            "thumbnailURL": {
+              "type": "string"
+            },
+            "imageURLs": {
               "type": "array",
               "items": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "string"
-                },
                 {
                   "type": "string"
                 },
@@ -885,48 +958,32 @@
                 }
               ]
             },
-            "product_url": {
-              "type": "string"
-            },
-            "currency": {
-              "type": "string"
-            },
-            "thumbnail_url": {
-              "type": "string"
-            },
-            "discount_percent": {
-              "type": "number"
-            },
-            "chatbot_image": {
-              "type": "string"
-            },
             "availability": {
               "type": "integer"
             },
-            "unique_id": {
-              "type": "string"
-            },
-            "pattern_mask": {
+            "productId": {
               "type": "string"
             }
           },
           "required": [
             "category",
-            "pattern_url",
-            "product_id",
-            "title",
-            "discounted_price",
+            "patternURL",
+            "description",
+            "discountPercent",
             "gender",
+            "brand",
+            "title",
+            "patternMask",
             "price",
-            "image_urls",
-            "product_url",
             "currency",
-            "thumbnail_url",
-            "discount_percent",
-            "chatbot_image",
+            "productURL",
+            "discountedPrice",
+            "uniqueId",
+            "chatbotImage",
+            "thumbnailURL",
+            "imageURLs",
             "availability",
-            "unique_id",
-            "pattern_mask"
+            "productId"
           ]
         },
         {
@@ -935,27 +992,54 @@
             "category": {
               "type": "string"
             },
-            "pattern_url": {
+            "patternURL": {
               "type": "string"
             },
-            "product_id": {
-              "type": "integer"
-            },
-            "title": {
+            "description": {
               "type": "string"
             },
-            "discounted_price": {
+            "discountPercent": {
               "type": "number"
             },
             "gender": {
               "type": "string"
             },
+            "brand": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "patternMask": {
+              "type": "string"
+            },
             "price": {
               "type": "number"
             },
-            "image_urls": {
+            "currency": {
+              "type": "string"
+            },
+            "productURL": {
+              "type": "string"
+            },
+            "discountedPrice": {
+              "type": "number"
+            },
+            "uniqueId": {
+              "type": "string"
+            },
+            "chatbotImage": {
+              "type": "string"
+            },
+            "thumbnailURL": {
+              "type": "string"
+            },
+            "imageURLs": {
               "type": "array",
               "items": [
+                {
+                  "type": "string"
+                },
                 {
                   "type": "string"
                 },
@@ -985,48 +1069,32 @@
                 }
               ]
             },
-            "product_url": {
-              "type": "string"
-            },
-            "currency": {
-              "type": "string"
-            },
-            "thumbnail_url": {
-              "type": "string"
-            },
-            "discount_percent": {
-              "type": "number"
-            },
-            "chatbot_image": {
-              "type": "string"
-            },
             "availability": {
               "type": "integer"
             },
-            "unique_id": {
-              "type": "string"
-            },
-            "pattern_mask": {
+            "productId": {
               "type": "string"
             }
           },
           "required": [
             "category",
-            "pattern_url",
-            "product_id",
-            "title",
-            "discounted_price",
+            "patternURL",
+            "description",
+            "discountPercent",
             "gender",
+            "brand",
+            "title",
+            "patternMask",
             "price",
-            "image_urls",
-            "product_url",
             "currency",
-            "thumbnail_url",
-            "discount_percent",
-            "chatbot_image",
+            "productURL",
+            "discountedPrice",
+            "uniqueId",
+            "chatbotImage",
+            "thumbnailURL",
+            "imageURLs",
             "availability",
-            "unique_id",
-            "pattern_mask"
+            "productId"
           ]
         },
         {
@@ -1035,27 +1103,60 @@
             "category": {
               "type": "string"
             },
-            "pattern_url": {
+            "patternURL": {
               "type": "string"
             },
-            "product_id": {
-              "type": "integer"
-            },
-            "title": {
+            "description": {
               "type": "string"
             },
-            "discounted_price": {
+            "discountPercent": {
               "type": "number"
             },
             "gender": {
               "type": "string"
             },
+            "brand": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "patternMask": {
+              "type": "string"
+            },
             "price": {
               "type": "number"
             },
-            "image_urls": {
+            "currency": {
+              "type": "string"
+            },
+            "productURL": {
+              "type": "string"
+            },
+            "discountedPrice": {
+              "type": "number"
+            },
+            "uniqueId": {
+              "type": "string"
+            },
+            "chatbotImage": {
+              "type": "string"
+            },
+            "thumbnailURL": {
+              "type": "string"
+            },
+            "imageURLs": {
               "type": "array",
               "items": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
                 {
                   "type": "string"
                 },
@@ -1085,48 +1186,32 @@
                 }
               ]
             },
-            "product_url": {
-              "type": "string"
-            },
-            "currency": {
-              "type": "string"
-            },
-            "thumbnail_url": {
-              "type": "string"
-            },
-            "discount_percent": {
-              "type": "number"
-            },
-            "chatbot_image": {
-              "type": "string"
-            },
             "availability": {
               "type": "integer"
             },
-            "unique_id": {
-              "type": "string"
-            },
-            "pattern_mask": {
+            "productId": {
               "type": "string"
             }
           },
           "required": [
             "category",
-            "pattern_url",
-            "product_id",
-            "title",
-            "discounted_price",
+            "patternURL",
+            "description",
+            "discountPercent",
             "gender",
+            "brand",
+            "title",
+            "patternMask",
             "price",
-            "image_urls",
-            "product_url",
             "currency",
-            "thumbnail_url",
-            "discount_percent",
-            "chatbot_image",
+            "productURL",
+            "discountedPrice",
+            "uniqueId",
+            "chatbotImage",
+            "thumbnailURL",
+            "imageURLs",
             "availability",
-            "unique_id",
-            "pattern_mask"
+            "productId"
           ]
         },
         {
@@ -1135,51 +1220,51 @@
             "category": {
               "type": "string"
             },
-            "pattern_url": {
+            "patternURL": {
               "type": "string"
             },
-            "product_id": {
-              "type": "integer"
-            },
-            "title": {
+            "description": {
               "type": "string"
             },
-            "discounted_price": {
+            "discountPercent": {
               "type": "number"
             },
             "gender": {
               "type": "string"
             },
+            "brand": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "patternMask": {
+              "type": "string"
+            },
             "price": {
               "type": "number"
             },
-            "image_urls": {
+            "currency": {
+              "type": "string"
+            },
+            "productURL": {
+              "type": "string"
+            },
+            "discountedPrice": {
+              "type": "number"
+            },
+            "uniqueId": {
+              "type": "string"
+            },
+            "chatbotImage": {
+              "type": "string"
+            },
+            "thumbnailURL": {
+              "type": "string"
+            },
+            "imageURLs": {
               "type": "array",
               "items": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "string"
-                },
                 {
                   "type": "string"
                 },
@@ -1200,48 +1285,32 @@
                 }
               ]
             },
-            "product_url": {
-              "type": "string"
-            },
-            "currency": {
-              "type": "string"
-            },
-            "thumbnail_url": {
-              "type": "string"
-            },
-            "discount_percent": {
-              "type": "number"
-            },
-            "chatbot_image": {
-              "type": "string"
-            },
             "availability": {
               "type": "integer"
             },
-            "unique_id": {
-              "type": "string"
-            },
-            "pattern_mask": {
+            "productId": {
               "type": "string"
             }
           },
           "required": [
             "category",
-            "pattern_url",
-            "product_id",
-            "title",
-            "discounted_price",
+            "patternURL",
+            "description",
+            "discountPercent",
             "gender",
+            "brand",
+            "title",
+            "patternMask",
             "price",
-            "image_urls",
-            "product_url",
             "currency",
-            "thumbnail_url",
-            "discount_percent",
-            "chatbot_image",
+            "productURL",
+            "discountedPrice",
+            "uniqueId",
+            "chatbotImage",
+            "thumbnailURL",
+            "imageURLs",
             "availability",
-            "unique_id",
-            "pattern_mask"
+            "productId"
           ]
         },
         {
@@ -1250,33 +1319,51 @@
             "category": {
               "type": "string"
             },
-            "pattern_url": {
+            "patternURL": {
               "type": "string"
             },
-            "product_id": {
-              "type": "integer"
-            },
-            "title": {
+            "description": {
               "type": "string"
             },
-            "discounted_price": {
+            "discountPercent": {
               "type": "number"
             },
             "gender": {
               "type": "string"
             },
+            "brand": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "patternMask": {
+              "type": "string"
+            },
             "price": {
               "type": "number"
             },
-            "image_urls": {
+            "currency": {
+              "type": "string"
+            },
+            "productURL": {
+              "type": "string"
+            },
+            "discountedPrice": {
+              "type": "number"
+            },
+            "uniqueId": {
+              "type": "string"
+            },
+            "chatbotImage": {
+              "type": "string"
+            },
+            "thumbnailURL": {
+              "type": "string"
+            },
+            "imageURLs": {
               "type": "array",
               "items": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "string"
-                },
                 {
                   "type": "string"
                 },
@@ -1300,48 +1387,32 @@
                 }
               ]
             },
-            "product_url": {
-              "type": "string"
-            },
-            "currency": {
-              "type": "string"
-            },
-            "thumbnail_url": {
-              "type": "string"
-            },
-            "discount_percent": {
-              "type": "number"
-            },
-            "chatbot_image": {
-              "type": "string"
-            },
             "availability": {
               "type": "integer"
             },
-            "unique_id": {
-              "type": "string"
-            },
-            "pattern_mask": {
+            "productId": {
               "type": "string"
             }
           },
           "required": [
             "category",
-            "pattern_url",
-            "product_id",
-            "title",
-            "discounted_price",
+            "patternURL",
+            "description",
+            "discountPercent",
             "gender",
+            "brand",
+            "title",
+            "patternMask",
             "price",
-            "image_urls",
-            "product_url",
             "currency",
-            "thumbnail_url",
-            "discount_percent",
-            "chatbot_image",
+            "productURL",
+            "discountedPrice",
+            "uniqueId",
+            "chatbotImage",
+            "thumbnailURL",
+            "imageURLs",
             "availability",
-            "unique_id",
-            "pattern_mask"
+            "productId"
           ]
         },
         {
@@ -1350,33 +1421,51 @@
             "category": {
               "type": "string"
             },
-            "pattern_url": {
+            "patternURL": {
               "type": "string"
             },
-            "product_id": {
-              "type": "integer"
-            },
-            "title": {
+            "description": {
               "type": "string"
             },
-            "discounted_price": {
+            "discountPercent": {
               "type": "number"
             },
             "gender": {
               "type": "string"
             },
+            "brand": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "patternMask": {
+              "type": "string"
+            },
             "price": {
               "type": "number"
             },
-            "image_urls": {
+            "currency": {
+              "type": "string"
+            },
+            "productURL": {
+              "type": "string"
+            },
+            "discountedPrice": {
+              "type": "number"
+            },
+            "uniqueId": {
+              "type": "string"
+            },
+            "chatbotImage": {
+              "type": "string"
+            },
+            "thumbnailURL": {
+              "type": "string"
+            },
+            "imageURLs": {
               "type": "array",
               "items": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "string"
-                },
                 {
                   "type": "string"
                 },
@@ -1403,48 +1492,32 @@
                 }
               ]
             },
-            "product_url": {
-              "type": "string"
-            },
-            "currency": {
-              "type": "string"
-            },
-            "thumbnail_url": {
-              "type": "string"
-            },
-            "discount_percent": {
-              "type": "number"
-            },
-            "chatbot_image": {
-              "type": "string"
-            },
             "availability": {
               "type": "integer"
             },
-            "unique_id": {
-              "type": "string"
-            },
-            "pattern_mask": {
+            "productId": {
               "type": "string"
             }
           },
           "required": [
             "category",
-            "pattern_url",
-            "product_id",
-            "title",
-            "discounted_price",
+            "patternURL",
+            "description",
+            "discountPercent",
             "gender",
+            "brand",
+            "title",
+            "patternMask",
             "price",
-            "image_urls",
-            "product_url",
             "currency",
-            "thumbnail_url",
-            "discount_percent",
-            "chatbot_image",
+            "productURL",
+            "discountedPrice",
+            "uniqueId",
+            "chatbotImage",
+            "thumbnailURL",
+            "imageURLs",
             "availability",
-            "unique_id",
-            "pattern_mask"
+            "productId"
           ]
         },
         {
@@ -1453,39 +1526,51 @@
             "category": {
               "type": "string"
             },
-            "pattern_url": {
+            "patternURL": {
               "type": "string"
             },
-            "product_id": {
-              "type": "integer"
-            },
-            "title": {
+            "description": {
               "type": "string"
             },
-            "discounted_price": {
+            "discountPercent": {
               "type": "number"
             },
             "gender": {
               "type": "string"
             },
+            "brand": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "patternMask": {
+              "type": "string"
+            },
             "price": {
               "type": "number"
             },
-            "image_urls": {
+            "currency": {
+              "type": "string"
+            },
+            "productURL": {
+              "type": "string"
+            },
+            "discountedPrice": {
+              "type": "number"
+            },
+            "uniqueId": {
+              "type": "string"
+            },
+            "chatbotImage": {
+              "type": "string"
+            },
+            "thumbnailURL": {
+              "type": "string"
+            },
+            "imageURLs": {
               "type": "array",
               "items": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "string"
-                },
                 {
                   "type": "string"
                 },
@@ -1506,48 +1591,32 @@
                 }
               ]
             },
-            "product_url": {
-              "type": "string"
-            },
-            "currency": {
-              "type": "string"
-            },
-            "thumbnail_url": {
-              "type": "string"
-            },
-            "discount_percent": {
-              "type": "number"
-            },
-            "chatbot_image": {
-              "type": "string"
-            },
             "availability": {
               "type": "integer"
             },
-            "unique_id": {
-              "type": "string"
-            },
-            "pattern_mask": {
+            "productId": {
               "type": "string"
             }
           },
           "required": [
             "category",
-            "pattern_url",
-            "product_id",
-            "title",
-            "discounted_price",
+            "patternURL",
+            "description",
+            "discountPercent",
             "gender",
+            "brand",
+            "title",
+            "patternMask",
             "price",
-            "image_urls",
-            "product_url",
             "currency",
-            "thumbnail_url",
-            "discount_percent",
-            "chatbot_image",
+            "productURL",
+            "discountedPrice",
+            "uniqueId",
+            "chatbotImage",
+            "thumbnailURL",
+            "imageURLs",
             "availability",
-            "unique_id",
-            "pattern_mask"
+            "productId"
           ]
         },
         {
@@ -1556,27 +1625,54 @@
             "category": {
               "type": "string"
             },
-            "pattern_url": {
+            "patternURL": {
               "type": "string"
             },
-            "product_id": {
-              "type": "integer"
-            },
-            "title": {
+            "description": {
               "type": "string"
             },
-            "discounted_price": {
+            "discountPercent": {
               "type": "number"
             },
             "gender": {
               "type": "string"
             },
+            "brand": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "patternMask": {
+              "type": "string"
+            },
             "price": {
               "type": "number"
             },
-            "image_urls": {
+            "currency": {
+              "type": "string"
+            },
+            "productURL": {
+              "type": "string"
+            },
+            "discountedPrice": {
+              "type": "number"
+            },
+            "uniqueId": {
+              "type": "string"
+            },
+            "chatbotImage": {
+              "type": "string"
+            },
+            "thumbnailURL": {
+              "type": "string"
+            },
+            "imageURLs": {
               "type": "array",
               "items": [
+                {
+                  "type": "string"
+                },
                 {
                   "type": "string"
                 },
@@ -1600,48 +1696,32 @@
                 }
               ]
             },
-            "product_url": {
-              "type": "string"
-            },
-            "currency": {
-              "type": "string"
-            },
-            "thumbnail_url": {
-              "type": "string"
-            },
-            "discount_percent": {
-              "type": "number"
-            },
-            "chatbot_image": {
-              "type": "string"
-            },
             "availability": {
               "type": "integer"
             },
-            "unique_id": {
-              "type": "string"
-            },
-            "pattern_mask": {
+            "productId": {
               "type": "string"
             }
           },
           "required": [
             "category",
-            "pattern_url",
-            "product_id",
-            "title",
-            "discounted_price",
+            "patternURL",
+            "description",
+            "discountPercent",
             "gender",
+            "brand",
+            "title",
+            "patternMask",
             "price",
-            "image_urls",
-            "product_url",
             "currency",
-            "thumbnail_url",
-            "discount_percent",
-            "chatbot_image",
+            "productURL",
+            "discountedPrice",
+            "uniqueId",
+            "chatbotImage",
+            "thumbnailURL",
+            "imageURLs",
             "availability",
-            "unique_id",
-            "pattern_mask"
+            "productId"
           ]
         },
         {
@@ -1650,25 +1730,49 @@
             "category": {
               "type": "string"
             },
-            "pattern_url": {
+            "patternURL": {
               "type": "string"
             },
-            "product_id": {
-              "type": "integer"
-            },
-            "title": {
+            "description": {
               "type": "string"
             },
-            "discounted_price": {
+            "discountPercent": {
               "type": "number"
             },
             "gender": {
               "type": "string"
             },
+            "brand": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "patternMask": {
+              "type": "string"
+            },
             "price": {
               "type": "number"
             },
-            "image_urls": {
+            "currency": {
+              "type": "string"
+            },
+            "productURL": {
+              "type": "string"
+            },
+            "discountedPrice": {
+              "type": "number"
+            },
+            "uniqueId": {
+              "type": "string"
+            },
+            "chatbotImage": {
+              "type": "string"
+            },
+            "thumbnailURL": {
+              "type": "string"
+            },
+            "imageURLs": {
               "type": "array",
               "items": [
                 {
@@ -1697,48 +1801,32 @@
                 }
               ]
             },
-            "product_url": {
-              "type": "string"
-            },
-            "currency": {
-              "type": "string"
-            },
-            "thumbnail_url": {
-              "type": "string"
-            },
-            "discount_percent": {
-              "type": "number"
-            },
-            "chatbot_image": {
-              "type": "string"
-            },
             "availability": {
               "type": "integer"
             },
-            "unique_id": {
-              "type": "string"
-            },
-            "pattern_mask": {
+            "productId": {
               "type": "string"
             }
           },
           "required": [
             "category",
-            "pattern_url",
-            "product_id",
-            "title",
-            "discounted_price",
+            "patternURL",
+            "description",
+            "discountPercent",
             "gender",
+            "brand",
+            "title",
+            "patternMask",
             "price",
-            "image_urls",
-            "product_url",
             "currency",
-            "thumbnail_url",
-            "discount_percent",
-            "chatbot_image",
+            "productURL",
+            "discountedPrice",
+            "uniqueId",
+            "chatbotImage",
+            "thumbnailURL",
+            "imageURLs",
             "availability",
-            "unique_id",
-            "pattern_mask"
+            "productId"
           ]
         },
         {
@@ -1747,33 +1835,51 @@
             "category": {
               "type": "string"
             },
-            "pattern_url": {
+            "patternURL": {
               "type": "string"
             },
-            "product_id": {
-              "type": "integer"
-            },
-            "title": {
+            "description": {
               "type": "string"
             },
-            "discounted_price": {
+            "discountPercent": {
               "type": "number"
             },
             "gender": {
               "type": "string"
             },
+            "brand": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "patternMask": {
+              "type": "string"
+            },
             "price": {
               "type": "number"
             },
-            "image_urls": {
+            "currency": {
+              "type": "string"
+            },
+            "productURL": {
+              "type": "string"
+            },
+            "discountedPrice": {
+              "type": "number"
+            },
+            "uniqueId": {
+              "type": "string"
+            },
+            "chatbotImage": {
+              "type": "string"
+            },
+            "thumbnailURL": {
+              "type": "string"
+            },
+            "imageURLs": {
               "type": "array",
               "items": [
-                {
-                  "type": "string"
-                },
-                {
-                  "type": "string"
-                },
                 {
                   "type": "string"
                 },
@@ -1797,48 +1903,32 @@
                 }
               ]
             },
-            "product_url": {
-              "type": "string"
-            },
-            "currency": {
-              "type": "string"
-            },
-            "thumbnail_url": {
-              "type": "string"
-            },
-            "discount_percent": {
-              "type": "number"
-            },
-            "chatbot_image": {
-              "type": "string"
-            },
             "availability": {
               "type": "integer"
             },
-            "unique_id": {
-              "type": "string"
-            },
-            "pattern_mask": {
+            "productId": {
               "type": "string"
             }
           },
           "required": [
             "category",
-            "pattern_url",
-            "product_id",
-            "title",
-            "discounted_price",
+            "patternURL",
+            "description",
+            "discountPercent",
             "gender",
+            "brand",
+            "title",
+            "patternMask",
             "price",
-            "image_urls",
-            "product_url",
             "currency",
-            "thumbnail_url",
-            "discount_percent",
-            "chatbot_image",
+            "productURL",
+            "discountedPrice",
+            "uniqueId",
+            "chatbotImage",
+            "thumbnailURL",
+            "imageURLs",
             "availability",
-            "unique_id",
-            "pattern_mask"
+            "productId"
           ]
         },
         {
@@ -1847,25 +1937,49 @@
             "category": {
               "type": "string"
             },
-            "pattern_url": {
+            "patternURL": {
               "type": "string"
             },
-            "product_id": {
-              "type": "integer"
-            },
-            "title": {
+            "description": {
               "type": "string"
             },
-            "discounted_price": {
+            "discountPercent": {
               "type": "number"
             },
             "gender": {
               "type": "string"
             },
+            "brand": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "patternMask": {
+              "type": "string"
+            },
             "price": {
               "type": "number"
             },
-            "image_urls": {
+            "currency": {
+              "type": "string"
+            },
+            "productURL": {
+              "type": "string"
+            },
+            "discountedPrice": {
+              "type": "number"
+            },
+            "uniqueId": {
+              "type": "string"
+            },
+            "chatbotImage": {
+              "type": "string"
+            },
+            "thumbnailURL": {
+              "type": "string"
+            },
+            "imageURLs": {
               "type": "array",
               "items": [
                 {
@@ -1903,48 +2017,32 @@
                 }
               ]
             },
-            "product_url": {
-              "type": "string"
-            },
-            "currency": {
-              "type": "string"
-            },
-            "thumbnail_url": {
-              "type": "string"
-            },
-            "discount_percent": {
-              "type": "number"
-            },
-            "chatbot_image": {
-              "type": "string"
-            },
             "availability": {
               "type": "integer"
             },
-            "unique_id": {
-              "type": "string"
-            },
-            "pattern_mask": {
+            "productId": {
               "type": "string"
             }
           },
           "required": [
             "category",
-            "pattern_url",
-            "product_id",
-            "title",
-            "discounted_price",
+            "patternURL",
+            "description",
+            "discountPercent",
             "gender",
+            "brand",
+            "title",
+            "patternMask",
             "price",
-            "image_urls",
-            "product_url",
             "currency",
-            "thumbnail_url",
-            "discount_percent",
-            "chatbot_image",
+            "productURL",
+            "discountedPrice",
+            "uniqueId",
+            "chatbotImage",
+            "thumbnailURL",
+            "imageURLs",
             "availability",
-            "unique_id",
-            "pattern_mask"
+            "productId"
           ]
         },
         {
@@ -1953,30 +2051,51 @@
             "category": {
               "type": "string"
             },
-            "pattern_url": {
+            "patternURL": {
               "type": "string"
             },
-            "product_id": {
-              "type": "integer"
-            },
-            "title": {
+            "description": {
               "type": "string"
             },
-            "discounted_price": {
+            "discountPercent": {
               "type": "number"
             },
             "gender": {
               "type": "string"
             },
+            "brand": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "patternMask": {
+              "type": "string"
+            },
             "price": {
               "type": "number"
             },
-            "image_urls": {
+            "currency": {
+              "type": "string"
+            },
+            "productURL": {
+              "type": "string"
+            },
+            "discountedPrice": {
+              "type": "number"
+            },
+            "uniqueId": {
+              "type": "string"
+            },
+            "chatbotImage": {
+              "type": "string"
+            },
+            "thumbnailURL": {
+              "type": "string"
+            },
+            "imageURLs": {
               "type": "array",
               "items": [
-                {
-                  "type": "string"
-                },
                 {
                   "type": "string"
                 },
@@ -2003,48 +2122,32 @@
                 }
               ]
             },
-            "product_url": {
-              "type": "string"
-            },
-            "currency": {
-              "type": "string"
-            },
-            "thumbnail_url": {
-              "type": "string"
-            },
-            "discount_percent": {
-              "type": "number"
-            },
-            "chatbot_image": {
-              "type": "string"
-            },
             "availability": {
               "type": "integer"
             },
-            "unique_id": {
-              "type": "string"
-            },
-            "pattern_mask": {
+            "productId": {
               "type": "string"
             }
           },
           "required": [
             "category",
-            "pattern_url",
-            "product_id",
-            "title",
-            "discounted_price",
+            "patternURL",
+            "description",
+            "discountPercent",
             "gender",
+            "brand",
+            "title",
+            "patternMask",
             "price",
-            "image_urls",
-            "product_url",
             "currency",
-            "thumbnail_url",
-            "discount_percent",
-            "chatbot_image",
+            "productURL",
+            "discountedPrice",
+            "uniqueId",
+            "chatbotImage",
+            "thumbnailURL",
+            "imageURLs",
             "availability",
-            "unique_id",
-            "pattern_mask"
+            "productId"
           ]
         }
       ]
