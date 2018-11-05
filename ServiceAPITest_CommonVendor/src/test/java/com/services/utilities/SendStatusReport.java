@@ -29,7 +29,7 @@ public class SendStatusReport {
 	static final String FROM = "test-automation@streamoid.com";
 	String[] sendTo = new String[] {"samir@streamoid.com", "naveen@streamoid.com", "murtaza.ali@streamoid.com"};
 	String[] sendCCPass = new String[] { "kinshuk@streamoid.com", "hemang@streamoid.com" };
-	String[] sendCCFail = new String[] { "sar@streamoid.com", "prathaban@streamoid.com", "dash@streamoid.com","kinshuk@streamoid.com", "hemang@streamoid.com"};
+	String[] sendCCFail = new String[] { "sar@streamoid.com", "prathaban@streamoid.com", "kinshuk@streamoid.com", "hemang@streamoid.com"};
 
 	@Test
 	public void sendMail() throws IOException {
