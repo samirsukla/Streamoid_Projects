@@ -3,17 +3,17 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="com.services.test.TestLouisPhilippeInfo"/>
-     <!--  <class name="com.services.test.TestFabIndiaInfo"/> -->
+      <!-- <class name="com.services.test.TestLouisPhilippeInfo"/>
+      <class name="com.services.test.TestFabIndiaInfo"/> 
       <class name="com.services.test.TestAllenSollyInfo"/>
-      <class name="com.services.test.TestGlobusFashionInfo"/>
       <class name="com.services.test.TestPeterEnglandInfo"/>
       <class name="com.services.test.TestPlanetFashionInfo"/>
       <class name="com.services.test.TestPeopleInfo"/>
-     <!--  <class name="com.services.test.TestPothysInfo"/>  -->
       <class name="com.services.test.TestVanHeusenInfo"/>
       <class name="com.services.test.TestAbofInfo"/>
-      <class name="com.services.test.TestSimonCarterInfo"/>
+      <class name="com.services.test.TestSimonCarterInfo"/> -->
+      <class name="com.services.test.TestGlobusFashionInfo"/>
+      <class name="com.services.test.TestPothysInfo"/> 
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
