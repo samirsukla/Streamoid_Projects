@@ -1,4 +1,4 @@
-package com.services.similartest;
+package com.services.utilities;
 
 import org.testng.annotations.Test;
 import java.io.File;
