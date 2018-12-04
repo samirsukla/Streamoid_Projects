@@ -17,11 +17,11 @@ import org.json.JSONObject;
 import org.json.simple.parser.ParseException;
 import org.testng.Assert;
 
-public class SimilarProductIdTest {
-	static String url = "http://similar.service.streamoid.com/insecure/similar/globus/s18xwt598a-orange/normalized";
-	//static String url = "http://52.77.251.253/insecure/similar/vintage_brands_nz_shopify/1334616653895/normalized";
+public class SimilarProductIdTest_V1 {
+	//static String url = "http://similar.service.streamoid.com/v1/similar/search/v_pantaloons/223371";
+	static String url = "http://similar.service.streamoid.com/v1/similar/search/v_peter_england/269083";
   @Test
-  public void similarProductTest() throws ParseException, IOException {
+  public void similarProductTest_V1() throws ParseException, IOException {
 	  
 	  	URL outfitterUrl = new URL(url);
 		String instantResp="";
@@ -40,7 +40,7 @@ public class SimilarProductIdTest {
 				instantResp+=sc.nextLine();
 			}
 			sc.close();
-			InputStream inputStream = new FileInputStream(new File ("src/test/resources/SimilarPIDNormalized.json"));
+			InputStream inputStream = new FileInputStream(new File ("src/test/resources/SimilarPIDNormalized_V1.json"));
 			JSONObject rawSchema = new JSONObject(new JSONTokener(inputStream));
 			Schema schema = SchemaLoader.load(rawSchema);
 			try {

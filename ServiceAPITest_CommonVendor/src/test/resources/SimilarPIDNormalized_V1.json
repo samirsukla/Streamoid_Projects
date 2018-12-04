@@ -1,0 +1,1877 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "status": {
+      "type": "object",
+      "properties": {
+        "message": {
+          "type": "string"
+        },
+        "code": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "message",
+        "code"
+      ]
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "visualWorkerId": {
+          "type": "string"
+        },
+        "products": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "sub_brand": {
+                  "type": "string"
+                },
+                "currency": {
+                  "type": "string"
+                },
+                "imageURLs": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ]
+                },
+                "availability": {
+                  "type": "integer"
+                },
+                "category": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "explain": {
+                  "type": "object",
+                  "properties": {
+                    "color": {
+                      "type": "number"
+                    },
+                    "print_type": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "color",
+                    "print_type"
+                  ]
+                },
+                "patternURL": {
+                  "type": "string"
+                },
+                "patternMask": {
+                  "type": "string"
+                },
+                "uniqueId": {
+                  "type": "string"
+                },
+                "chatbotImage": {
+                  "type": "string"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "productId": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "price": {
+                  "type": "number"
+                },
+                "productURL": {
+                  "type": "string"
+                },
+                "scores": {
+                  "type": "object",
+                  "properties": {
+                    "pattern_class": {
+                      "type": "number"
+                    },
+                    "color": {
+                      "type": "number"
+                    },
+                    "pattern": {
+                      "type": "number"
+                    },
+                    "combined": {
+                      "type": "number"
+                    },
+                    "attributes": {
+                      "type": "number"
+                    },
+                    "final": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "pattern_class",
+                    "color",
+                    "pattern",
+                    "combined",
+                    "attributes",
+                    "final"
+                  ]
+                },
+                "thumbnailURL": {
+                  "type": "string"
+                },
+                "discountPercent": {
+                  "type": "number"
+                },
+                "gender": {
+                  "type": "string"
+                },
+                "discountedPrice": {
+                  "type": "number"
+                },
+                "attributes": {
+                  "type": "object",
+                  "properties": {
+                    "gender": {
+                      "type": "string"
+                    },
+                    "attributes": {
+                      "type": "object",
+                      "properties": {
+                        "color": {
+                          "type": "object"
+                        },
+                        "waist_level": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "collar_depth": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "primary_fibre": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "hemline_length": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "collar_width": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "silhouette": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "fit": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "detail": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "hemline_level": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "sleeve_length": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "department": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "hemline_shape": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "type": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "hemline_width": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "neck_width": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "print_type": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "collar_type": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "neck_depth": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "construction_technique": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "sleeve_type": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "shoulder_type": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "neck_type": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    "comprehensive_category": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "gender",
+                    "attributes",
+                    "comprehensive_category"
+                  ]
+                }
+              },
+              "required": [
+                "sub_brand",
+                "currency",
+                "imageURLs",
+                "availability",
+                "category",
+                "title",
+                "explain",
+                "patternURL",
+                "patternMask",
+                "uniqueId",
+                "chatbotImage",
+                "brand",
+                "productId",
+                "description",
+                "price",
+                "productURL",
+                "scores",
+                "thumbnailURL",
+                "discountPercent",
+                "gender",
+                "discountedPrice",
+                "attributes"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "sub_brand": {
+                  "type": "string"
+                },
+                "currency": {
+                  "type": "string"
+                },
+                "imageURLs": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ]
+                },
+                "availability": {
+                  "type": "integer"
+                },
+                "category": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "explain": {
+                  "type": "object",
+                  "properties": {
+                    "color": {
+                      "type": "number"
+                    },
+                    "print_type": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "color",
+                    "print_type"
+                  ]
+                },
+                "patternURL": {
+                  "type": "string"
+                },
+                "patternMask": {
+                  "type": "string"
+                },
+                "uniqueId": {
+                  "type": "string"
+                },
+                "chatbotImage": {
+                  "type": "string"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "productId": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "price": {
+                  "type": "number"
+                },
+                "productURL": {
+                  "type": "string"
+                },
+                "scores": {
+                  "type": "object",
+                  "properties": {
+                    "pattern_class": {
+                      "type": "number"
+                    },
+                    "color": {
+                      "type": "number"
+                    },
+                    "pattern": {
+                      "type": "number"
+                    },
+                    "combined": {
+                      "type": "number"
+                    },
+                    "attributes": {
+                      "type": "number"
+                    },
+                    "final": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "pattern_class",
+                    "color",
+                    "pattern",
+                    "combined",
+                    "attributes",
+                    "final"
+                  ]
+                },
+                "thumbnailURL": {
+                  "type": "string"
+                },
+                "discountPercent": {
+                  "type": "number"
+                },
+                "gender": {
+                  "type": "string"
+                },
+                "discountedPrice": {
+                  "type": "number"
+                },
+                "attributes": {
+                  "type": "object",
+                  "properties": {
+                    "gender": {
+                      "type": "string"
+                    },
+                    "attributes": {
+                      "type": "object",
+                      "properties": {
+                        "color": {
+                          "type": "object"
+                        },
+                        "waist_level": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "collar_depth": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "primary_fibre": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "hemline_length": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "collar_width": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "silhouette": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "fit": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "detail": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "hemline_level": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "sleeve_length": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "department": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "hemline_shape": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "type": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "hemline_width": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "neck_width": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "print_type": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "collar_type": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "neck_depth": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "construction_technique": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "sleeve_type": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "shoulder_type": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "neck_type": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    "comprehensive_category": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "gender",
+                    "attributes",
+                    "comprehensive_category"
+                  ]
+                }
+              },
+              "required": [
+                "sub_brand",
+                "currency",
+                "imageURLs",
+                "availability",
+                "category",
+                "title",
+                "explain",
+                "patternURL",
+                "patternMask",
+                "uniqueId",
+                "chatbotImage",
+                "brand",
+                "productId",
+                "description",
+                "price",
+                "productURL",
+                "scores",
+                "thumbnailURL",
+                "discountPercent",
+                "gender",
+                "discountedPrice",
+                "attributes"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "sub_brand": {
+                  "type": "string"
+                },
+                "currency": {
+                  "type": "string"
+                },
+                "imageURLs": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ]
+                },
+                "availability": {
+                  "type": "integer"
+                },
+                "category": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "explain": {
+                  "type": "object",
+                  "properties": {
+                    "color": {
+                      "type": "number"
+                    },
+                    "print_type": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "color",
+                    "print_type"
+                  ]
+                },
+                "patternURL": {
+                  "type": "string"
+                },
+                "patternMask": {
+                  "type": "string"
+                },
+                "uniqueId": {
+                  "type": "string"
+                },
+                "chatbotImage": {
+                  "type": "string"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "productId": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "price": {
+                  "type": "number"
+                },
+                "productURL": {
+                  "type": "string"
+                },
+                "scores": {
+                  "type": "object",
+                  "properties": {
+                    "pattern_class": {
+                      "type": "number"
+                    },
+                    "color": {
+                      "type": "number"
+                    },
+                    "pattern": {
+                      "type": "number"
+                    },
+                    "combined": {
+                      "type": "number"
+                    },
+                    "attributes": {
+                      "type": "number"
+                    },
+                    "final": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "pattern_class",
+                    "color",
+                    "pattern",
+                    "combined",
+                    "attributes",
+                    "final"
+                  ]
+                },
+                "thumbnailURL": {
+                  "type": "string"
+                },
+                "discountPercent": {
+                  "type": "number"
+                },
+                "gender": {
+                  "type": "string"
+                },
+                "discountedPrice": {
+                  "type": "number"
+                },
+                "attributes": {
+                  "type": "object",
+                  "properties": {
+                    "gender": {
+                      "type": "string"
+                    },
+                    "attributes": {
+                      "type": "object",
+                      "properties": {
+                        "color": {
+                          "type": "object"
+                        },
+                        "waist_level": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "collar_depth": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "hemline_length": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "collar_width": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "embellishment": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "silhouette": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "fit": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "detail": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "hemline_level": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "sleeve_length": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "department": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "hemline_shape": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "hemline_width": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "neck_width": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "print_type": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "collar_type": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "neck_depth": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "construction_technique": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "sleeve_type": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "shoulder_type": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "neck_type": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    "comprehensive_category": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "gender",
+                    "attributes",
+                    "comprehensive_category"
+                  ]
+                }
+              },
+              "required": [
+                "sub_brand",
+                "currency",
+                "imageURLs",
+                "availability",
+                "category",
+                "title",
+                "explain",
+                "patternURL",
+                "patternMask",
+                "uniqueId",
+                "chatbotImage",
+                "brand",
+                "productId",
+                "description",
+                "price",
+                "productURL",
+                "scores",
+                "thumbnailURL",
+                "discountPercent",
+                "gender",
+                "discountedPrice",
+                "attributes"
+              ]
+            },
+            {
+              "type": "object",
+              "properties": {
+                "sub_brand": {
+                  "type": "string"
+                },
+                "currency": {
+                  "type": "string"
+                },
+                "imageURLs": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "string"
+                    }
+                  ]
+                },
+                "availability": {
+                  "type": "integer"
+                },
+                "category": {
+                  "type": "string"
+                },
+                "title": {
+                  "type": "string"
+                },
+                "explain": {
+                  "type": "object",
+                  "properties": {
+                    "color": {
+                      "type": "number"
+                    },
+                    "print_type": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "color",
+                    "print_type"
+                  ]
+                },
+                "patternURL": {
+                  "type": "string"
+                },
+                "patternMask": {
+                  "type": "string"
+                },
+                "uniqueId": {
+                  "type": "string"
+                },
+                "chatbotImage": {
+                  "type": "string"
+                },
+                "brand": {
+                  "type": "string"
+                },
+                "productId": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "price": {
+                  "type": "number"
+                },
+                "productURL": {
+                  "type": "string"
+                },
+                "scores": {
+                  "type": "object",
+                  "properties": {
+                    "pattern_class": {
+                      "type": "number"
+                    },
+                    "color": {
+                      "type": "number"
+                    },
+                    "pattern": {
+                      "type": "number"
+                    },
+                    "combined": {
+                      "type": "number"
+                    },
+                    "attributes": {
+                      "type": "number"
+                    },
+                    "final": {
+                      "type": "number"
+                    }
+                  },
+                  "required": [
+                    "pattern_class",
+                    "color",
+                    "pattern",
+                    "combined",
+                    "attributes",
+                    "final"
+                  ]
+                },
+                "thumbnailURL": {
+                  "type": "string"
+                },
+                "discountPercent": {
+                  "type": "number"
+                },
+                "gender": {
+                  "type": "string"
+                },
+                "discountedPrice": {
+                  "type": "number"
+                },
+                "attributes": {
+                  "type": "object",
+                  "properties": {
+                    "gender": {
+                      "type": "string"
+                    },
+                    "attributes": {
+                      "type": "object",
+                      "properties": {
+                        "sleeve_type": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "shoulder_type": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "silhouette": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "collar_type": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "fit": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "color": {
+                          "type": "object"
+                        },
+                        "neck_depth": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "neck_width": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "waist_level": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "collar_depth": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "hemline_level": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "hemline_length": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "sleeve_length": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "collar_width": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "department": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "hemline_width": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "print_type": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "hemline_shape": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "type": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        },
+                        "neck_type": {
+                          "type": "array",
+                          "items": [
+                            {
+                              "type": "string"
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    "comprehensive_category": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "gender",
+                    "attributes",
+                    "comprehensive_category"
+                  ]
+                }
+              },
+              "required": [
+                "sub_brand",
+                "currency",
+                "imageURLs",
+                "availability",
+                "category",
+                "title",
+                "explain",
+                "patternURL",
+                "patternMask",
+                "uniqueId",
+                "chatbotImage",
+                "brand",
+                "productId",
+                "description",
+                "price",
+                "productURL",
+                "scores",
+                "thumbnailURL",
+                "discountPercent",
+                "gender",
+                "discountedPrice",
+                "attributes"
+              ]
+            }
+          ]
+        },
+        "timestamp": {
+          "type": "string"
+        },
+        "visualCount": {
+          "type": "integer"
+        },
+        "scoredSubsetSize": {
+          "type": "integer"
+        },
+        "queryData": {
+          "type": "object",
+          "properties": {
+            "category": {
+              "type": "string"
+            },
+            "uniqueId": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "sub_brand": {
+              "type": "string"
+            },
+            "price": {
+              "type": "number"
+            },
+            "patternURL": {
+              "type": "string"
+            },
+            "brand": {
+              "type": "string"
+            },
+            "patternMask": {
+              "type": "string"
+            },
+            "discountPercent": {
+              "type": "number"
+            },
+            "description": {
+              "type": "string"
+            },
+            "currency": {
+              "type": "string"
+            },
+            "productURL": {
+              "type": "string"
+            },
+            "discountedPrice": {
+              "type": "number"
+            },
+            "gender": {
+              "type": "string"
+            },
+            "chatbotImage": {
+              "type": "string"
+            },
+            "attributes": {
+              "type": "object",
+              "properties": {
+                "gender": {
+                  "type": "string"
+                },
+                "attributes": {
+                  "type": "object",
+                  "properties": {
+                    "color": {
+                      "type": "object"
+                    },
+                    "waist_level": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "collar_depth": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "primary_fibre": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "hemline_length": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "collar_width": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "silhouette": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "fit": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "detail": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "hemline_level": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "sleeve_length": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "department": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "hemline_shape": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "type": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "hemline_width": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "neck_width": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "print_type": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "collar_type": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "neck_depth": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "construction_technique": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "sleeve_type": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "shoulder_type": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    },
+                    "neck_type": {
+                      "type": "array",
+                      "items": [
+                        {
+                          "type": "string"
+                        }
+                      ]
+                    }
+                  }
+                },
+                "comprehensive_category": {
+                  "type": "string"
+                }
+              },
+              "required": [
+                "gender",
+                "attributes",
+                "comprehensive_category"
+              ]
+            },
+            "thumbnailURL": {
+              "type": "string"
+            },
+            "imageURLs": {
+              "type": "array",
+              "items": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "string"
+                }
+              ]
+            },
+            "availability": {
+              "type": "integer"
+            },
+            "productId": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "category",
+            "uniqueId",
+            "title",
+            "sub_brand",
+            "price",
+            "patternURL",
+            "brand",
+            "patternMask",
+            "discountPercent",
+            "description",
+            "currency",
+            "productURL",
+            "discountedPrice",
+            "gender",
+            "chatbotImage",
+            "attributes",
+            "thumbnailURL",
+            "imageURLs",
+            "availability",
+            "productId"
+          ]
+        },
+        "filterApplied": {
+          "type": "object",
+          "properties": {
+            "vendor_table": {
+              "type": "string"
+            },
+            "vendor_db": {
+              "type": "string"
+            },
+            "meta_table": {
+              "type": "string"
+            },
+            "id_field": {
+              "type": "string"
+            },
+            "join_table": {
+              "type": "string"
+            },
+            "query": {
+              "type": "object",
+              "properties": {
+                "availability": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "integer"
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "availability"
+              ]
+            },
+            "meta_db": {
+              "type": "string"
+            },
+            "meta_query": {
+              "type": "object",
+              "properties": {
+                "department": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "integer"
+                    }
+                  ]
+                },
+                "gender": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "string"
+                    }
+                  ]
+                },
+                "comprehensive_category": {
+                  "type": "array",
+                  "items": [
+                    {
+                      "type": "string"
+                    }
+                  ]
+                }
+              },
+              "required": [
+                "department",
+                "gender",
+                "comprehensive_category"
+              ]
+            }
+          },
+          "required": [
+            "vendor_table",
+            "vendor_db",
+            "meta_table",
+            "id_field",
+            "join_table",
+            "query",
+            "meta_db",
+            "meta_query"
+          ]
+        },
+        "totalProcessingTime": {
+          "type": "number"
+        },
+        "attributes": {
+          "type": "object",
+          "properties": {
+            "color": {
+              "type": "integer"
+            },
+            "print_type": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "color",
+            "print_type"
+          ]
+        },
+        "resultCount": {
+          "type": "integer"
+        },
+        "querySubsetSize": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "visualWorkerId",
+        "products",
+        "timestamp",
+        "visualCount",
+        "scoredSubsetSize",
+        "queryData",
+        "filterApplied",
+        "totalProcessingTime",
+        "attributes",
+        "resultCount",
+        "querySubsetSize"
+      ]
+    }
+  },
+  "required": [
+    "status",
+    "data"
+  ]
+}
