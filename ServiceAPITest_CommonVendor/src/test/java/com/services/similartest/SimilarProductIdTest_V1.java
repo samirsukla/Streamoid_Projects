@@ -18,8 +18,8 @@ import org.json.simple.parser.ParseException;
 import org.testng.Assert;
 
 public class SimilarProductIdTest_V1 {
-	//static String url = "http://similar.service.streamoid.com/v1/similar/search/v_pantaloons/223371";
-	static String url = "http://similar.service.streamoid.com/v1/similar/search/v_peter_england/269083";
+	static String url = "http://similar.service.streamoid.com/v1/similar/search/v_pantaloons/310798";
+	//static String url = "http://similar.service.streamoid.com/v1/similar/search/v_peter_england/269083";
   @Test
   public void similarProductTest_V1() throws ParseException, IOException {
 	  
