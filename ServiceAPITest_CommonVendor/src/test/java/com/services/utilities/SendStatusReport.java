@@ -27,10 +27,10 @@ public class SendStatusReport {
 	static String[] sendCC;
 	static GetSystemDate getDate;
 	static final String FROM = "test-automation@streamoid.com";
-	String[] sendTo = new String[] {"samir@streamoid.com", "naveen@streamoid.com", "murtaza.ali@streamoid.com"};
+	String[] sendTo = new String[] {"samir@streamoid.com","naveen@streamoid.com", "murtaza.ali@streamoid.com" };
 	String[] sendCCPass = new String[] { "kinshuk@streamoid.com", "hemang@streamoid.com" };
 	String[] sendCCFail = new String[] { "sar@streamoid.com", "prathaban@streamoid.com", "kinshuk@streamoid.com", "hemang@streamoid.com"};
-
+	
 	@Test
 	public void sendMail() throws IOException {
 
@@ -75,8 +75,8 @@ public class SendStatusReport {
 		Element body = doc.body();
 		Element table = body.select("table").get(0);
 		Elements rows = table.select("tr");
-		Element row = rows.get(2);
-		Elements cols = row.select("td");
+		Element row = rows.get(4);
+		Elements cols = row.select("th");
 		int skippedValue = Integer.parseInt(cols.get(2).text());
 		//System.out.println("No of Tests Skipped : "+skippedValue);
 		int failedValue = Integer.parseInt(cols.get(3).text());

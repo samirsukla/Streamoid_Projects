@@ -74,8 +74,8 @@ public class SendStatusReportTarget {
 		Element body = doc.body();
 		Element table = body.select("table").get(0);
 		Elements rows = table.select("tr");
-		Element row = rows.get(2);
-		Elements cols = row.select("td");
+		Element row = rows.get(4);
+		Elements cols = row.select("th");
 		int skippedValue = Integer.parseInt(cols.get(2).text());
 		//System.out.println("No of Tests Skipped : "+skippedValue);
 		int failedValue = Integer.parseInt(cols.get(3).text());
