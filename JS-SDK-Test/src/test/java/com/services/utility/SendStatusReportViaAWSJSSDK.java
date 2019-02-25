@@ -30,7 +30,7 @@ public class SendStatusReportViaAWSJSSDK {
 
 	String[] sendTo = new String[] { "murtaza.ali@streamoid.com", "vivekb@streamoid.com" };
 	String[] sendCCPass = new String[] { "kinshuk@streamoid.com","naveen@streamoid.com", "samir@streamoid.com" };
-	String[] sendCCFail = new String[] { "sar@streamoid.com", "prathaban@streamoid.com",
+	String[] sendCCFail = new String[] { "prathaban@streamoid.com",
 			 "kinshuk@streamoid.com","malini@streamoid.com", "naveen@streamoid.com", "samir@streamoid.com" };
 
 	@Test
