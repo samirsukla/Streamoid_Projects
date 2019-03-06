@@ -28,9 +28,7 @@ import org.testng.xml.XmlSuite;
 public class CustomTestNGReporter implements IReporter {
 
 	//This is the customize emailabel report template file path.
-	private static final String emailableReportTemplateFile = "/Users/samirsukla/Desktop/Samir_Streamoid/"
-			+ "Selenium_Setup/Eclipse_program/TextSearchSanitySuite/src/test/java/com/TextSearch/utility/"
-			+ "customize-emailable-report-template.html";
+	private static final String emailableReportTemplateFile = "src/test/resources/customize-emailable-report-template.html";
 
 	public void generateReport(List<XmlSuite> xmlSuites, List<ISuite> suites, String outputDirectory) {
 
