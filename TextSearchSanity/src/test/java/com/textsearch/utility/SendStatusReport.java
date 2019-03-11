@@ -37,7 +37,11 @@ public class SendStatusReport {
 	public void sendMail() throws IOException {
 
 		getDate = new GetSystemDate();
-		String todaysDate = getDate.getPresentDate();
+		String[] currDate = getDate.getPresentDate();
+		
+		String todaysDate = currDate[0];
+		String todaysDay = currDate[1];
+		
 
 		boolean testStatus = sendMailStatus();
 		int failCount = sendFailCount();
@@ -47,6 +51,10 @@ public class SendStatusReport {
 		} else {
 			sendCC = sendCCFail;
 
+		}
+		
+		if(todaysDay.equals("Monday")) {
+			sendCC = sendCCFail;
 		}
 
 		StringWriter writer = new StringWriter();
