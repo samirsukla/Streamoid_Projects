@@ -10,7 +10,7 @@ This project contains the script for Text Search Sanity.
 
 The idea behind this script is to find out the differences between a list of expected PIDs and the actual outcome of the realtime API.
 
-## Implimentation
+## Implementation
 
 - For a list of Text Search query, we store the IDs of first 10 relevant products for individual queries.
 - In the script, we hit the real time API with the above mentioned queries everyday.
