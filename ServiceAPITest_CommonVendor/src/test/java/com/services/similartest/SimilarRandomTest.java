@@ -18,7 +18,8 @@ import org.json.simple.parser.ParseException;
 import org.testng.Assert;
 
 public class SimilarRandomTest {
-	static String url = "https://similar.service.streamoid.com/insecure/similar/allen_solly/random/normalized";
+	static String url = "http://similar.service.streamoid.com/insecure/similar/allen_solly/random/normalized";
+	//static String url = "http://52.77.251.253/insecure/similar/globus/random/normalized";
   @Test
   public void similarRandom() throws ParseException, IOException {
 	  
