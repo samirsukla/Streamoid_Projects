@@ -20,7 +20,7 @@ public class ExtractInfoFromExcel {
 	public static void inputExcel() throws IOException {
 		fis = new FileInputStream("src/test/resources/NDCG_Implementation.xls");
 		workbook = new HSSFWorkbook(fis);
-		sheet = workbook.getSheetAt(1);
+		sheet = workbook.getSheetAt(0);
 		rowCount = sheet.getLastRowNum() - sheet.getFirstRowNum();
 	}
 
