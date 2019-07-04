@@ -1,7 +1,7 @@
 # README
 This README would normally document whatever steps are necessary to get your application up and running.
 
-# Text Search Sanity
+# Service API Check for Common Vendors
 This project contains the script for Schema validation of all the APIs for all the other Commaon Vendors like ABFRL, Pothys...etc.
 
 # Purpose
