@@ -1,7 +1,7 @@
 # README
 This README would normally document whatever steps are necessary to get your application up and running.
 
-# Text Search Sanity
+# JS-SDK-Test
 This project contains the script SDK validation on the PDP for all the live clients.
 
 # Purpose
