@@ -30,7 +30,7 @@ public class SendStatusReport {
 
 	String[] sendTo = new String[] { "samir@streamoid.com" };
 	String[] sendCCPass = new String[] { "naveen@streamoid.com" };
-	 String[] sendCCFail = new String[] { "prathaban@streamoid.com","prashant.gupta@streamoid.com","krupa@streamoid.com",
+	String[] sendCCFail = new String[] { "prathaban@streamoid.com","prashant.gupta@streamoid.com","krupa@streamoid.com",
 			 "deepika@streamoid.com","rohan@streamoid.com", "naveen@streamoid.com" };
 
 	@Test
