@@ -41,7 +41,7 @@ public class GetTextSearchStatus {
 		getAct = new GetActualProductList();
 		findDiff = new FindTheDifference();
 		diffList = new ArrayList<String>();
-		 rowCount = ext.returnRowCount();
+		rowCount = ext.returnRowCount();
 	}
   @Test
   public void getQueryStatus() throws IOException, ParseException {
@@ -53,12 +53,13 @@ public class GetTextSearchStatus {
 		List<String> statusList = new ArrayList<String>();
 		List<String> expectedPIDList = new ArrayList<String>();
 		List<String> actualPIDList = new ArrayList<String>();
+		List<String> totalProdCount = new ArrayList<String>();
 	 
 	  for (int i = 1; i <= rowCount; i++) {
 		  queryName = ext.extractQuery(i);
 		  status = compList.getQueryStatus(i);
 		  expectedList = ext.extractPIDList(i);
-		  actualList = getAct.triggerSearchAPI(i);
+		  actualList = getAct.getProductList(i);
 		  
 		  	String expectedStringList = "";	
 			String actualStringList = "";
@@ -96,6 +97,7 @@ public class GetTextSearchStatus {
 		  diffPIDsList.add(diffStringList);
 		  expectedPIDList.add(expectedStringList);
 		  actualPIDList.add(actualStringList);
+		  totalProdCount.add(Integer.toString(getAct.getProductCount(i)));
 		 
 		  
 	  }
@@ -104,6 +106,7 @@ public class GetTextSearchStatus {
 		map.put("expectedList", expectedPIDList);
 		map.put("actualList", actualPIDList);
 		map.put("diffPIDList", diffPIDsList);
+		map.put("totalProductCount", totalProdCount);
 		map.put("status", statusList);
 		ITestResult testResult = Reporter.getCurrentTestResult();
 		testResult.setAttribute("key", map); 

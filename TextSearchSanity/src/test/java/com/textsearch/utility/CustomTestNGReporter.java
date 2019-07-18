@@ -56,10 +56,8 @@ public class CustomTestNGReporter implements IReporter {
 
 			// Replace test methods place holder with custom test method summary.
 			customReportTemplateStr = customReportTemplateStr.replaceAll("\\$Test_Case_Detail\\$", customTestMethodSummary);
-
-
+			
 			customReportTemplateStr = customReportTemplateStr.replaceAll("\\$Query_Details\\$", customeRecords);
-
 
 			// Write replaced test report content to custom-emailable-report.html.
 			File targetFile = new File(outputDirectory + "/custom-emailable-report.html");
@@ -479,6 +477,7 @@ public class CustomTestNGReporter implements IReporter {
 				String expectedList = map.get("expectedList").get(i);
 				String actualList = map.get("actualList").get(i);
 				String diffPIDList = map.get("diffPIDList").get(i);
+				String totalProdCount = map.get("totalProductCount").get(i);
 				
 				retStrBuf.append("<tr bgcolor=" + status + ">");
 
@@ -500,6 +499,10 @@ public class CustomTestNGReporter implements IReporter {
 
 				retStrBuf.append("<td align=\"center\">");
 				retStrBuf.append(diffPIDList);
+				retStrBuf.append("</td>");
+				
+				retStrBuf.append("<td align=\"center\">");
+				retStrBuf.append(totalProdCount);
 				retStrBuf.append("</td>");
 				retStrBuf.append("</tr>");
 

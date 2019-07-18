@@ -17,7 +17,7 @@ public class FindTheDifference {
 
 		
 		List<String> expectedList = ext.extractPIDList(rowNum);
-		List<String> actualList = getpidlist.triggerSearchAPI(rowNum);
+		List<String> actualList = getpidlist.getProductList(rowNum);
 		
 		actualList.removeAll(expectedList);
 		return actualList;
